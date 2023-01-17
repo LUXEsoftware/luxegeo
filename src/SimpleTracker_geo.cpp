@@ -55,9 +55,6 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     pv.addPhysVolID("layer",n);
     layer.setPlacement(pv);
   }
-//  if ( x_det.hasAttr(_U(combineHits)) ) {
-//    sdet.setCombineHits(x_det.combineHits(),sens);
-//  }
 
   pv = description.pickMotherVolume(sdet).placeVolume(assembly);
   pv.addPhysVolID("system",sdet.id());

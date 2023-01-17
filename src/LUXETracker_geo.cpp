@@ -28,7 +28,7 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     Box l_box (0.5*dx, 0.5*dy, 0.5*dz);
     Volume l_vol(l_name,l_box,air);
 
-    int im = 0;
+    int im = 0, nmod=0;
     for(xml_coll_t j(x_layer,_U(stave)); j; ++j, ++im)  {
       xml_comp_t x_stave = j;
       Material mat = description.material(x_stave.materialStr());
@@ -53,18 +53,23 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
       double sen_length = x_sensor.length();
       double sen_width = x_sensor.width();
 
+      Assembly moduleAssembly("module");
+
       for (int imod = 0; imod < nModules; imod++){
-        int nmod=im*nModules + imod;
-        string sen_name= stave_name+_toString(imod,"_sensor%d");
+        nmod++;
+        string sen_name= l_name+_toString(nmod,"_sensor%d");
         Box sen_box(0.5*sen_length, 0.5*sen_width, 0.5*sen_thickness);
         Volume sen_vol(sen_name, sen_box, sen_mat);
         if ( x_sensor.isSensitive() ) {
           sen_vol.setSensitiveDetector(sens);
         }
         sen_vol.setAttributes(description,x_sensor.regionStr(),x_sensor.limitsStr(),x_sensor.visStr());
-        pv = l_vol.placeVolume(sen_vol, Transform3D(Position(xoffset - 0.5*length + 0.5*sen_length + imod*(sen_length + gap), 0.0, zoffset - 0.5*sen_thickness - 0.5*thickness)));
-        pv.addPhysVolID("sensor",imod);
+
+        pv = moduleAssembly.placeVolume(sen_vol, Transform3D(Position( - 0.5*length + 0.5*sen_length + imod*(sen_length + gap), 0.0, 0.0)));
+        pv.addPhysVolID("sensor",nmod);
       }
+      pv = l_vol.placeVolume(moduleAssembly, Transform3D(Position(xoffset, 0.0, zoffset - 0.5*sen_thickness - 0.5*thickness)));
+ 
     }
     l_vol.setVisAttributes(description,x_layer.visStr());
     assembly.setVisAttributes(description,x_det.visStr());
@@ -72,9 +77,6 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     pv.addPhysVolID("layer",n);
     layer.setPlacement(pv);
   }
-  //if ( x_det.hasAttr(_U(combineHits)) ) {
-  //  sdet.setCombineHits(x_det.combineHits(),sens);
-  //}
 
   pv = description.pickMotherVolume(sdet).placeVolume(assembly);
   pv.addPhysVolID("system",sdet.id());
