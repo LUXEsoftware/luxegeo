@@ -82,4 +82,4 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
   return sdet;
 }
 
-DECLARE_DETELEMENT(MLTracker,create_detector)
+DECLARE_DETELEMENT(SimpleTracker,create_detector)
