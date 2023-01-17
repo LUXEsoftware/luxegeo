@@ -1,19 +1,3 @@
-//==========================================================================
-//  AIDA Detector description implementation 
-//--------------------------------------------------------------------------
-// Copyright (C) Organisation europeenne pour la Recherche nucleaire (CERN)
-// All rights reserved.
-//
-// For the licensing terms see $DD4hepINSTALL/LICENSE.
-// For the list of contributors see $DD4hepINSTALL/doc/CREDITS.
-//
-// Author     : M.Frank
-//
-//==========================================================================
-//
-// Specialized generic detector constructor
-// 
-//==========================================================================
 #include "DD4hep/DetFactoryHelper.h"
 
 using namespace std;
@@ -41,7 +25,7 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     double  dz    = x_layer.dz();
 
     DetElement layer(sdet,_toString(n,"layer%d"),x_layer.id());
-    Box    l_box (dx, dy, dz);
+    Box    l_box (0.5*dx, 0.5*dy, 0.5*dz);
     Volume  l_vol(l_name,l_box,air);
     int im = 0;
 
@@ -53,7 +37,7 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
       double length = x_slice.length();
       double width = x_slice.width();
 
-      Box   s_box(length, width, thickness);
+      Box   s_box(0.5*length, 0.5*width, 0.5*thickness);
       Volume s_vol(s_name, s_box, mat);
 
       if ( x_slice.isSensitive() ) {
@@ -65,16 +49,15 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
       // Slices have no extra id. Take the ID of the layer!
       pv.addPhysVolID("slice",im);
     }
-    //cout << l_name << " " << rmin << " " << r << " " << z << endl;
     l_vol.setVisAttributes(description,x_layer.visStr());
       
     pv = assembly.placeVolume(l_vol, Transform3D(Position(x,y,z)));
     pv.addPhysVolID("layer",n);
     layer.setPlacement(pv);
   }
-  if ( x_det.hasAttr(_U(combineHits)) ) {
-    sdet.setCombineHits(x_det.combineHits(),sens);
-  }
+//  if ( x_det.hasAttr(_U(combineHits)) ) {
+//    sdet.setCombineHits(x_det.combineHits(),sens);
+//  }
 
   pv = description.pickMotherVolume(sdet).placeVolume(assembly);
   pv.addPhysVolID("system",sdet.id());

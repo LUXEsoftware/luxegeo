@@ -1,12 +1,12 @@
 <lccdd>
 
-  <info name="test"
-        title="test"
+  <info name="SimpleTracker"
+        title="test simple LUXE-like tracker"
         author="Yee"
         url="luxe.desy.de"
         status="development"
         version="test">
-    <comment> test LUXE tracker</comment>
+    <comment> test LUXE-like tracker without support structure</comment>
   </info>
 
   <includes>
@@ -26,18 +26,18 @@
 
 <detectors>
 
-  <detector name="Tracker" type="MLTracker" readout="SiHits" insideTrackingVolume="true">
-    <layer id="1" x="290*mm" y="0" z="3960*mm" dx="250*mm" dy="15*mm" dz="0.1*mm">
-      <slice material="Si" thickness="0.1*mm" length="250*mm" width="15*mm" sensitive="true"/>
+  <detector name="Tracker" type="SimpleTracker" readout="SiHits" insideTrackingVolume="true">
+    <layer id="1" x="290*mm" y="0" z="3960*mm" dx="500*mm" dy="15*mm" dz="0.1*mm">
+      <slice material="Si" thickness="0.1*mm" length="500*mm" width="15*mm" sensitive="true"/>
    </layer>
-    <layer id="2" x="290*mm" y="0" z="4060*mm" dx="250*mm" dy="15*mm" dz="0.1*mm">
-      <slice material="Si" thickness="0.1*mm" length="250*mm" width="15*mm" sensitive="true"/>
+    <layer id="2" x="290*mm" y="0" z="4060*mm" dx="500*mm" dy="15*mm" dz="0.1*mm">
+      <slice material="Si" thickness="0.1*mm" length="500*mm" width="15*mm" sensitive="true"/>
     </layer>
-    <layer id="3" x="290*mm" y="0" z="4160*mm" dx="250*mm" dy="15*mm" dz="0.1*mm">
-      <slice material="Si" thickness="0.1*mm" length="250*mm" width="15*mm" sensitive="true"/>
+    <layer id="3" x="290*mm" y="0" z="4160*mm" dx="500*mm" dy="15*mm" dz="0.1*mm">
+      <slice material="Si" thickness="0.1*mm" length="500*mm" width="15*mm" sensitive="true"/>
     </layer>
-    <layer id="4" x="290*mm" y="0" z="4260*mm" dx="250*mm" dy="15*mm" dz="0.1*mm">
-      <slice material="Si" thickness="0.1*mm" length="250*mm" width="15*mm" sensitive="true"/>
+    <layer id="4" x="290*mm" y="0" z="4260*mm" dx="500*mm" dy="15*mm" dz="0.1*mm">
+      <slice material="Si" thickness="0.1*mm" length="500*mm" width="15*mm" sensitive="true"/>
     </layer>
   </detector>
 
@@ -51,17 +51,11 @@
 </readouts>
 
 <fields>
-    <field name="MagnetFields_Dipole" type="MultipoleMagnet" Z="0.*tesla" vis="MagVis">
+    <field name="MagnetFields_Dipole" type="MultipoleMagnet" Z="0.*tesla">
      <position x="0*cm" y="0*cm" z="205.3*cm"/>
       <coefficient coefficient="-0.95*tesla" skew="0.*tesla"/>
       <shape type="Box" dx="16.5*cm" dy="3*cm" dz="61.9*cm"/>
     </field>
 </fields>
-
-<display>
-    <vis name="MagVis"   alpha="0.1" r="1.0" g="0.0" b="0.0"  showDaughters="false"  visible="true"/>
-    <vis name="VisibleRed"  r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
-    <vis name="Invisible" showDaughters="true" visible="false"/>
-</display>
 
 </lccdd>
