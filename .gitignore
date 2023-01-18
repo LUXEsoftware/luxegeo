@@ -1,3 +1,17 @@
+# Canonical build folders
+build
+spack*
+install
+
+# Editor swap files
+*~
+*.swp
+
+# Tooling
+/.clangd/
+/compile_commands.json
+.vscode
+
 # Prerequisites
 *.d
 
@@ -30,3 +44,6 @@
 *.exe
 *.out
 *.app
+
+# Python cache files
+*.pyc
