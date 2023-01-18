@@ -22,3 +22,6 @@ target_link_libraries(${PROJECT_NAME} DD4hep::DDCore)
 
 # Create this_package.sh file, and install
 dd4hep_instantiate_package(${PROJECT_NAME})
+
+include(CTest)
+add_subdirectory(tests)
