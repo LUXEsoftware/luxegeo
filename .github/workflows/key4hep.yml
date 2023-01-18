@@ -1,0 +1,24 @@
+name: key4hep
+
+on: [push, pull_request]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cvmfs-contrib/github-action-cvmfs@v3
+    - uses: aidasoft/run-lcg-view@v4
+      with:
+        container: centos7
+        view-path: /cvmfs/sw-nightlies.hsf.org/key4hep
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_INSTALL_PREFIX=../install \
+            -DCMAKE_CXX_STANDARD=17 \
+            -DCMAKE_CXX_FLAGS=" -fdiagnostics-color=always -Werror " \
+            -GNinja ..
+          ninja -k0
