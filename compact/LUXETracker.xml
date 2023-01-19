@@ -14,59 +14,59 @@
     <gdmlFile  ref="./materials.xml"/>
   </includes>
 
-    <define>
-        <constant name="world_side"             value="10*m"/>
-        <constant name="world_x"                value="world_side"/>
-        <constant name="world_y"                value="world_side"/>
-        <constant name="world_z"                value="world_side"/>
-        <constant name="tracker_region_zmax"        value="4300*mm"/>
-        <constant name="tracker_region_rmax"        value="600*mm"/>
-    </define>
+  <define>
+    <constant name="world_side"             value="10*m"/>
+    <constant name="world_x"                value="world_side"/>
+    <constant name="world_y"                value="world_side"/>
+    <constant name="world_z"                value="world_side"/>
+    <constant name="tracker_region_zmax"        value="4300*mm"/>
+    <constant name="tracker_region_rmax"        value="600*mm"/>
+  </define>
 
-<detectors>
-  <detector name="Tracker" type="LUXETracker" readout="SiHits" insideTrackingVolume="true">
-    <layer id="1" x="290*mm" y="0" z="3959*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
-      <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
-    </layer>
-    <layer id="2" x="290*mm" y="0" z="4059*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
-      <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
-    </layer>
-    <layer id="3" x="290*mm" y="0" z="4159*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
-      <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
-    </layer>
-    <layer id="4" x="290*mm" y="0" z="4259*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-      <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
-      <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
-    </layer>
-  </detector>
-</detectors>
+  <detectors>
+    <detector name="Tracker" type="LUXETracker" readout="SiHits" insideTrackingVolume="true">
+      <layer id="1" x="290*mm" y="0" z="3959*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="2" x="290*mm" y="0" z="4059*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="3" x="290*mm" y="0" z="4159*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="4" x="290*mm" y="0" z="4259*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+    </detector>
+  </detectors>
 
-<readouts>
+  <readouts>
     <readout name="SiHits">
       <segmentation type="CartesianGridXY" grid_size_x="0.025*mm" grid_size_y="0.025*mm"/>
       <id>system:1,layer:2,stave:3,sensor:7,x:32:-16,y:-16</id>
     </readout>
-</readouts>
+  </readouts>
 
-<fields>
+  <fields>
     <field name="MagnetFields_Dipole" type="MultipoleMagnet" Z="0.*tesla">
-     <position x="0*cm" y="0*cm" z="205.3*cm"/>
+      <position x="0*cm" y="0*cm" z="205.3*cm"/>
       <coefficient coefficient="-0.95*tesla" skew="0.*tesla"/>
       <shape type="Box" dx="16.5*cm" dy="3*cm" dz="61.9*cm"/>
     </field>
-</fields>
+  </fields>
 
-<display>
+  <display>
     <vis name="SolidRed"  r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
     <vis name="Red"  alpha="0.1" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
     <vis name="Invisible" showDaughters="true" visible="false"/>
-</display>
+  </display>
 
 </lccdd>
