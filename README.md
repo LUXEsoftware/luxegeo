@@ -88,6 +88,7 @@ step is to setup luxegeo.
 
 ```bash
 source install/bin/thisluxegeo.sh
+export luxegeo_DIR=$(pwd)/install/share/luxegeo/compact
 ```
 
 We then use `ddsim` to run a simulation using the LUXE tracker. The example uses
@@ -96,7 +97,7 @@ EDM4hep format. (Note, that you need DD4hep that has been built with EDM4hep
 enabled)
 
 ```bash
-ddsim --compactFile xml/LUXETracker.xml \
+ddsim --compactFile ${luxegeo_DIR}/LUXETracker.xml \
   --numberOfEvents 1 \
   --enableGun \
   --gun.multiplicity 100 \
