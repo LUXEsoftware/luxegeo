@@ -1,0 +1,9 @@
+<lccdd>
+  <fields>
+    <field name="MagnetFields_Dipole" type="MultipoleMagnet" Z="0.*tesla">
+      <position x="0*cm" y="0*cm" z="205.3*cm"/>
+      <coefficient coefficient="-0.95*tesla" skew="0.*tesla"/>
+      <shape type="Box" dx="16.5*cm" dy="3*cm" dz="61.9*cm"/>
+    </field>
+  </fields>
+</lccdd>
