@@ -47,3 +47,7 @@ install
 
 # Python cache files
 *.pyc
+
+# Common output file types
+*.root
+*.slcio
