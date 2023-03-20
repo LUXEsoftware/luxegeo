@@ -43,7 +43,6 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
       Volume stave_vol(stave_name, stave_box, mat);
       stave_vol.setAttributes(description,x_stave.regionStr(),x_stave.limitsStr(),x_stave.visStr());
       pv = l_vol.placeVolume(stave_vol, Transform3D(Position(xoffset, 0.0, zoffset )));
-      pv.addPhysVolID("stave",im);
   
       int nModules=x_stave.nmodules();
       double gap = x_stave.gap();
@@ -65,8 +64,10 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
         }
         sen_vol.setAttributes(description,x_sensor.regionStr(),x_sensor.limitsStr(),x_sensor.visStr());
 
+        DetElement sensorDE( layer,  sen_name , nmod );
         pv = moduleAssembly.placeVolume(sen_vol, Transform3D(Position( - 0.5*length + 0.5*sen_length + imod*(sen_length + gap), 0.0, 0.0)));
         pv.addPhysVolID("sensor",nmod);
+        sensorDE.setPlacement( pv ) ;
       }
       pv = l_vol.placeVolume(moduleAssembly, Transform3D(Position(xoffset, 0.0, zoffset - 0.5*sen_thickness - 0.5*thickness)));
  

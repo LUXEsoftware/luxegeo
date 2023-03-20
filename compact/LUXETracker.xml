@@ -46,11 +46,22 @@
   <readouts>
     <readout name="SiHits">
       <segmentation type="CartesianGridXY" grid_size_x="0.025*mm" grid_size_y="0.025*mm"/>
-      <id>system:1,layer:2,stave:3,sensor:7,x:32:-16,y:-16</id>
+      <id>${GlobalTrackerReadoutID}</id>
     </readout>
   </readouts>
 
   <include ref="./dipole_field.xml"/>
+
+  <plugins>
+    <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
+      <argument value="Tracker"/>
+      <argument value="dimension=2"/>
+      <argument value="u_x=1."/>
+      <argument value="v_y=1."/>
+      <argument value="n_z=1."/>
+    </plugin>
+    <plugin name="InstallSurfaceManager"/>
+  </plugins>
 
   <display>
     <vis name="SolidRed"  r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
