@@ -45,6 +45,7 @@
 
   <readouts>
     <readout name="SiHits">
+      <segmentation type="CartesianGridXY" grid_size_x="0.025*mm" grid_size_y="0.025*mm"/>
       <id>${GlobalTrackerReadoutID}</id>
     </readout>
   </readouts>
