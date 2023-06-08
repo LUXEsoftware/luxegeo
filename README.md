@@ -67,7 +67,7 @@ luxegeo is a CMake project, so building it follows the usual steps
 cd luxegeo
 mkdir build && cd build
 cmake -DCMAKE_CXX_STANDARD=17 \
-  -DCMAKE_INSTALL_PREFIX=../install
+  -DCMAKE_INSTALL_PREFIX=../install \
   ..
 make install
 ```
