@@ -20,24 +20,24 @@
 
   <detectors>
     <detector name="Tracker" type="LUXETracker" readout="SiHits" insideTrackingVolume="true">
-      <layer id="1" x="290*mm" y="0" z="3959*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+      <layer id="1" x="290*mm" y="0" z="3956*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
         <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
       </layer>
-      <layer id="2" x="290*mm" y="0" z="4059*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+      <layer id="2" x="290*mm" y="0" z="4056*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
         <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
       </layer>
-      <layer id="3" x="290*mm" y="0" z="4159*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+      <layer id="3" x="290*mm" y="0" z="4156*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
         <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
       </layer>
-      <layer id="4" x="290*mm" y="0" z="4259*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="3.*mm" x_offset="-115.*mm"/>
-        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-3*mm" x_offset="115.*mm"/>
+      <layer id="4" x="290*mm" y="0" z="4256*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
         <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
       </layer>
     </detector>
