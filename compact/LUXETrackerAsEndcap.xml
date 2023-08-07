@@ -1,0 +1,188 @@
+<lccdd>
+    <info name="LUXETrackerEndcap"
+          title="LUXETrackerEndcap"
+          author="Yee"
+          url="luxe.desy.de"
+          status="development"
+          version="test">
+        <comment> LUXE tracker defined as an endcap </comment>
+    </info>
+
+    <includes>
+        <gdmlFile ref="./elements.xml"/>
+        <gdmlFile ref="./materials.xml"/>
+    </includes>
+
+    <define>
+        <constant name="world_side"             value="10*m"/>
+        <constant name="world_x"                value="world_side"/>
+        <constant name="world_y"                value="world_side"/>
+        <constant name="world_z"                value="world_side"/>
+        <constant name="tracker_region_zmax"    value="4300*mm"/>
+        <constant name="tracker_region_rmax"    value="600*mm"/>
+        <constant name="GlobalTrackerReadoutID" type="string" value="system:1,side:1,layer:3,module:5,sensor:0,x:32:-16,y:-16"/>
+        <constant name="tracker_z_0"            value="3956*mm"/>
+        <constant name="tracker_z_1"            value="4056*mm"/>
+        <constant name="tracker_z_2"            value="4156*mm"/>
+        <constant name="tracker_z_3"            value="4256*mm"/>
+        <constant name="stave0_innerradius"     value="52.73*mm"/>
+        <constant name="stave1_innerradius"     value="282.73*mm"/>
+        <constant name="tracker_mod_distance"   value="30.1*mm"/>
+        <constant name="stave_dz"       value="6*mm"/>
+    </define>
+
+    <display>
+        <vis name="ModuleVis" alpha="0.5" r="0.0" g="1.0" b="0.6" showDaughters="false" visible="true"/>
+        <vis name="TrackerVis" alpha="1.0" r="0.078" g="0.12" b="0.59" showDaughters="true" visible="false"/>
+    </display>
+
+    <readouts>
+        <readout name="SiHits">
+            <segmentation type="CartesianGridXY" grid_size_x="0.027*mm" grid_size_y="0.029*mm"/>
+            <id>${GlobalTrackerReadoutID}</id>
+        </readout>
+    </readouts>
+
+    <detectors>
+        <detector id="0" name="LUXETrackerEndcap" type="TrackerEndcap_o2_v06" readout="SiHits" reflect="false" >
+            <type_flags type=" DetType_TRACKER + DetType_ENDCAP"/>
+            <envelope vis="TrackerVis">
+                <shape type="Assembly"/>
+            </envelope>
+            <module name="Alpide_0_0" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_0_1" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_1_0" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_1_1" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_2_0" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_2_1" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_3_0" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <module name="Alpide_3_1" vis="ModuleVis">
+                <trd x="15.*mm" y="30.*mm"/>
+                <include ref="TrackerModule.xml"/>
+            </module>
+            <layer id="0">
+                <ring r="stave0_innerradius"                        zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+tracker_mod_distance"   zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+2*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+3*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+4*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+5*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+6*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+7*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+                <ring r="stave0_innerradius+8*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="stave_dz" module="Alpide_0_0" phi0="pi"/>
+            </layer>
+            <layer id="1">
+                <ring r="stave1_innerradius"                        zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+tracker_mod_distance"   zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+2*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+3*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+4*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+5*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+6*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+7*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+                <ring r="stave1_innerradius+8*tracker_mod_distance" zstart="tracker_z_0" nmodules="1" dz="-stave_dz" module="Alpide_0_1" phi0="pi"/>
+            </layer>
+            <layer id="2">
+                <ring r="stave0_innerradius"                        zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+tracker_mod_distance"   zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+2*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+3*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+4*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+5*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+6*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+7*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+                <ring r="stave0_innerradius+8*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="stave_dz" module="Alpide_1_0" phi0="pi"/>
+            </layer>
+            <layer id="3">
+                <ring r="stave1_innerradius"                        zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+tracker_mod_distance"   zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+2*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+3*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+4*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+5*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+6*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+7*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+                <ring r="stave1_innerradius+8*tracker_mod_distance" zstart="tracker_z_1" nmodules="1" dz="-stave_dz" module="Alpide_1_1" phi0="pi"/>
+            </layer>
+            <layer id="4">
+                <ring r="stave0_innerradius"                        zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+tracker_mod_distance"   zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+2*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+3*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+4*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+5*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+6*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+7*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+                <ring r="stave0_innerradius+8*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="stave_dz" module="Alpide_2_0" phi0="pi"/>
+            </layer>
+            <layer id="5">
+                <ring r="stave1_innerradius"                        zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+tracker_mod_distance"   zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+2*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+3*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+4*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+5*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+6*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+7*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+                <ring r="stave1_innerradius+8*tracker_mod_distance" zstart="tracker_z_2" nmodules="1" dz="-stave_dz" module="Alpide_2_1" phi0="pi"/>
+            </layer>
+            <layer id="6">
+                <ring r="stave0_innerradius"                        zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+tracker_mod_distance"   zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+2*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+3*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+4*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+5*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+6*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+7*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+                <ring r="stave0_innerradius+8*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="stave_dz" module="Alpide_3_0" phi0="pi"/>
+            </layer>
+            <layer id="7">
+                <ring r="stave1_innerradius"                        zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+tracker_mod_distance"   zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+2*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+3*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+4*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+5*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+6*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+7*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+                <ring r="stave1_innerradius+8*tracker_mod_distance" zstart="tracker_z_3" nmodules="1" dz="-stave_dz" module="Alpide_3_1" phi0="pi"/>
+            </layer>
+       </detector>`
+    </detectors>
+
+    <plugins>
+        <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
+            <argument value="LUXETrackerEndcap"/>
+            <argument value="dimension=2"/>
+            <argument value="u_x=1."/>
+            <argument value="v_y=1."/>
+            <argument value="n_z=1."/>
+        </plugin>
+        <plugin name="InstallSurfaceManager"/>
+    </plugins>
+
+    <include ref="./dipole_field.xml"/>
+
+</lccdd>
