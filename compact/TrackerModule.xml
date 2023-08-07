@@ -1,0 +1,3 @@
+<lccdd>
+    <module_component thickness="0.1*mm"  material="Silicon"          info="Module: Sensor"                       sensitive="true"/>
+</lccdd>
