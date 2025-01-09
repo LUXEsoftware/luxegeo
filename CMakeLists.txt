@@ -15,6 +15,7 @@ find_package(DD4hep REQUIRED COMPONENTS DDG4)
 set(sources
   ./src/SimpleTracker_geo.cpp
   ./src/LUXETracker_geo.cpp
+  ./src/LUXEEcal_geo.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need
