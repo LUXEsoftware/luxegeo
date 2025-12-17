@@ -86,6 +86,7 @@
     <constant name="Ecal_w_slab_gap500" value="Ecal_LayerDistance-3.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
     <constant name="Ecal_w_slab_gap650" value="Ecal_LayerDistance-Ecal_slab_thickness650"/>
     <constant name="Ecal_w_slab_gap500_4p2mmW" value="Ecal_LayerDistance-2.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
+    <constant name="Ecal_w_slab_gap500_2p1mmW" value="Ecal_LayerDistance-1.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
     <constant name="Ecal_w_slab_gap500_10mmgap" value="Ecal_LayerDistance_10-2.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
     
     

@@ -146,36 +146,39 @@ static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDete
                 double slice_thickness = x_slice.thickness();
                 Material slice_material = theDetector.material(x_slice.materialStr());
                 DetElement slice(layer, slice_name, slice_number);
-                bool sliceHasStaves = x_slice.staves();
+                bool sliceHasModules = false;
+                if (x_slice.hasAttr(_Unicode(sliceHasModules))) {
+                    sliceHasModules = x_slice.attr<bool>(_Unicode(sliceHasModules));
+                }
 
                 slice_pos_z += slice_thickness / 2;
                 // Slice volume & box
                 Volume slice_vol(slice_name, Box(cal_hx, cal_hy, slice_thickness / 2), air); // Material to be set later
                 
                 
-                if (sliceHasStaves) {
-                    for (xml_coll_t q(x_slice, _U(stave)); q; ++q) {
-                        xml_comp_t x_stave = q;
-                        int stave_number = x_stave.id();
-                        string stave_name = slice_name + _toString(stave_number, "stave_%d_");
-                        double stave_offsetX = x_stave.x_offset();
-                        double stave_offsetY = x_stave.y_offset();
-                        double stave_sizeX = x_stave.dx();
-                        double stave_sizeY = x_stave.dy();
-                        DetElement stave(slice, stave_name, stave_number);
+                if (sliceHasModules) {
+                    for (xml_coll_t q(x_slice, _U(module)); q; ++q) {
+                        xml_comp_t x_module = q;
+                        int module_number = x_module.id();
+                        string module_name = slice_name + _toString(module_number, "module_%d_");
+                        double module_offsetX = x_module.x_offset();
+                        double module_offsetY = x_module.y_offset();
+                        double module_sizeX = x_module.dx();
+                        double module_sizeY = x_module.dy();
+                        DetElement module(slice, module_name, module_number);
                         
-                        // Stave volume & box
-                        Volume stave_vol(stave_name, Box(0.5*stave_sizeX, 0.5*stave_sizeY, slice_thickness / 2), slice_material);
+                        // Module volume & box
+                        Volume module_vol(module_name, Box(0.5*module_sizeX, 0.5*module_sizeY, slice_thickness / 2), slice_material);
                         if (x_slice.isSensitive()) { // sensitivity is written in slice level
                             // sens.setType("calorimeter");
-                            stave_vol.setSensitiveDetector(sens);
+                            module_vol.setSensitiveDetector(sens);
                         }
                         // Set region, limitset, and vis.
-                        stave_vol.setAttributes(theDetector, x_stave.regionStr(), x_stave.limitsStr(), x_stave.visStr());
-                        // stave PlacedVolume
-                        PlacedVolume stave_phv = slice_vol.placeVolume(stave_vol, Position(0 + stave_offsetX, 0 + stave_offsetY, slice_pos_z));
-                        stave_phv.addPhysVolID("stave", stave_number);
-                        stave.setPlacement(stave_phv);
+                        module_vol.setAttributes(theDetector, x_module.regionStr(), x_module.limitsStr(), x_module.visStr());
+                        // module PlacedVolume
+                        PlacedVolume module_phv = slice_vol.placeVolume(module_vol, Position(0 + module_offsetX, 0 + module_offsetY, slice_pos_z));
+                        module_phv.addPhysVolID("module", module_number);
+                        module.setPlacement(module_phv);
                     }
                 } else {
                     slice_vol.setMaterial(slice_material);

@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 
 project(luxegeo)
 
+# install(DIRECTORY compact DESTINATION share/luxegeo/)
+SET( CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/" )
+SET( CMAKE_INSTALL_LIBDIR "lib" )
+
 # project version
 SET( ${PROJECT_NAME}_VERSION_MAJOR 0 )
 SET( ${PROJECT_NAME}_VERSION_MINOR 0 )
@@ -24,7 +28,7 @@ target_link_libraries(${PROJECT_NAME} DD4hep::DDCore)
 # Create this_package.sh file, and install
 dd4hep_instantiate_package(${PROJECT_NAME})
 
-install(DIRECTORY compact DESTINATION share/luxegeo/)
+# install(DIRECTORY compact DESTINATION share/luxegeo/)
 
 include(CTest)
 add_subdirectory(tests)

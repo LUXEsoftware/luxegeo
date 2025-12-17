@@ -55,13 +55,13 @@
 </readout>
 </readouts>
 <detectors>
-  <detector name="EcalTestBeam" type="CaloPrototype_v02" vis="EcalVis" id="3" readout="SiEcalCollection" insideTrackingVolume="false">
+  <detector name="EcalTestBeam" type="LUXEEcal" vis="EcalVis" id="3" readout="SiEcalCollection" insideTrackingVolume="false">
   <dimensions x="Ecal_dim_x" y="Ecal_dim_y" z="Ecal_dim_z"/>
 <type_flags type="1" />
 <envelope vis="EcalVis">
 <shape type="Box" dx="Ecal_dim_x/2.0 + env_safety" dy="Ecal_dim_y/2.0 + env_safety"  dz="Ecal_dim_z/2.0 + env_safety" material="Air" />
 <rotation x="0" y="0" z="0"/>
-<position x="0" y="0" z="14.25"/>
+<position x="0" y="0" z="Ecal_dim_z/2.0"/>
 </envelope>
 
 
