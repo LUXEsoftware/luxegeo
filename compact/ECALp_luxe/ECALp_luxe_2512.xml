@@ -87,7 +87,7 @@
           <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
           <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
         </slice>
-        <slice material="Air"               thickness="Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
         <slice material="Cu"                thickness="Ecal_KaptonThickness" vis="AirVis" sliceHasModules="true">
           <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
           <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
@@ -96,7 +96,7 @@
           <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
           <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
         </slice>
-        <slice material="Air"               thickness="Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
         <slice material="Si"                thickness="Ecal_WaferThickness320" vis="AirVis" sliceHasModules="true" sensitive="yes">
           <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
           <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
@@ -105,7 +105,7 @@
           <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
           <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
         </slice>
-        <slice material="Air"               thickness="Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
         <slice material="Cu"                thickness="Ecal_KaptonThickness" vis="AirVis" sliceHasModules="true">
           <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
           <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />

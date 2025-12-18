@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 project(luxegeo)
 
 # install(DIRECTORY compact DESTINATION share/luxegeo/)
-SET( CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/" )
+# SET( CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/install" )
 SET( CMAKE_INSTALL_LIBDIR "lib" )
 
 # project version
