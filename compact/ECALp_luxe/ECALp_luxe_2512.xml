@@ -119,14 +119,6 @@
       <!-- Last "layer" as a protection/shielding from the rear -->
       <layer repeat="1" vis="EcalVis">
         <slice material="TungstenDens1910"  thickness="EcalP_WThickness" vis="TungstenVis" />
-        <slice material="CarbonFiber"       thickness="Ecal_CFThickness250"  vis="AirVis" sliceHasModules="true">
-          <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-          <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-          <module id="2"   x_offset="-45.0*mm"  y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-          <module id="3"   x_offset="45.0*mm"   y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-          <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-          <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.999*mm" dy="89.99*mm"   vis="CFVis" />
-        </slice>
       </layer>
 
     </detector>
