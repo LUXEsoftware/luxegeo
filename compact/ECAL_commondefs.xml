@@ -48,20 +48,26 @@
     <constant name="Ecal_dim_z" value="285*mm"/> <!-- 15*15 layers + 26 (rear space) + 30 (upfront space) + 4 (plastic plates) -->
     <constant name="Ecal_dim_z_10mmgap" value="210*mm"/> <!-- 15*10 layers + 26 (rear space) + 30 (upfront space) + 4 (plastic plates) -->
     <!--TODO: check!! , more on the order of 220*mm (used to be 500*mm), but still fine if we put the first layer in the border of the box (?)-->
+    <constant name="EcalP_dim_x" value="555*mm"/>
+    <constant name="EcalP_dim_y" value="100*mm"/>
+    <constant name="EcalP_dim_z" value="93.5*mm"/> <!-- 0 (front space) + 4.5*20 layers + 3.5 (rear tungsten) -->
 
     <constant name="Ecal_LayerDistance" value="15.0*mm"/> 
     <constant name="Ecal_LayerDistance_10" value="10.0*mm"/> 
     <constant name="Ecal_slab_thickness320" value="10.72*mm"/>
     <constant name="Ecal_slab_thickness500" value="10.9*mm"/>
     <constant name="Ecal_slab_thickness650" value="11.05*mm"/>
+    <constant name="EcalP_LayerDistance" value="4.5*mm"/> 
 
     <!-- TB2022-06: Aluminum plate can be removed for LUXE-->
     <constant name="Ecal_AlThickness" value="2*mm"/> 
     <constant name="Ecal_AlThickness_back" value="2*mm"/>
 
     <constant name="Ecal_WThickness" value="2.1*mm"/> 
+    <constant name="EcalP_WThickness" value="3.55*mm"/> 
     <constant name="Ecal_PlasticThickness" value="2*mm"/>
     <constant name="Ecal_CFThickness" value="1.5*mm"/>
+    <constant name="Ecal_CFThickness250" value="0.25*mm"/>
     <constant name="Ecal_KaptonThickness" value="0.1*mm"/>
     <constant name="Ecal_GlueThickness_kap" value="0.1*mm"/>
     <constant name="Ecal_WaferThickness320" value="0.320*mm"/>
@@ -88,7 +94,7 @@
     <constant name="Ecal_w_slab_gap500_4p2mmW" value="Ecal_LayerDistance-2.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
     <constant name="Ecal_w_slab_gap500_2p1mmW" value="Ecal_LayerDistance-1.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
     <constant name="Ecal_w_slab_gap500_10mmgap" value="Ecal_LayerDistance_10-2.*Ecal_WThickness-Ecal_CFThickness-Ecal_KaptonThickness-Ecal_GlueThickness_kap-Ecal_WaferThickness500-Ecal_GlueThickness_pcb-Ecal_PcbThickness-Ecal_ChipThickness"/>
-    
+    <constant name="EcalP_Airgap" value="EcalP_LayerDistance - EcalP_WThickness - Ecal_CFThickness250 - Ecal_GlueThickness_kap - Ecal_KaptonThickness - Ecal_GlueThickness_kap - Ecal_WaferThickness320 - Ecal_GlueThickness_kap - Ecal_KaptonThickness"/>
     
   </define>
 
