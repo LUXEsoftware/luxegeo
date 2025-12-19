@@ -21,26 +21,6 @@ using namespace std;
 using namespace dd4hep;
 using namespace dd4hep::detail;
 
-// using dd4hep::BUILD_ENVELOPE;
-// using dd4hep::Box;
-// using dd4hep::DetElement;
-// using dd4hep::Detector;
-// using dd4hep::Layer;
-// using dd4hep::Layering;
-// using dd4hep::Material;
-// using dd4hep::PlacedVolume;
-// using dd4hep::Position;
-// using dd4hep::Readout;
-// using dd4hep::Ref_t;
-// using dd4hep::Segmentation;
-// using dd4hep::SensitiveDetector;
-// using dd4hep::Volume;
-// using dd4hep::_toString;
-
-// workaround for DD4hep v00-14 (and older) 
-// #ifndef DD4HEP_VERSION_GE
-// #define DD4HEP_VERSION_GE(a,b) 0 
-// #endif
 
 
 static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDetector sens)  {
