@@ -82,58 +82,31 @@
         <!-- the aluminum cover was used in the TB2022-06 but it can be removed! , so we remove it here-->
         <!--slice material = "Air"          thickness = "48.44*mm"   vis="Invisible"/--><!-- Do we need air in front of the detector? how much? for the moment, we ignore it-->
         <slice material="TungstenDens1910"  thickness="2*Ecal_WThickness" vis="TungstenVis" /> <!-- 2x2.1mm of tungsten in each layer-->
-        <slice material="CarbonFiber"       thickness="Ecal_CFThickness"  vis="AirVis" sliceHasModules="true">
-          <module id="0"   x_offset="-134.55*mm" y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="1"   x_offset="-44.85*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="2"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="3"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="4"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="5"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="6"   x_offset="44.85*mm"   y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-          <module id="7"   x_offset="134.55*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CFVis" />
-        </slice>
+        <slice material="CarbonFiber"       thickness="Ecal_CFThickness"  vis="AirVis" sliceHasModules="false" />
         <slice material="Cu"                thickness="Ecal_KaptonThickness" vis="AirVis" sliceHasModules="true">
-          <module id="0"   x_offset="-134.55*mm" y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="1"   x_offset="-44.85*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="2"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="3"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="4"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="5"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="6"   x_offset="44.85*mm"   y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
-          <module id="7"   x_offset="134.55*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="0"   x_offset="-89.7*mm" y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="CuVis" />
+          <module id="4"   x_offset="89.7*mm"  y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="CuVis" />
         </slice>
         <slice material="Air"               thickness="Ecal_GlueThickness_kap" vis="AirVis" />
         <slice material="Si"                thickness="Ecal_WaferThickness500" vis="AirVis" sliceHasModules="true" sensitive="yes">
           <module id="0"   x_offset="-134.55*mm" y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
           <module id="1"   x_offset="-44.85*mm"  y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
-          <module id="2"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
-          <module id="3"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
-          <module id="4"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
-          <module id="5"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="2"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="3"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="4"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="5"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
           <module id="6"   x_offset="44.85*mm"   y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
           <module id="7"   x_offset="134.55*mm"  y_offset="44.85*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
         </slice>
         <slice material="Air"               thickness="Ecal_GlueThickness_pcb" vis="AirVis" />
         <!--slice material = "Cu"           thickness = "Ecal_KaptonThickness" vis="CuVis" /--> <!-- this part is not existing-->
         <slice material="PCB"               thickness="Ecal_PcbThickness"      vis="AirVis" sliceHasModules="true">
-          <module id="0"   x_offset="-134.55*mm" y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="1"   x_offset="-44.85*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="2"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="3"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="4"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="5"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="6"   x_offset="44.85*mm"   y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
-          <module id="7"   x_offset="134.55*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="PCBVis" />
+          <module id="0"   x_offset="-89.7*mm" y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="PCBVis" />
+          <module id="4"   x_offset="89.7*mm"  y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="PCBVis" />
         </slice>
         <slice material="PCB"               thickness="Ecal_ChipThickness" vis="AirVis" sliceHasModules="true">
-          <module id="0"   x_offset="-134.55*mm" y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="1"   x_offset="-44.85*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="2"   x_offset="44.85*mm"   y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="3"   x_offset="134.55*mm"  y_offset="-44.85*mm"  dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="4"   x_offset="-134.55*mm" y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="5"   x_offset="-44.85*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="6"   x_offset="44.85*mm"   y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
-          <module id="7"   x_offset="134.55*mm"  y_offset="44.85*mm"   dx="89.7*mm" dy="89.7*mm"   vis="AirVis" />
+          <module id="0"   x_offset="-89.7*mm" y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="AirVis" />
+          <module id="4"   x_offset="89.7*mm"  y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="AirVis" />
         </slice>
         <slice material="Air"               thickness="Ecal_w_slab_gap500_10mmgap" vis="AirVis" />
       </layer>
