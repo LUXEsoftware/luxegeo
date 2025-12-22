@@ -72,6 +72,7 @@ static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDete
     // check if we have a TiledLayerGridXY segmentation :
     dd4hep::DDSegmentation::TiledLayerGridXY* tileSeg = 
         dynamic_cast< dd4hep::DDSegmentation::TiledLayerGridXY*>( seg.segmentation() ) ;
+    // TO CHECK: if readout.segmentation() does not have type TiledLayerGridXY, can it be converted?
 
     //access the layer identifier via the segmentation.
     //the layer identifier is defined in the compact xml file.
@@ -140,7 +141,7 @@ static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDete
                     for (xml_coll_t q(x_slice, _U(module)); q; ++q) {
                         xml_comp_t x_module = q;
                         int module_number = x_module.id();
-                        string module_name = slice_name + _toString(module_number, "module_%d_");
+                        string module_name = slice_name + _toString(module_number, "_module%d");
                         double module_offsetX = x_module.x_offset();
                         double module_offsetY = x_module.y_offset();
                         double module_sizeX = x_module.dx();
@@ -156,7 +157,7 @@ static Ref_t create_detector(Detector& theDetector, xml_h element, SensitiveDete
                         // Set region, limitset, and vis.
                         module_vol.setAttributes(theDetector, x_module.regionStr(), x_module.limitsStr(), x_module.visStr());
                         // module PlacedVolume
-                        PlacedVolume module_phv = slice_vol.placeVolume(module_vol, Position(0 + module_offsetX, 0 + module_offsetY, slice_pos_z));
+                        PlacedVolume module_phv = slice_vol.placeVolume(module_vol, Position(0 + module_offsetX, 0 + module_offsetY, 0));
                         module_phv.addPhysVolID("module", module_number);
                         module.setPlacement(module_phv);
                     }
