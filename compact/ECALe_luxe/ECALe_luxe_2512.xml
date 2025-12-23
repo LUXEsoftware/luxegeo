@@ -28,6 +28,10 @@
     <constant name="world_x" value="world_side" />
     <constant name="world_y" value="world_side" />
     <constant name="world_z" value="world_side" />
+
+    <constant name="tracker_region_rmax" value="0*mm" />
+    <constant name="tracker_region_zmax" value="0*mm" />
+
   </define>
 
 
@@ -51,17 +55,29 @@
           grid_size_y="Ecal_dim_y*2"
           offset_x="-(Ecal_dim_x)/2.0"
           offset_y="-(Ecal_dim_y)/2.0" />
-      <!-- <segmentation type="TiledLayerGridXY"
-          grid_size_x="5.5*mm"
-          grid_size_y="5.5*mm"
-          offset_x="-(Ecal_dim_x)/2.0"
-          offset_y="-(Ecal_dim_y)/2.0" /> -->
       <id>system:8,layer:8,x:16,y:16,slice:8,module:4</id>
+    </readout>
+    <readout name="PixelSiEcalCollection">
+      <segmentation type="TiledLayerGridXY"
+          grid_size_x="5.53*mm"
+          grid_size_y="5.53*mm"
+          offset_x="-44.24*mm"
+          offset_y="-44.24*mm" />
+      <id>system:8,layer:5,slice:4,module:3,x:4,y:4</id>
+    </readout>
+    <readout name="PixelSiEcalCollectionCart">
+      <!-- Cartesian type not working -->
+      <segmentation type="CartesianGridXY"
+          grid_size_x="5.53*mm"
+          grid_size_y="5.53*mm"
+          offset_x="-44.24*mm"
+          offset_y="-44.24*mm" />
+      <id>system:8,layer:5,slice:4,module:3,x:4,y:4</id>
     </readout>
   </readouts>
 
   <detectors>
-    <detector name="ECALe_luxe" type="LUXEEcal" vis="EcalVis" id="2500" readout="SiEcalCollection" insideTrackingVolume="false">
+    <detector name="ECALe_luxe" type="LUXEEcal" vis="EcalVis" id="2500" readout="PixelSiEcalCollection" insideTrackingVolume="false">
       <dimensions
           x="Ecal_dim_x"
           y="Ecal_dim_y"
@@ -108,7 +124,7 @@
           <module id="0"   x_offset="-89.7*mm" y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="AirVis" />
           <module id="4"   x_offset="89.7*mm"  y_offset="0*mm"   dx="2*89.7*mm" dy="2*89.7*mm"   vis="AirVis" />
         </slice>
-        <slice material="Air"               thickness="Ecal_w_slab_gap500_10mmgap" vis="AirVis" />
+        <slice material="Air"               thickness="Ecal_w_slab_gap500_4p2mmW" vis="AirVis" />
       </layer>
 
     </detector>
