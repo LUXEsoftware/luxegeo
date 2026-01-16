@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 
 project(luxegeo)
 
+# install(DIRECTORY compact DESTINATION share/luxegeo/)
+# SET( CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/install" )
+SET( CMAKE_INSTALL_LIBDIR "lib" )
+
 # project version
 SET( ${PROJECT_NAME}_VERSION_MAJOR 0 )
 SET( ${PROJECT_NAME}_VERSION_MINOR 0 )
@@ -15,6 +19,7 @@ find_package(DD4hep REQUIRED COMPONENTS DDG4)
 set(sources
   ./src/SimpleTracker_geo.cpp
   ./src/LUXETracker_geo.cpp
+  ./src/LUXEEcal_geo.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need
