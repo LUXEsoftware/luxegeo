@@ -33,6 +33,7 @@
 
   <define>
     <include ref="../ECAL_commondefs.xml" />
+    <include ref="./ECALp_defs.xml"/>
     <include ref="../ECAL_commondisp.xml" />
   </define>
 
