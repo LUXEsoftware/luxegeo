@@ -23,26 +23,26 @@ function(LUXEGEO_TEST name)
 endfunction()
 
 LUXEGEO_TEST(test_SimpleTracker
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/Tracker/SimpleTracker.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/Tracker/SimpleTracker.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e+
   --outputFile ddsim_simple_tracker.root
 )
 
 LUXEGEO_TEST(test_LUXETracker
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/Tracker/LUXETracker.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/Tracker/LUXETracker.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e+
   --outputFile ddsim_luxe_tracker.root
 )
 
 LUXEGEO_TEST(test_ECALp
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALp/ECALp_2512.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/ECALp/ECALp_2512.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e+
   --gun.position=0,0,-50 --gun.direction=0,0,1
   --outputFile ddsim_luxe_ecalp.root
 )
 
 LUXEGEO_TEST(test_ECALe
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALe/ECALe_2512.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/ECALe/ECALe_2512.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e-
   --gun.position=0,0,-250 --gun.direction=0,0,1
   --outputFile ddsim_luxe_ecale.root
