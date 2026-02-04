@@ -22,6 +22,14 @@ function(LUXEGEO_TEST name)
     )
 endfunction()
 
-LUXEGEO_TEST(test_SimpleTracker ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/SimpleTracker.xml -G -N 1 --gun.multiplicity 100 --gun.particle e+)
+LUXEGEO_TEST(test_SimpleTracker
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/SimpleTracker.xml
+  -G -N 1 --gun.multiplicity 100 --gun.particle e+
+  --outputFile ddsim_simple_tracker.root
+)
 
-LUXEGEO_TEST(test_LUXETracker ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXETracker.xml -G -N 1 --gun.multiplicity 100 --gun.particle e+)
+LUXEGEO_TEST(test_LUXETracker
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXETracker.xml
+  -G -N 1 --gun.multiplicity 100 --gun.particle e+
+  --outputFile ddsim_luxe_tracker.root
+)
