@@ -36,8 +36,6 @@
 
 
   <define>
-    <constant name="env_safety" value="0.001"/>
-    
     <!--constant name="Ecal_NcellsX" value="32" />
     <constant name="Ecal_NcellsY" value="32" />
     <constant name="Ecal_CellSizeX" value="5.5" />
