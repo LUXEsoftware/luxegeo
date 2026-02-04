@@ -54,3 +54,8 @@ LUXEGEO_TEST(test_LUXE_v0
   --outputFile ddsim_luxe_v0.root
 
 )
+
+LUXEGEO_TEST(overlap_check_LUXE_v0
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/LUXE_v0.xml
+  --runType run --ui.commandsInitialize "/geometry/test/run"
+)
