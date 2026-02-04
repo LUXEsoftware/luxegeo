@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+
+   TB2022-06 - CERN
+   "||" = W layer (2.1mm)
+
+   Conf 1: 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 |||| 13 |||| 14 |||| 19.6 X0
+  -->
+
+<!--
+   Plastic plate (polyethylene) thickness: 2 mm
+   Distance to groove 61.8 mm
+   Dist between grooves: 15 mm
+   Carbon thickness
+
+
+   ECAL slab structure (from upstream beam direction)
+
+   Tungsten             From 0 mm, to 5.6 mm (New in TB2022-06)
+   Carbon               1.50 mm (A Gallas)
+   Kapton               0.10 mm
+   Glue                 0.10 mm
+   Silicon Sensor       0.32 mm or 0.5 mm or 0.65 mm
+   Glue                 0.10 mm
+   Copper layer:        0.10 mm
+   PCB                  1.70 mm (TODO To be checked with Jerome)
+   Chip                 1.20 mm
+   Air
+   ==================================
+   total slab thickness = 10.72, 10.9 or 11.05 mm (counting 5.6 mm Tungsten "box")
+
+
+  -->
+
+
+<define>
+    <!--TODO: check!! , more on the order of 220*mm (used to be 500*mm), but still fine if we put the first layer in the border of the box (?)-->
+    <constant name="EcalP_dim_x" value="555*mm"/>
+    <constant name="EcalP_dim_y" value="100*mm"/>
+    <constant name="EcalP_dim_z" value="93.5*mm"/> <!-- 0 (front space) + 4.5*20 layers + 3.5 (rear tungsten) -->
+
+    <constant name="EcalP_WThickness" value="3.55*mm"/>
+    <constant name="Ecal_CFThickness250" value="0.25*mm"/>
+    <constant name="Ecal_WaferThickness320" value="0.320*mm"/>
+
+    <constant name="EcalP_LayerDistance" value="4.5*mm"/>
+
+    <constant name="EcalP_Airgap" value="EcalP_LayerDistance - EcalP_WThickness - Ecal_CFThickness250 - 0.5*Ecal_GlueThickness_kap - Ecal_KaptonThickness - 0.5*Ecal_GlueThickness_kap - Ecal_WaferThickness320 - 0.5*Ecal_GlueThickness_kap - Ecal_KaptonThickness"/>
+
+</define>
