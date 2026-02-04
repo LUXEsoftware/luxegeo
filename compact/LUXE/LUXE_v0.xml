@@ -1,0 +1,33 @@
+<lccdd>
+  <info name="LUXE DD4hep geometry"
+        title="LUXE_v0"
+        author="LUXE collaboration"
+        url="luxe.desy.de"
+        status="development"
+        version="v0">
+    <comment>
+      This is an active development geometry of the LUXE geometry implemented in
+      DD4hep. The focus is on bringing as many sensitive detectors in without
+      support first.
+    </comment>
+  </info>
+
+  <includes>
+    <gdmlFile ref="./elements.xml"/>
+    <gdmlFile ref="./materials.xml"/>
+  </includes>
+
+  <define>
+    <include ref="./basic_defs.xml"/>
+  </define>
+
+  <include ref="./dipole_field.xml"/>
+  <include ref="Tracker/Tracker_v0.xml"/>
+
+  <!-- TODO: Split existing ecal geometry into a part that can be
+       included here and another one that also includes that part, but remains
+       usable in a standalone fashion. Make sure to position it correctly.
+  -->
+
+
+</lccdd>

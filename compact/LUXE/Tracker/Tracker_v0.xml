@@ -1,0 +1,56 @@
+<lccdd>
+  <define>
+    <include ref="./tracker_defs.xml"/>
+  </define>
+
+  <detectors>
+    <detector name="Tracker" type="LUXETracker" readout="SiHits" insideTrackingVolume="true">
+      <layer id="1" x="290*mm" y="0" z="3956*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="2" x="290*mm" y="0" z="4056*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="3" x="290*mm" y="0" z="4156*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="4" x="290*mm" y="0" z="4256*mm" dx="500*mm" dy="15*mm" dz="20*mm" vis="Red">
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="6.*mm" x_offset="-115.*mm"/>
+        <stave material="CarbonFiber" thickness="0.1*mm" length="270*mm" width="15*mm" nmodules="9" gap="0.1*mm" z_offset="-6*mm" x_offset="115.*mm"/>
+        <sensor material="Si" thickness="0.1*mm" length="30*mm" width="15*mm" sensitive="true" vis="SolidRed"/>
+      </layer>
+    </detector>
+  </detectors>
+
+  <readouts>
+    <readout name="SiHits">
+      <segmentation type="CartesianGridXY" grid_size_x="0.025*mm" grid_size_y="0.025*mm"/>
+      <id>${GlobalTrackerReadoutID}</id>
+    </readout>
+  </readouts>
+
+  <plugins>
+    <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
+      <argument value="Tracker"/>
+      <argument value="dimension=2"/>
+      <argument value="u_x=1."/>
+      <argument value="v_y=1."/>
+      <argument value="n_z=1."/>
+    </plugin>
+    <plugin name="InstallSurfaceManager"/>
+  </plugins>
+
+  <display>
+    <vis name="SolidRed"  r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="Red"  alpha="0.1" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="Invisible" showDaughters="true" visible="false"/>
+  </display>
+
+
+</lccdd>
