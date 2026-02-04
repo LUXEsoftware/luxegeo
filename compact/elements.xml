@@ -8,6 +8,7 @@
   <D type="density" unit="g/cm3" value="10.07" />
   <composite n="1" ref="Ac" />
  </material>
+
  <element Z="47" formula="Ag" name="Ag" >
   <atom type="A" unit="g/mol" value="107.868" />
  </element>
@@ -17,6 +18,7 @@
   <D type="density" unit="g/cm3" value="10.5" />
   <composite n="1" ref="Ag" />
  </material>
+
  <element Z="13" formula="Al" name="Al" >
   <atom type="A" unit="g/mol" value="26.9815" />
  </element>
@@ -26,6 +28,7 @@
   <D type="density" unit="g/cm3" value="2.699" />
   <composite n="1" ref="Al" />
  </material>
+
  <element Z="95" formula="Am" name="Am" >
   <atom type="A" unit="g/mol" value="243.061" />
  </element>
@@ -35,6 +38,7 @@
   <D type="density" unit="g/cm3" value="13.67" />
   <composite n="1" ref="Am" />
  </material>
+
  <element Z="18" formula="Ar" name="Ar" >
   <atom type="A" unit="g/mol" value="39.9477" />
  </element>
@@ -44,6 +48,7 @@
   <D type="density" unit="g/cm3" value="0.00166201" />
   <composite n="1" ref="Ar" />
  </material>
+
  <element Z="33" formula="As" name="As" >
   <atom type="A" unit="g/mol" value="74.9216" />
  </element>
@@ -53,6 +58,7 @@
   <D type="density" unit="g/cm3" value="5.73" />
   <composite n="1" ref="As" />
  </material>
+
  <element Z="85" formula="At" name="At" >
   <atom type="A" unit="g/mol" value="209.987" />
  </element>
@@ -62,6 +68,7 @@
   <D type="density" unit="g/cm3" value="9.32" />
   <composite n="1" ref="At" />
  </material>
+
  <element Z="79" formula="Au" name="Au" >
   <atom type="A" unit="g/mol" value="196.967" />
  </element>
@@ -71,6 +78,7 @@
   <D type="density" unit="g/cm3" value="19.32" />
   <composite n="1" ref="Au" />
  </material>
+
  <element Z="5" formula="B" name="B" >
   <atom type="A" unit="g/mol" value="10.811" />
  </element>
@@ -80,6 +88,7 @@
   <D type="density" unit="g/cm3" value="2.37" />
   <composite n="1" ref="B" />
  </material>
+
  <element Z="56" formula="Ba" name="Ba" >
   <atom type="A" unit="g/mol" value="137.327" />
  </element>
@@ -89,6 +98,7 @@
   <D type="density" unit="g/cm3" value="3.5" />
   <composite n="1" ref="Ba" />
  </material>
+
  <element Z="4" formula="Be" name="Be" >
   <atom type="A" unit="g/mol" value="9.01218" />
  </element>
@@ -98,6 +108,7 @@
   <D type="density" unit="g/cm3" value="1.848" />
   <composite n="1" ref="Be" />
  </material>
+
  <element Z="83" formula="Bi" name="Bi" >
   <atom type="A" unit="g/mol" value="208.98" />
  </element>
@@ -107,6 +118,7 @@
   <D type="density" unit="g/cm3" value="9.747" />
   <composite n="1" ref="Bi" />
  </material>
+
  <element Z="97" formula="Bk" name="Bk" >
   <atom type="A" unit="g/mol" value="247.07" />
  </element>
@@ -116,6 +128,7 @@
   <D type="density" unit="g/cm3" value="14" />
   <composite n="1" ref="Bk" />
  </material>
+
  <element Z="35" formula="Br" name="Br" >
   <atom type="A" unit="g/mol" value="79.9035" />
  </element>
@@ -125,6 +138,7 @@
   <D type="density" unit="g/cm3" value="0.0070721" />
   <composite n="1" ref="Br" />
  </material>
+
  <element Z="6" formula="C" name="C" >
   <atom type="A" unit="g/mol" value="12.0107" />
  </element>
@@ -134,6 +148,7 @@
   <D type="density" unit="g/cm3" value="2" />
   <composite n="1" ref="C" />
  </material>
+
  <element Z="20" formula="Ca" name="Ca" >
   <atom type="A" unit="g/mol" value="40.078" />
  </element>
@@ -143,6 +158,7 @@
   <D type="density" unit="g/cm3" value="1.55" />
   <composite n="1" ref="Ca" />
  </material>
+
  <element Z="48" formula="Cd" name="Cd" >
   <atom type="A" unit="g/mol" value="112.411" />
  </element>
@@ -152,6 +168,7 @@
   <D type="density" unit="g/cm3" value="8.65" />
   <composite n="1" ref="Cd" />
  </material>
+
  <element Z="58" formula="Ce" name="Ce" >
   <atom type="A" unit="g/mol" value="140.115" />
  </element>
@@ -161,6 +178,7 @@
   <D type="density" unit="g/cm3" value="6.657" />
   <composite n="1" ref="Ce" />
  </material>
+
  <element Z="98" formula="Cf" name="Cf" >
   <atom type="A" unit="g/mol" value="251.08" />
  </element>
@@ -170,6 +188,7 @@
   <D type="density" unit="g/cm3" value="10" />
   <composite n="1" ref="Cf" />
  </material>
+
  <element Z="17" formula="Cl" name="Cl" >
   <atom type="A" unit="g/mol" value="35.4526" />
  </element>
@@ -179,6 +198,7 @@
   <D type="density" unit="g/cm3" value="0.00299473" />
   <composite n="1" ref="Cl" />
  </material>
+
  <element Z="96" formula="Cm" name="Cm" >
   <atom type="A" unit="g/mol" value="247.07" />
  </element>
@@ -188,6 +208,7 @@
   <D type="density" unit="g/cm3" value="13.51" />
   <composite n="1" ref="Cm" />
  </material>
+
  <element Z="27" formula="Co" name="Co" >
   <atom type="A" unit="g/mol" value="58.9332" />
  </element>
@@ -197,6 +218,7 @@
   <D type="density" unit="g/cm3" value="8.9" />
   <composite n="1" ref="Co" />
  </material>
+
  <element Z="24" formula="Cr" name="Cr" >
   <atom type="A" unit="g/mol" value="51.9961" />
  </element>
@@ -206,6 +228,7 @@
   <D type="density" unit="g/cm3" value="7.18" />
   <composite n="1" ref="Cr" />
  </material>
+
  <element Z="55" formula="Cs" name="Cs" >
   <atom type="A" unit="g/mol" value="132.905" />
  </element>
@@ -215,6 +238,7 @@
   <D type="density" unit="g/cm3" value="1.873" />
   <composite n="1" ref="Cs" />
  </material>
+
  <element Z="29" formula="Cu" name="Cu" >
   <atom type="A" unit="g/mol" value="63.5456" />
  </element>
@@ -224,6 +248,7 @@
   <D type="density" unit="g/cm3" value="8.96" />
   <composite n="1" ref="Cu" />
  </material>
+
  <element Z="66" formula="Dy" name="Dy" >
   <atom type="A" unit="g/mol" value="162.497" />
  </element>
@@ -233,6 +258,7 @@
   <D type="density" unit="g/cm3" value="8.55" />
   <composite n="1" ref="Dy" />
  </material>
+
  <element Z="68" formula="Er" name="Er" >
   <atom type="A" unit="g/mol" value="167.256" />
  </element>
@@ -242,6 +268,7 @@
   <D type="density" unit="g/cm3" value="9.066" />
   <composite n="1" ref="Er" />
  </material>
+
  <element Z="63" formula="Eu" name="Eu" >
   <atom type="A" unit="g/mol" value="151.964" />
  </element>
@@ -251,6 +278,7 @@
   <D type="density" unit="g/cm3" value="5.243" />
   <composite n="1" ref="Eu" />
  </material>
+
  <element Z="9" formula="F" name="F" >
   <atom type="A" unit="g/mol" value="18.9984" />
  </element>
@@ -260,6 +288,7 @@
   <D type="density" unit="g/cm3" value="0.00158029" />
   <composite n="1" ref="F" />
  </material>
+
  <element Z="26" formula="Fe" name="Fe" >
   <atom type="A" unit="g/mol" value="55.8451" />
  </element>
@@ -269,6 +298,7 @@
   <D type="density" unit="g/cm3" value="7.874" />
   <composite n="1" ref="Fe" />
  </material>
+
  <element Z="87" formula="Fr" name="Fr" >
   <atom type="A" unit="g/mol" value="223.02" />
  </element>
@@ -278,6 +308,7 @@
   <D type="density" unit="g/cm3" value="1" />
   <composite n="1" ref="Fr" />
  </material>
+
  <element Z="31" formula="Ga" name="Ga" >
   <atom type="A" unit="g/mol" value="69.7231" />
  </element>
@@ -287,6 +318,7 @@
   <D type="density" unit="g/cm3" value="5.904" />
   <composite n="1" ref="Ga" />
  </material>
+
  <element Z="64" formula="Gd" name="Gd" >
   <atom type="A" unit="g/mol" value="157.252" />
  </element>
@@ -296,6 +328,7 @@
   <D type="density" unit="g/cm3" value="7.9004" />
   <composite n="1" ref="Gd" />
  </material>
+
  <element Z="32" formula="Ge" name="Ge" >
   <atom type="A" unit="g/mol" value="72.6128" />
  </element>
@@ -305,6 +338,7 @@
   <D type="density" unit="g/cm3" value="5.323" />
   <composite n="1" ref="Ge" />
  </material>
+
  <element Z="1" formula="H" name="H" >
   <atom type="A" unit="g/mol" value="1.00794" />
  </element>
@@ -314,6 +348,7 @@
   <D type="density" unit="g/cm3" value="8.3748e-05" />
   <composite n="1" ref="H" />
  </material>
+
  <element Z="2" formula="He" name="He" >
   <atom type="A" unit="g/mol" value="4.00264" />
  </element>
@@ -323,6 +358,7 @@
   <D type="density" unit="g/cm3" value="0.000166322" />
   <composite n="1" ref="He" />
  </material>
+
  <element Z="72" formula="Hf" name="Hf" >
   <atom type="A" unit="g/mol" value="178.485" />
  </element>
@@ -332,6 +368,7 @@
   <D type="density" unit="g/cm3" value="13.31" />
   <composite n="1" ref="Hf" />
  </material>
+
  <element Z="80" formula="Hg" name="Hg" >
   <atom type="A" unit="g/mol" value="200.599" />
  </element>
@@ -341,6 +378,7 @@
   <D type="density" unit="g/cm3" value="13.546" />
   <composite n="1" ref="Hg" />
  </material>
+
  <element Z="67" formula="Ho" name="Ho" >
   <atom type="A" unit="g/mol" value="164.93" />
  </element>
@@ -350,6 +388,7 @@
   <D type="density" unit="g/cm3" value="8.795" />
   <composite n="1" ref="Ho" />
  </material>
+
  <element Z="53" formula="I" name="I" >
   <atom type="A" unit="g/mol" value="126.904" />
  </element>
@@ -359,6 +398,7 @@
   <D type="density" unit="g/cm3" value="4.93" />
   <composite n="1" ref="I" />
  </material>
+
  <element Z="49" formula="In" name="In" >
   <atom type="A" unit="g/mol" value="114.818" />
  </element>
@@ -368,6 +408,7 @@
   <D type="density" unit="g/cm3" value="7.31" />
   <composite n="1" ref="In" />
  </material>
+
  <element Z="77" formula="Ir" name="Ir" >
   <atom type="A" unit="g/mol" value="192.216" />
  </element>
@@ -377,6 +418,7 @@
   <D type="density" unit="g/cm3" value="22.42" />
   <composite n="1" ref="Ir" />
  </material>
+
  <element Z="19" formula="K" name="K" >
   <atom type="A" unit="g/mol" value="39.0983" />
  </element>
@@ -386,6 +428,7 @@
   <D type="density" unit="g/cm3" value="0.862" />
   <composite n="1" ref="K" />
  </material>
+
  <element Z="36" formula="Kr" name="Kr" >
   <atom type="A" unit="g/mol" value="83.7993" />
  </element>
@@ -395,6 +438,7 @@
   <D type="density" unit="g/cm3" value="0.00347832" />
   <composite n="1" ref="Kr" />
  </material>
+
  <element Z="57" formula="La" name="La" >
   <atom type="A" unit="g/mol" value="138.905" />
  </element>
@@ -404,6 +448,7 @@
   <D type="density" unit="g/cm3" value="6.154" />
   <composite n="1" ref="La" />
  </material>
+
  <element Z="3" formula="Li" name="Li" >
   <atom type="A" unit="g/mol" value="6.94003" />
  </element>
@@ -413,6 +458,7 @@
   <D type="density" unit="g/cm3" value="0.534" />
   <composite n="1" ref="Li" />
  </material>
+
  <element Z="71" formula="Lu" name="Lu" >
   <atom type="A" unit="g/mol" value="174.967" />
  </element>
@@ -422,6 +468,7 @@
   <D type="density" unit="g/cm3" value="9.84" />
   <composite n="1" ref="Lu" />
  </material>
+
  <element Z="12" formula="Mg" name="Mg" >
   <atom type="A" unit="g/mol" value="24.305" />
  </element>
@@ -431,6 +478,7 @@
   <D type="density" unit="g/cm3" value="1.74" />
   <composite n="1" ref="Mg" />
  </material>
+
  <element Z="25" formula="Mn" name="Mn" >
   <atom type="A" unit="g/mol" value="54.938" />
  </element>
@@ -440,6 +488,7 @@
   <D type="density" unit="g/cm3" value="7.44" />
   <composite n="1" ref="Mn" />
  </material>
+
  <element Z="42" formula="Mo" name="Mo" >
   <atom type="A" unit="g/mol" value="95.9313" />
  </element>
@@ -449,6 +498,7 @@
   <D type="density" unit="g/cm3" value="10.22" />
   <composite n="1" ref="Mo" />
  </material>
+
  <element Z="7" formula="N" name="N" >
   <atom type="A" unit="g/mol" value="14.0068" />
  </element>
@@ -458,6 +508,7 @@
   <D type="density" unit="g/cm3" value="0.0011652" />
   <composite n="1" ref="N" />
  </material>
+
  <element Z="11" formula="Na" name="Na" >
   <atom type="A" unit="g/mol" value="22.9898" />
  </element>
@@ -467,6 +518,7 @@
   <D type="density" unit="g/cm3" value="0.971" />
   <composite n="1" ref="Na" />
  </material>
+
  <element Z="41" formula="Nb" name="Nb" >
   <atom type="A" unit="g/mol" value="92.9064" />
  </element>
@@ -476,6 +528,7 @@
   <D type="density" unit="g/cm3" value="8.57" />
   <composite n="1" ref="Nb" />
  </material>
+
  <element Z="60" formula="Nd" name="Nd" >
   <atom type="A" unit="g/mol" value="144.236" />
  </element>
@@ -485,6 +538,7 @@
   <D type="density" unit="g/cm3" value="6.9" />
   <composite n="1" ref="Nd" />
  </material>
+
  <element Z="10" formula="Ne" name="Ne" >
   <atom type="A" unit="g/mol" value="20.18" />
  </element>
@@ -494,6 +548,7 @@
   <D type="density" unit="g/cm3" value="0.000838505" />
   <composite n="1" ref="Ne" />
  </material>
+
  <element Z="28" formula="Ni" name="Ni" >
   <atom type="A" unit="g/mol" value="58.6933" />
  </element>
@@ -503,6 +558,7 @@
   <D type="density" unit="g/cm3" value="8.902" />
   <composite n="1" ref="Ni" />
  </material>
+
  <element Z="93" formula="Np" name="Np" >
   <atom type="A" unit="g/mol" value="237.048" />
  </element>
@@ -512,6 +568,7 @@
   <D type="density" unit="g/cm3" value="20.25" />
   <composite n="1" ref="Np" />
  </material>
+
  <element Z="8" formula="O" name="O" >
   <atom type="A" unit="g/mol" value="15.9994" />
  </element>
@@ -521,6 +578,7 @@
   <D type="density" unit="g/cm3" value="0.00133151" />
   <composite n="1" ref="O" />
  </material>
+
  <element Z="76" formula="Os" name="Os" >
   <atom type="A" unit="g/mol" value="190.225" />
  </element>
@@ -530,6 +588,7 @@
   <D type="density" unit="g/cm3" value="22.57" />
   <composite n="1" ref="Os" />
  </material>
+
  <element Z="15" formula="P" name="P" >
   <atom type="A" unit="g/mol" value="30.9738" />
  </element>
@@ -539,6 +598,7 @@
   <D type="density" unit="g/cm3" value="2.2" />
   <composite n="1" ref="P" />
  </material>
+
  <element Z="91" formula="Pa" name="Pa" >
   <atom type="A" unit="g/mol" value="231.036" />
  </element>
@@ -548,6 +608,7 @@
   <D type="density" unit="g/cm3" value="15.37" />
   <composite n="1" ref="Pa" />
  </material>
+
  <element Z="82" formula="Pb" name="Pb" >
   <atom type="A" unit="g/mol" value="207.217" />
  </element>
@@ -557,6 +618,7 @@
   <D type="density" unit="g/cm3" value="11.35" />
   <composite n="1" ref="Pb" />
  </material>
+
  <element Z="46" formula="Pd" name="Pd" >
   <atom type="A" unit="g/mol" value="106.415" />
  </element>
@@ -566,6 +628,7 @@
   <D type="density" unit="g/cm3" value="12.02" />
   <composite n="1" ref="Pd" />
  </material>
+
  <element Z="61" formula="Pm" name="Pm" >
   <atom type="A" unit="g/mol" value="144.913" />
  </element>
@@ -575,6 +638,7 @@
   <D type="density" unit="g/cm3" value="7.22" />
   <composite n="1" ref="Pm" />
  </material>
+
  <element Z="84" formula="Po" name="Po" >
   <atom type="A" unit="g/mol" value="208.982" />
  </element>
@@ -584,6 +648,7 @@
   <D type="density" unit="g/cm3" value="9.32" />
   <composite n="1" ref="Po" />
  </material>
+
  <element Z="59" formula="Pr" name="Pr" >
   <atom type="A" unit="g/mol" value="140.908" />
  </element>
@@ -593,6 +658,7 @@
   <D type="density" unit="g/cm3" value="6.71" />
   <composite n="1" ref="Pr" />
  </material>
+
  <element Z="78" formula="Pt" name="Pt" >
   <atom type="A" unit="g/mol" value="195.078" />
  </element>
@@ -602,6 +668,7 @@
   <D type="density" unit="g/cm3" value="21.45" />
   <composite n="1" ref="Pt" />
  </material>
+
  <element Z="94" formula="Pu" name="Pu" >
   <atom type="A" unit="g/mol" value="244.064" />
  </element>
@@ -611,6 +678,7 @@
   <D type="density" unit="g/cm3" value="19.84" />
   <composite n="1" ref="Pu" />
  </material>
+
  <element Z="88" formula="Ra" name="Ra" >
   <atom type="A" unit="g/mol" value="226.025" />
  </element>
@@ -620,6 +688,7 @@
   <D type="density" unit="g/cm3" value="5" />
   <composite n="1" ref="Ra" />
  </material>
+
  <element Z="37" formula="Rb" name="Rb" >
   <atom type="A" unit="g/mol" value="85.4677" />
  </element>
@@ -629,6 +698,7 @@
   <D type="density" unit="g/cm3" value="1.532" />
   <composite n="1" ref="Rb" />
  </material>
+
  <element Z="75" formula="Re" name="Re" >
   <atom type="A" unit="g/mol" value="186.207" />
  </element>
@@ -638,6 +708,7 @@
   <D type="density" unit="g/cm3" value="21.02" />
   <composite n="1" ref="Re" />
  </material>
+
  <element Z="45" formula="Rh" name="Rh" >
   <atom type="A" unit="g/mol" value="102.906" />
  </element>
@@ -647,6 +718,7 @@
   <D type="density" unit="g/cm3" value="12.41" />
   <composite n="1" ref="Rh" />
  </material>
+
  <element Z="86" formula="Rn" name="Rn" >
   <atom type="A" unit="g/mol" value="222.018" />
  </element>
@@ -656,6 +728,7 @@
   <D type="density" unit="g/cm3" value="0.00900662" />
   <composite n="1" ref="Rn" />
  </material>
+
  <element Z="44" formula="Ru" name="Ru" >
   <atom type="A" unit="g/mol" value="101.065" />
  </element>
@@ -665,6 +738,7 @@
   <D type="density" unit="g/cm3" value="12.41" />
   <composite n="1" ref="Ru" />
  </material>
+
  <element Z="16" formula="S" name="S" >
   <atom type="A" unit="g/mol" value="32.0661" />
  </element>
@@ -674,6 +748,7 @@
   <D type="density" unit="g/cm3" value="2" />
   <composite n="1" ref="S" />
  </material>
+
  <element Z="51" formula="Sb" name="Sb" >
   <atom type="A" unit="g/mol" value="121.76" />
  </element>
@@ -683,6 +758,7 @@
   <D type="density" unit="g/cm3" value="6.691" />
   <composite n="1" ref="Sb" />
  </material>
+
  <element Z="21" formula="Sc" name="Sc" >
   <atom type="A" unit="g/mol" value="44.9559" />
  </element>
@@ -692,6 +768,7 @@
   <D type="density" unit="g/cm3" value="2.989" />
   <composite n="1" ref="Sc" />
  </material>
+
  <element Z="34" formula="Se" name="Se" >
   <atom type="A" unit="g/mol" value="78.9594" />
  </element>
@@ -701,6 +778,7 @@
   <D type="density" unit="g/cm3" value="4.5" />
   <composite n="1" ref="Se" />
  </material>
+
  <element Z="14" formula="Si" name="Si" >
   <atom type="A" unit="g/mol" value="28.0854" />
  </element>
@@ -710,6 +788,7 @@
   <D type="density" unit="g/cm3" value="2.33" />
   <composite n="1" ref="Si" />
  </material>
+
  <element Z="62" formula="Sm" name="Sm" >
   <atom type="A" unit="g/mol" value="150.366" />
  </element>
@@ -719,6 +798,7 @@
   <D type="density" unit="g/cm3" value="7.46" />
   <composite n="1" ref="Sm" />
  </material>
+
  <element Z="50" formula="Sn" name="Sn" >
   <atom type="A" unit="g/mol" value="118.71" />
  </element>
@@ -728,6 +808,7 @@
   <D type="density" unit="g/cm3" value="7.31" />
   <composite n="1" ref="Sn" />
  </material>
+
  <element Z="38" formula="Sr" name="Sr" >
   <atom type="A" unit="g/mol" value="87.6166" />
  </element>
@@ -737,6 +818,7 @@
   <D type="density" unit="g/cm3" value="2.54" />
   <composite n="1" ref="Sr" />
  </material>
+
  <element Z="73" formula="Ta" name="Ta" >
   <atom type="A" unit="g/mol" value="180.948" />
  </element>
@@ -746,6 +828,7 @@
   <D type="density" unit="g/cm3" value="16.654" />
   <composite n="1" ref="Ta" />
  </material>
+
  <element Z="65" formula="Tb" name="Tb" >
   <atom type="A" unit="g/mol" value="158.925" />
  </element>
@@ -755,6 +838,7 @@
   <D type="density" unit="g/cm3" value="8.229" />
   <composite n="1" ref="Tb" />
  </material>
+
  <element Z="43" formula="Tc" name="Tc" >
   <atom type="A" unit="g/mol" value="97.9072" />
  </element>
@@ -764,6 +848,7 @@
   <D type="density" unit="g/cm3" value="11.5" />
   <composite n="1" ref="Tc" />
  </material>
+
  <element Z="52" formula="Te" name="Te" >
   <atom type="A" unit="g/mol" value="127.603" />
  </element>
@@ -773,6 +858,7 @@
   <D type="density" unit="g/cm3" value="6.24" />
   <composite n="1" ref="Te" />
  </material>
+
  <element Z="90" formula="Th" name="Th" >
   <atom type="A" unit="g/mol" value="232.038" />
  </element>
@@ -782,6 +868,7 @@
   <D type="density" unit="g/cm3" value="11.72" />
   <composite n="1" ref="Th" />
  </material>
+
  <element Z="22" formula="Ti" name="Ti" >
   <atom type="A" unit="g/mol" value="47.8667" />
  </element>
@@ -791,6 +878,7 @@
   <D type="density" unit="g/cm3" value="4.54" />
   <composite n="1" ref="Ti" />
  </material>
+
  <element Z="81" formula="Tl" name="Tl" >
   <atom type="A" unit="g/mol" value="204.383" />
  </element>
@@ -800,6 +888,7 @@
   <D type="density" unit="g/cm3" value="11.72" />
   <composite n="1" ref="Tl" />
  </material>
+
  <element Z="69" formula="Tm" name="Tm" >
   <atom type="A" unit="g/mol" value="168.934" />
  </element>
@@ -809,6 +898,7 @@
   <D type="density" unit="g/cm3" value="9.321" />
   <composite n="1" ref="Tm" />
  </material>
+
  <element Z="92" formula="U" name="U" >
   <atom type="A" unit="g/mol" value="238.029" />
  </element>
@@ -818,6 +908,7 @@
   <D type="density" unit="g/cm3" value="18.95" />
   <composite n="1" ref="U" />
  </material>
+
  <element Z="23" formula="V" name="V" >
   <atom type="A" unit="g/mol" value="50.9415" />
  </element>
@@ -827,6 +918,7 @@
   <D type="density" unit="g/cm3" value="6.11" />
   <composite n="1" ref="V" />
  </material>
+
  <element Z="74" formula="W" name="W" >
   <atom type="A" unit="g/mol" value="183.842" />
  </element>
@@ -836,6 +928,7 @@
   <D type="density" unit="g/cm3" value="19.3" />
   <composite n="1" ref="W" />
  </material>
+
  <element Z="54" formula="Xe" name="Xe" >
   <atom type="A" unit="g/mol" value="131.292" />
  </element>
@@ -845,6 +938,7 @@
   <D type="density" unit="g/cm3" value="0.00548536" />
   <composite n="1" ref="Xe" />
  </material>
+
  <element Z="39" formula="Y" name="Y" >
   <atom type="A" unit="g/mol" value="88.9058" />
  </element>
@@ -854,6 +948,7 @@
   <D type="density" unit="g/cm3" value="4.469" />
   <composite n="1" ref="Y" />
  </material>
+
  <element Z="70" formula="Yb" name="Yb" >
   <atom type="A" unit="g/mol" value="173.038" />
  </element>
@@ -863,6 +958,7 @@
   <D type="density" unit="g/cm3" value="6.73" />
   <composite n="1" ref="Yb" />
  </material>
+
  <element Z="30" formula="Zn" name="Zn" >
   <atom type="A" unit="g/mol" value="65.3955" />
  </element>
@@ -872,6 +968,7 @@
   <D type="density" unit="g/cm3" value="7.133" />
   <composite n="1" ref="Zn" />
  </material>
+
  <element Z="40" formula="Zr" name="Zr" >
   <atom type="A" unit="g/mol" value="91.2236" />
  </element>
