@@ -4,6 +4,8 @@
   <constant name="world_y"                value="world_side"/>
   <constant name="world_z"                value="world_side"/>
 
+  <constant name="env_safety" value="0.001"/>
+
   <constant name="tracker_region_zmax"        value="4300*mm"/>
   <constant name="tracker_region_rmax"        value="600*mm"/>
 
