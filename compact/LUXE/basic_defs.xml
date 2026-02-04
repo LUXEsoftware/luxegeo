@@ -8,6 +8,4 @@
 
   <constant name="tracker_region_zmax"        value="4300*mm"/>
   <constant name="tracker_region_rmax"        value="600*mm"/>
-
-  <constant name="GlobalTrackerReadoutID"     type="string" value="system:1,side:1,layer:2,module:1,sensor:5,x:32:-16,y:-16"/>
 </define>
