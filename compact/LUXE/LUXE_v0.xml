@@ -19,15 +19,21 @@
 
   <define>
     <include ref="./basic_defs.xml"/>
+    <include ref="./detector_positions.xml"/>
+    <include ref="./ECAL_commondefs.xml"/>
+    <include ref="./ECAL_commondisp.xml" />
+    <include ref="./ECALp/ECALp_defs.xml"/>
   </define>
+
+  <limits>
+    <limitset name="cal_limits">
+      <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
+    </limitset>
+  </limits>
+
 
   <include ref="./dipole_field.xml"/>
   <include ref="Tracker/Tracker_v0.xml"/>
-
-  <!-- TODO: Split existing ecal geometry into a part that can be
-       included here and another one that also includes that part, but remains
-       usable in a standalone fashion. Make sure to position it correctly.
-  -->
-
+  <include ref="ECALp/ECALp_v0.xml"/>
 
 </lccdd>

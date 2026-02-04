@@ -1,0 +1,10 @@
+<define>
+  <comment>
+    Global detector positions that might have different values in the standalone
+    versions of the subdetectors
+  </comment>
+
+  <constant name="EcalP_x_position" value="10 * cm"/>
+  <constant name="EcalP_y_position" value="0"/>
+  <constant name="EcalP_z_position" value="4300 * mm"/>
+</define>
