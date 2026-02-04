@@ -35,14 +35,14 @@ LUXEGEO_TEST(test_LUXETracker
 )
 
 LUXEGEO_TEST(test_ECALp
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALp_luxe/ECALp_luxe_2512.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALp/ECALp_2512.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e+
   --gun.position=0,0,-50 --gun.direction=0,0,1
   --outputFile ddsim_luxe_ecalp.root
 )
 
 LUXEGEO_TEST(test_ECALe
-  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALe_luxe/ECALe_luxe_2512.xml
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/ECALe/ECALe_2512.xml
   -G -N 1 --gun.multiplicity 100 --gun.particle e-
   --gun.position=0,0,-250 --gun.direction=0,0,1
   --outputFile ddsim_luxe_ecale.root
