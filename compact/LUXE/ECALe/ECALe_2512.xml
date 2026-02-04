@@ -22,6 +22,9 @@
 
   <define>
     <include ref="../basic_defs.xml"/>
+    <include ref="../ECAL_commondefs.xml" />
+    <include ref="../ECAL_commondisp.xml" />
+    <include ref="./ECALe_defs.xml"/>
   </define>
 
 
@@ -30,12 +33,6 @@
       <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
     </limitset>
   </limits>
-
-  <define>
-    <include ref="../ECAL_commondefs.xml" />
-    <include ref="../ECAL_commondisp.xml" />
-    <!--constant name="total_preshower_estimation" value="1.443"/-->
-  </define>
 
   <readouts>
     <readout name="SiEcalCollection">
