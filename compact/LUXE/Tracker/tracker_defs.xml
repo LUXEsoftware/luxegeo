@@ -11,10 +11,12 @@
 
 
   <!-- TODO: These can probably be derived from other values? -->
-  <constant name="Tracker_layer_dim_x" value="500*mm"/>
+  <!-- NOTE: dim_x was originally 500*mm but that makes the stave volume too
+       short, because it doesn't consider the gap between the sensors. that in
+       turn leads to a volume overlap with the outermost sensor volume. -->
+  <constant name="Tracker_layer_dim_x" value="502*mm"/>
   <constant name="Tracker_layer_dim_y" value="15*mm"/>
   <constant name="Tracker_layer_dim_z" value="20*mm"/>
-
 
   <constant name="Tracker_x_pos_local" value="Tracker_x_position / 2 + Tracker_stave_length"/>
 
