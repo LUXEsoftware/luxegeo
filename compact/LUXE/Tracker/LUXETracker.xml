@@ -16,6 +16,7 @@
 
   <define>
     <include ref="../basic_defs.xml"/>
+    <include ref="../detector_positions.xml"/> <!-- Only need the ones from the tracker -->
   </define>
 
   <include ref="../dipole_field.xml"/>
