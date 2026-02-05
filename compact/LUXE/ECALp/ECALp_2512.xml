@@ -1,0 +1,40 @@
+<lccdd xmlns:compact="http://www.lcsim.org/schemas/compact/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xs:noNamespaceSchemaLocation="http://www.lcsim.org/schemas/compact/1.0/compact.xsd">
+
+  <global detectorName="ECALp_luxe" />
+
+
+  <info name="ECALp_luxe_2512"
+      title="ECALp_luxe_2512"
+      author="S. Huang"
+      url="none"
+      status="development"
+      version="$Id$">
+    <comment>The compact File for LUXE ECAL-P (updated December 2025)</comment>
+  </info>
+
+  <includes>
+    <comment>Additional design specific material definitions</comment>
+    <gdmlFile ref="../elements.xml"/>
+    <gdmlFile ref="../materials.xml"/>
+  </includes>
+
+  <define>
+    <include ref="../basic_defs.xml"/>
+    <include ref="../ECAL_commondefs.xml" />
+    <include ref="./ECALp_defs.xml"/>
+    <include ref="../ECAL_commondisp.xml" />
+    <include ref="./ECALp_standalone_defs.xml"/>
+  </define>
+
+
+  <limits>
+    <limitset name="cal_limits">
+      <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
+    </limitset>
+  </limits>
+
+  <include ref="./ECALp_v0.xml"/>
+
+</lccdd>

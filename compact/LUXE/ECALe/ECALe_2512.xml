@@ -16,22 +16,15 @@
 
   <includes>
     <comment>Additional design specific material definitions</comment>
-    <gdmlFile ref="../elements.xml"/> <!-- /afs/desy.de/project/ilcsoft/sw/x86_64_gcc82_centos7/v02-02-03/lcgeo/v00-16-07/ILD/compact/ILD_o1_v05/elements.xml-->
-    <gdmlFile ref="../materials.xml"/> <!-- "/afs/desy.de/project/ilcsoft/sw/x86_64_gcc82_centos7/v02-02-03/lcgeo/v00-16-07/ILD/compact/ILD_o1_v05/materials.xml -->
-    <gdmlFile ref="../Materials_v1.xml" />
-    <gdmlFile ref="../extra_materials.xml" />
+    <gdmlFile ref="../elements.xml"/>
+    <gdmlFile ref="../materials.xml"/>
   </includes>
 
   <define>
-    <!-- world -->
-    <constant name="world_side" value="10*m" />
-    <constant name="world_x" value="world_side" />
-    <constant name="world_y" value="world_side" />
-    <constant name="world_z" value="world_side" />
-
-    <constant name="tracker_region_rmax" value="0*mm" />
-    <constant name="tracker_region_zmax" value="0*mm" />
-
+    <include ref="../basic_defs.xml"/>
+    <include ref="../ECAL_commondefs.xml" />
+    <include ref="../ECAL_commondisp.xml" />
+    <include ref="./ECALe_defs.xml"/>
   </define>
 
 
@@ -40,12 +33,6 @@
       <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
     </limitset>
   </limits>
-
-  <define>
-    <include ref="../ECAL_commondefs.xml" />
-    <include ref="../ECAL_commondisp.xml" />
-    <!--constant name="total_preshower_estimation" value="1.443"/-->
-  </define>
 
   <readouts>
     <readout name="SiEcalCollection">

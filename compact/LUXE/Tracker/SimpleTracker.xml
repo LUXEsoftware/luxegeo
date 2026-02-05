@@ -10,12 +10,12 @@
   </info>
 
   <includes>
-    <gdmlFile  ref="./elements.xml"/>
-    <gdmlFile  ref="./materials.xml"/>
+    <gdmlFile  ref="../elements.xml"/>
+    <gdmlFile  ref="../materials.xml"/>
   </includes>
 
   <define>
-    <include ref="./basic_defs.xml"/>
+    <include ref="../basic_defs.xml"/>
   </define>
 
   <detectors>
@@ -44,6 +44,6 @@
     </readout>
   </readouts>
 
-  <include ref="./dipole_field.xml"/>
+  <include ref="../dipole_field.xml"/>
 
 </lccdd>

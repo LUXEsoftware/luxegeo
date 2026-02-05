@@ -1,51 +1,4 @@
-<lccdd xmlns:compact="http://www.lcsim.org/schemas/compact/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xs:noNamespaceSchemaLocation="http://www.lcsim.org/schemas/compact/1.0/compact.xsd">
-
-  <global detectorName="ECALp_luxe" />
-
-
-  <info name="ECALp_luxe_2512"
-      title="ECALp_luxe_2512"
-      author="S. Huang"
-      url="none"
-      status="development"
-      version="$Id$">
-    <comment>The compact File for LUXE ECAL-P (updated December 2025)</comment>
-  </info>
-
-  <includes>
-    <comment>Additional design specific material definitions</comment>
-    <gdmlFile ref="../elements.xml"/> <!-- /afs/desy.de/project/ilcsoft/sw/x86_64_gcc82_centos7/v02-02-03/lcgeo/v00-16-07/ILD/compact/ILD_o1_v05/elements.xml-->
-    <gdmlFile ref="../materials.xml"/> <!-- "/afs/desy.de/project/ilcsoft/sw/x86_64_gcc82_centos7/v02-02-03/lcgeo/v00-16-07/ILD/compact/ILD_o1_v05/materials.xml -->
-    <gdmlFile ref="../Materials_v1.xml" />
-    <gdmlFile ref="../extra_materials.xml" />
-  </includes>
-
-  <define>
-    <!-- world -->
-    <constant name="world_side" value="10*m" />
-    <constant name="world_x" value="world_side" />
-    <constant name="world_y" value="world_side" />
-    <constant name="world_z" value="world_side" />
-
-    <constant name="tracker_region_rmax" value="0*mm" />
-    <constant name="tracker_region_zmax" value="0*mm" />
-
-  </define>
-
-
-  <limits>
-    <limitset name="cal_limits">
-      <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
-    </limitset>
-  </limits>
-
-  <define>
-    <include ref="../ECAL_commondefs.xml" />
-    <include ref="../ECAL_commondisp.xml" />
-  </define>
-
+<lccdd>
   <readouts>
     <readout name="SiEcalCollection">
       <!--We are making a very simple segmentation: one single tile that takes the full surface of every layer "/-->
@@ -75,6 +28,7 @@
     </readout>
   </readouts>
 
+
   <detectors>
     <detector name="ECALp_luxe" type="LUXEEcal" vis="EcalVis" id="2000" readout="PixelSiEcalCollection" insideTrackingVolume="false">
       <dimensions
@@ -89,7 +43,7 @@
             dz="EcalP_dim_z/2.0 + env_safety"
             material="Air" />
         <rotation x="0" y="0" z="0" />
-        <position x="0" y="0" z="EcalP_dim_z/2.0" />
+        <position x="EcalP_x_position + EcalP_dim_x / 2" y="EcalP_y_position" z="EcalP_z_position + EcalP_dim_z / 2" />
       </envelope>
 
 
@@ -139,4 +93,7 @@
 
     </detector>
   </detectors>
+
+  
+  
 </lccdd>
