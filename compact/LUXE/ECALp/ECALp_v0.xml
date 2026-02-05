@@ -43,7 +43,7 @@
             dz="EcalP_dim_z/2.0 + env_safety"
             material="Air" />
         <rotation x="0" y="0" z="0" />
-        <position x="EcalP_x_position" y="EcalP_y_position" z="EcalP_z_position" />
+        <position x="EcalP_x_position + EcalP_dim_x / 2" y="EcalP_y_position" z="EcalP_z_position + EcalP_dim_z / 2" />
       </envelope>
 
 
