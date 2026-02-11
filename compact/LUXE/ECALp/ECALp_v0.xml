@@ -1,0 +1,99 @@
+<lccdd>
+  <readouts>
+    <readout name="SiEcalCollection">
+      <!--We are making a very simple segmentation: one single tile that takes the full surface of every layer "/-->
+      <segmentation type="TiledLayerGridXY"
+          grid_size_x="EcalP_dim_x*2"
+          grid_size_y="EcalP_dim_y*2"
+          offset_x="-(EcalP_dim_x)/2.0"
+          offset_y="-(EcalP_dim_y)/2.0" />
+      <id>system:8,layer:8,x:16,y:16,slice:8,module:4</id>
+    </readout>
+    <readout name="PixelSiEcalCollection">
+      <segmentation type="TiledLayerGridXY"
+          grid_size_x="5.53*mm"
+          grid_size_y="5.53*mm"
+          offset_x="-44.24*mm"
+          offset_y="-44.24*mm" />
+      <id>system:8,layer:5,slice:4,module:3,x:4,y:4</id>
+    </readout>
+    <readout name="PixelSiEcalCollectionCart">
+      <!-- Cartesian type not working -->
+      <segmentation type="CartesianGridXY"
+          grid_size_x="5.53*mm"
+          grid_size_y="5.53*mm"
+          offset_x="-44.24*mm"
+          offset_y="-44.24*mm" />
+      <id>system:8,layer:5,slice:4,module:3,x:4,y:4</id>
+    </readout>
+  </readouts>
+
+
+  <detectors>
+    <detector name="ECALp_luxe" type="LUXEEcal" vis="EcalVis" id="2000" readout="PixelSiEcalCollection" insideTrackingVolume="false">
+      <dimensions
+          x="EcalP_dim_x"
+          y="EcalP_dim_y"
+          z="EcalP_dim_z" />
+      <type_flags type="1" />
+      <envelope vis="EcalVis">
+        <shape type="Box"
+            dx="EcalP_dim_x/2.0 + env_safety"
+            dy="EcalP_dim_y/2.0 + env_safety"
+            dz="EcalP_dim_z/2.0 + env_safety"
+            material="Air" />
+        <rotation x="0" y="0" z="0" />
+        <position x="EcalP_x_position + EcalP_dim_x / 2" y="EcalP_y_position" z="EcalP_z_position + EcalP_dim_z / 2" />
+      </envelope>
+
+
+      <layer repeat="20" vis="EcalVis">
+        <slice material="TungstenDens1910"  thickness="EcalP_WThickness" vis="TungstenVis" /> <!-- 2x2.1mm of tungsten in each layer-->
+        <slice material="CarbonFiber"       thickness="Ecal_CFThickness250"  vis="AirVis" sliceHasModules="true">
+          <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+          <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+          <module id="2"   x_offset="-45.0*mm"  y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+          <module id="3"   x_offset="45.0*mm"   y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+          <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+          <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.99*mm" dy="89.99*mm"   vis="CFVis" />
+        </slice>
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Cu"                thickness="Ecal_KaptonThickness" vis="AirVis" sliceHasModules="true">
+          <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="2"   x_offset="-45.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="3"   x_offset="45.0*mm"   y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+        </slice>
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Si"                thickness="Ecal_WaferThickness320" vis="AirVis" sliceHasModules="true" sensitive="yes">
+          <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="2"   x_offset="-45.0*mm"  y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="3"   x_offset="45.0*mm"   y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+          <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="88.48*mm" dy="88.48*mm"   vis="SiVis" />
+        </slice>
+        <slice material="Air"               thickness="0.5*Ecal_GlueThickness_kap" vis="AirVis" />
+        <slice material="Cu"                thickness="Ecal_KaptonThickness" vis="AirVis" sliceHasModules="true">
+          <module id="0"   x_offset="-225.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="1"   x_offset="-135.0*mm" y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="2"   x_offset="-45.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="3"   x_offset="45.0*mm"   y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="4"   x_offset="135.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+          <module id="5"   x_offset="225.0*mm"  y_offset="0.0*mm"   dx="89.7*mm" dy="89.7*mm"   vis="CuVis" />
+        </slice>
+        <slice material="Air"               thickness="EcalP_Airgap" vis="AirVis" />
+      </layer>
+      <!-- Last "layer" as a protection/shielding from the rear -->
+      <layer repeat="1" vis="EcalVis">
+        <slice material="TungstenDens1910"  thickness="EcalP_WThickness" vis="TungstenVis" />
+      </layer>
+
+    </detector>
+  </detectors>
+
+  
+  
+</lccdd>

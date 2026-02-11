@@ -13,10 +13,9 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
   PlacedVolume pv;
   sens.setType("tracker");
 
-  int n = 0;
-  for (xml_coll_t i(x_det, _U(layer)); i; ++i, ++n) {
+  for (xml_coll_t i(x_det, _U(layer)); i; ++i) {
     xml_comp_t x_layer = i;
-    string l_name = det_name + _toString(n, "_layer%d");
+    string l_name = det_name + _toString(x_layer.id(), "_layer%d");
     double x = x_layer.x();
     double y = x_layer.y();
     double z = x_layer.z();
@@ -24,7 +23,7 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     double dy = x_layer.dy();
     double dz = x_layer.dz();
 
-    DetElement layer(sdet, _toString(n, "layer%d"), x_layer.id());
+    DetElement layer(sdet, _toString(x_layer.id(), "layer%d"), x_layer.id());
     Box l_box(0.5 * dx, 0.5 * dy, 0.5 * dz);
     Volume l_vol(l_name, l_box, air);
 
@@ -76,7 +75,7 @@ static Ref_t create_detector(Detector& description, xml_h e, SensitiveDetector s
     l_vol.setVisAttributes(description, x_layer.visStr());
     assembly.setVisAttributes(description, x_det.visStr());
     pv = assembly.placeVolume(l_vol, Transform3D(Position(x, y, z)));
-    pv.addPhysVolID("layer", n);
+    pv.addPhysVolID("layer", x_layer.id());
     layer.setPlacement(pv);
   }
 

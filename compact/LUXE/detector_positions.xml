@@ -1,0 +1,20 @@
+<define>
+  <comment>
+    Global detector positions that might have different values in the standalone
+    versions of the subdetectors.
+
+    The x-position of the tracker refers to the "point of closest approach" to
+    the beamline (in x and y). This might require some additional translation when
+    placing the subdetector depending on how it defines its local coordinate
+    system. For example, it might be that it defines (0, 0, 0) to be in the
+    center of the sub-detector with extents in all directions.
+  </comment>
+
+  <constant name="Tracker_x_position" value="4 * cm"/>
+  <constant name="Tracker_y_position" value="0*mm"/>
+  <constant name="Tracker_z_position" value="3956*mm"/>
+
+  <constant name="EcalP_x_position" value="10 * cm"/>
+  <constant name="EcalP_y_position" value="0"/>
+  <constant name="EcalP_z_position" value="4300 * mm"/>
+</define>
