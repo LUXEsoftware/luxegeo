@@ -97,7 +97,7 @@ EDM4hep format. (Note, that you need DD4hep that has been built with EDM4hep
 enabled)
 
 ```bash
-ddsim --compactFile ${luxegeo_DIR}/LUXETracker.xml \
+ddsim --compactFile ${luxegeo_DIR}/LUXE/Tracker/LUXETracker.xml \
   --numberOfEvents 1 \
   --enableGun \
   --gun.multiplicity 100 \
