@@ -47,3 +47,15 @@ LUXEGEO_TEST(test_ECALe
   --gun.position=0,0,-250 --gun.direction=0,0,1
   --outputFile ddsim_luxe_ecale.root
 )
+
+LUXEGEO_TEST(test_LUXE_v0
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/LUXE_v0.xml
+  -G -N 1 --gun.multiplicity 100 --gun.particle e-
+  --outputFile ddsim_luxe_v0.root
+
+)
+
+LUXEGEO_TEST(overlap_check_LUXE_v0
+  ddsim --compactFile ${CMAKE_SOURCE_DIR}/compact/LUXE/LUXE_v0.xml
+  --runType run --ui.commandsInitialize "/geometry/test/run"
+)

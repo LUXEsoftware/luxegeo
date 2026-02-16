@@ -1,0 +1,5 @@
+<define>
+  <constant name="EcalP_x_position" value="0*mm"/>
+  <constant name="EcalP_y_position" value="0*mm"/>
+  <constant name="EcalP_z_position" value="EcalP_dim_z / 2.0"/>
+</define>

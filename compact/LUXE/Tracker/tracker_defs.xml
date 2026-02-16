@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<define>
+  <constant name="Tracker_layer_distance" value="100*mm"/>
+  <constant name="Tracker_stave_length" value="270*mm"/>
+  <constant name="Tracker_stave_width" value="15*mm"/>
+  <constant name="Tracker_stave_thickness" value="0.1*mm"/>
+  <constant name="Tracker_stave_gap" value="0.1*mm"/>
+  <constant name="Tracker_stave_z_offset" value="6*mm"/>
+  <constant name="Tracker_stave_x_offset" value="115.*mm"/>
+  <constant name="Tracker_modules_per_stave" value="9"/>
+
+
+  <!-- TODO: These can probably be derived from other values? -->
+  <!-- NOTE: dim_x was originally 500*mm but that makes the stave volume too
+       short, because it doesn't consider the gap between the sensors. that in
+       turn leads to a volume overlap with the outermost sensor volume. -->
+  <constant name="Tracker_layer_dim_x" value="502*mm"/>
+  <constant name="Tracker_layer_dim_y" value="15*mm"/>
+  <constant name="Tracker_layer_dim_z" value="20*mm"/>
+
+  <constant name="Tracker_x_pos_local" value="Tracker_x_position / 2 + Tracker_stave_length"/>
+
+  <constant name="Tracker_sensor_thickness" value="0.1*mm"/>
+  <constant name="Tracker_sensor_width" value="15*mm"/>
+  <constant name="Tracker_sensor_length" value="30*mm"/>
+
+  <constant name="GlobalTrackerReadoutID"     type="string" value="system:1,side:1,layer:2,module:1,sensor:5,x:32:-16,y:-16"/>
+</define>

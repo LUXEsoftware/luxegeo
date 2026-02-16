@@ -1,0 +1,76 @@
+<lccdd>
+  <define>
+    <include ref="./tracker_defs.xml"/>
+  </define>
+
+  <detectors>
+    <detector name="Tracker" type="LUXETracker" readout="SiHits" insideTrackingVolume="true">
+      <layer id="0" x="Tracker_x_pos_local" y="Tracker_y_position" z="Tracker_z_position"
+             dx="Tracker_layer_dim_x" dy="Tracker_layer_dim_y" dz="Tracker_layer_dim_z" vis="Red">
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="Tracker_stave_z_offset" x_offset="-Tracker_stave_x_offset"/>
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="-Tracker_stave_z_offset" x_offset="Tracker_stave_x_offset"/>
+        <sensor material="Si" thickness="Tracker_sensor_thickness" length="Tracker_sensor_length"
+                width="Tracker_sensor_width" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="1" x="Tracker_x_pos_local" y="Tracker_y_position" z="Tracker_z_position + Tracker_layer_distance"
+             dx="Tracker_layer_dim_x" dy="Tracker_layer_dim_y" dz="Tracker_layer_dim_z" vis="Red">
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="Tracker_stave_z_offset" x_offset="-Tracker_stave_x_offset"/>
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="-Tracker_stave_z_offset" x_offset="Tracker_stave_x_offset"/>
+        <sensor material="Si" thickness="Tracker_sensor_thickness" length="Tracker_sensor_length"
+                width="Tracker_sensor_width" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="2" x="Tracker_x_pos_local" y="Tracker_y_position" z="Tracker_z_position + 2*Tracker_layer_distance"
+             dx="Tracker_layer_dim_x" dy="Tracker_layer_dim_y" dz="Tracker_layer_dim_z" vis="Red">
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="Tracker_stave_z_offset" x_offset="-Tracker_stave_x_offset"/>
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="-Tracker_stave_z_offset" x_offset="Tracker_stave_x_offset"/>
+        <sensor material="Si" thickness="Tracker_sensor_thickness" length="Tracker_sensor_length"
+                width="Tracker_sensor_width" sensitive="true" vis="SolidRed"/>
+      </layer>
+      <layer id="3" x="Tracker_x_pos_local" y="Tracker_y_position" z="Tracker_z_position + 3*Tracker_layer_distance"
+             dx="Tracker_layer_dim_x" dy="Tracker_layer_dim_y" dz="Tracker_layer_dim_z" vis="Red">
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="Tracker_stave_z_offset" x_offset="-Tracker_stave_x_offset"/>
+        <stave material="CarbonFiber" thickness="Tracker_stave_thickness"
+               length="Tracker_stave_length" width="Tracker_stave_width"
+               nmodules="Tracker_modules_per_stave" gap="Tracker_stave_gap"
+               z_offset="-Tracker_stave_z_offset" x_offset="Tracker_stave_x_offset"/>
+        <sensor material="Si" thickness="Tracker_sensor_thickness" length="Tracker_sensor_length"
+                width="Tracker_sensor_width" sensitive="true" vis="SolidRed"/>
+      </layer>
+    </detector>
+  </detectors>
+
+  <readouts>
+    <readout name="SiHits">
+      <segmentation type="CartesianGridXY" grid_size_x="0.025*mm" grid_size_y="0.025*mm"/>
+      <id>${GlobalTrackerReadoutID}</id>
+    </readout>
+  </readouts>
+
+  <display>
+    <vis name="SolidRed"  r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="Red"  alpha="0.1" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+    <vis name="Invisible" showDaughters="true" visible="false"/>
+  </display>
+
+</lccdd>
