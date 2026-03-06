@@ -1,6 +1,6 @@
 # luxegeo
 
-[![key4hep](https://github.com/LUXEsoftware/luxegeo/actions/workflows/key4hep.yml/badge.svg)](https://github.com/LUXEsoftware/luxegeo/actions/workflows/key4hep.yml)
+[![Key4hep build](https://github.com/LUXEsoftware/luxegeo/actions/workflows/key4hep.yml/badge.svg)](https://github.com/LUXEsoftware/luxegeo/actions/workflows/key4hep.yml)
 
 Implementation of the detector geometry of the LUXE experiment using [DD4hep](https://dd4hep.web.cern.ch/dd4hep/).
 
