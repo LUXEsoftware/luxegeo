@@ -65,18 +65,18 @@ luxegeo is a CMake project, so building it follows the usual steps
 
 ```bash
 cd luxegeo
-mkdir build && cd build
 cmake -DCMAKE_CXX_STANDARD=20 \
-  -DCMAKE_INSTALL_PREFIX=../install \
-  ..
-make install
+    -DCMAKE_INSTALL_PREFIX=$(pwd)/install \
+    -B build -S . \
+    -GNinja
+cmake --build build --target install
 ```
 
 luxegeo comes with a few tests to verify that the build and installation process
 has been successful, they can be run via (in the `build` folder)
 
 ```bash
-ctest --output-on-failure
+ctest --test-dir build --output-on-failure
 ```
 
 ### Running a simple example using a particle gun
