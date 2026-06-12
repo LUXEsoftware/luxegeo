@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Detector entry for the Gamma spectrometer magnet (FlashMagnet model).
+  Include in the <detectors> section of your main XML via:
+      <include ref="GammaMagnet.xml"/>
+
+  The xpos/ypos/zpos values mirror lxs->GMagnetXpos/Ypos/Zpos.
+  fieldvolname must be unique per magnet placement across the full geometry.
+  rotate="true" applies a pi/2 rotation around Z (as in ConstructDumpMagnet).
+  support="true" places the support table and pedestal.
+-->
+<detectors>
+  <detector id="4" name="GMagnet" type="LxMagnet">
+    <magnet model="FlashMagnet"
+            xpos="GMagnetXpos"
+            ypos="GMagnetYpos"
+            zpos="GMagnetZpos"
+            rotate="false"
+            fieldvolname="logicGMagnetField"
+            support="true"/>
+  </detector>
+</detectors>

@@ -1,0 +1,71 @@
+<lccdd>
+  <info name="lxelgeo_v0"
+        title="LUXE ELBEX geometry"
+        author="LUXE collaboration"
+        url="luxe.desy.de"
+        status="development"
+        version="v0">
+    <comment>
+      LUXE geometry in XTD8.
+    </comment>
+  </info>
+
+  <materials>
+    <material name="Vacuum">
+      <D type="density" unit="g/cm3" value="0.0000000001" />
+      <fraction n="0.754" ref="Nitrogen"/>
+      <fraction n="0.234" ref="O"/>
+      <fraction n="0.012" ref="Ar"/>
+    </material>
+  </materials>
+
+
+  <includes>
+    <file ref="./dummy_elements.xml"/>
+    <file ref="./materials_gdml.xml"/>
+  </includes>
+
+
+  <define>
+    <constant name="world_x" value="30*m"/>
+    <constant name="world_y" value="30*m"/>
+    <constant name="world_z" value="50*m"/>
+
+    <constant name="Air" value="Air20" type="string"/>
+    <constant name="Vacuum" value="Vacuum" type="string"/>
+
+    <include ref="./lxs_defs.xml"/>
+  </define>
+
+
+  <limits>
+    <limitset name="cal_limits">
+      <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
+    </limitset>
+  </limits>
+
+
+  <include ref="./LxXTD8.xml"/>
+  <include ref="./LxInteractionChamber.xml"/>
+  <include ref="./DumpMagnet.xml"/>
+  <include ref="./IPMagnet.xml"/>
+  <include ref="./GammaMagnet.xml"/>
+
+
+
+  <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins
+       here at the end. They cannot be included from a common xml file.-->
+<!--
+  <plugins>
+    <plugin name="DD4hep_GenericSurfaceInstallerPlugin">
+      <argument value="Tracker"/>
+      <argument value="dimension=2"/>
+      <argument value="u_x=1."/>
+      <argument value="v_y=1."/>
+      <argument value="n_z=1."/>
+    </plugin>
+    <plugin name="InstallSurfaceManager"/>
+  </plugins>
+  -->
+
+</lccdd>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+  <!--
+    Minimal compact XML fragment for the DD4hep LxXTD8 plugin.
+
+    This detector part has no semantic substructure. The plugin builds
+    passive tunnel/floor geometry and places it directly into the DD4hep
+    world volume.
+
+    Required global inputs:
+      - constants in <define>:
+          TunnelRin
+          TunnelThickness
+          TunnelLength
+          FloorX
+          FloorSurfaceYpos
+          TunnelWallXpos
+      - material in <materials>:
+          ShieldingConcrete
+  -->
+
+  <detectors>
+    <detector name="LxXTD8" type="LxXTD8" id="8"/>
+  </detectors>
+</lccdd>

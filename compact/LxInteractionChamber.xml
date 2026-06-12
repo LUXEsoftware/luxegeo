@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal detector entry for LxInteractionChamber.
+  Include this file in the <detectors> section of your main XML via:
+      <include ref="LxInteractionChamber_dd4hep.xml"/>
+  All geometry constants are expected to be defined in the <define> section
+  of the main XML (they mirror the lxs->X member names from LXSetUp).
+
+  Mirror array parameters use indexed naming:
+      TAUIChamberNMirrors        — number of mirrors
+      TAUIChamberMirrorR_N       — mirror radius for mirror N
+      TAUIChamberMirrorD_N       — mirror thickness for mirror N
+      TAUIChamberMirrorXpos_N    — mirror X position for mirror N
+      TAUIChamberMirrorZpos_N    — mirror Z position for mirror N
+      TAUIChamberMirrorTheta_N   — mirror rotation angle (around Y) for mirror N
+      TAUIChamberMirrorName_N    — mirror name string for mirror N  (type="string")
+-->
+<detectors>
+  <detector id="2" name="LxInteractionChamber" type="LxInteractionChamber">
+  </detector>
+</detectors>

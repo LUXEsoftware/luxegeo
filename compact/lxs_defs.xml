@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<define>
+  <!-- Generated from LXSetUp constructor assignments. -->
+  <!-- Unit symbols are preserved symbolically, not numerically evaluated. -->
+  <constant name="OverlapTest" value="1"/>
+  <constant name="EnvironmentMaterial" value="Air20" type="string"/>
+  <constant name="FloorSurfaceYpos" value="-1390.0 *mm"/>
+  <constant name="FloorX" value="3808.36 *mm"/>
+  <constant name="TunnelRin" value="2300.0 *mm"/>
+  <constant name="TunnelThickness" value="2600.0 *mm - TunnelRin"/>
+  <constant name="TunnelLength" value="50.0 *m"/>
+  <constant name="TunnelWallXpos" value="1350.0 *mm"/>
+  <constant name="CeilingSurfaceYpos" value="1816.0 *mm"/>
+  <constant name="IPBoxX" value="45.0 *cm"/>
+  <constant name="IPBoxY" value="25.0 *cm"/>
+  <constant name="IPBoxZ" value="60.0 *cm"/>
+  <constant name="IPBoxThickness" value="5.0 *mm"/>
+  <constant name="BPipeR" value="24.13 *mm"/>
+  <constant name="BPipeThickness" value="1.651 *mm"/>
+  <constant name="BeamPipeMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamPipeWindowMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamCrossingAngle" value="0.3 *rad"/>
+  <constant name="BeamPipeVacuumMaterial" value="XFELVacuum" type="string"/>
+  <constant name="LaserPipeR" value="25.0 *mm"/>
+  <constant name="LaserPipeThickness" value="2.0 *mm"/>
+  <constant name="MagnetMaterial" value="Iron" type="string"/>
+  <constant name="DumpMagnetXpos" value="0.0 *mm"/>
+  <constant name="DumpMagnetYpos" value="-100.0 *mm"/>
+  <constant name="DumpMagnetZpos" value="-650.0 *cm"/>
+  <constant name="DumpMagnetX" value="40.0*cm"/>
+  <constant name="DumpMagnetY" value="20.0 *cm"/>
+  <constant name="DumpMagnetZ" value="100.0 *cm"/>
+  <constant name="DumpMagnetThickness" value="50.0 *cm"/>
+  <constant name="DumpMagFieldY" value="0.0*gauss"/>
+  <constant name="IPMagFieldY" value="-10000.0*gauss"/>
+  <constant name="DMBPipeWindow" value="pi/4.0 *rad"/>
+  <constant name="CerenkovchannelY" value="5. * mm"/>
+  <constant name="ScintCerenkovPhysics" value="0"/>
+  <constant name="ScintPhysicsYield" value="0.01"/>
+  <constant name="ScintAngle" value="15. *deg"/>
+  <constant name="ScintXpos" value="(-500. - 110.)*mm"/>
+  <constant name="ScintZpos" value="DumpMagnetZpos + (1520./2. + 275.) *mm"/>
+  <constant name="CerenkovAngle" value="0. *deg"/>
+  <constant name="CerenkovXpos" value="-605. *mm"/>
+  <constant name="CerenkovZpos" value="DumpMagnetZpos + (1520./2. + 950.) *mm"/>
+  <constant name="ScintX" value="1000. *mm"/>
+  <constant name="ScintY" value="100. *mm"/>
+  <constant name="ScintBaseZ" value="0.19 *mm"/>
+  <constant name="ScintPhosphorZ" value="0.3 *mm"/>
+  <constant name="ScintFinishZ" value="0.01 *mm"/>
+  <constant name="ScintFrameThickness" value="10. *mm"/>
+  <constant name="ScintFrameMaterial" value="Aluminium" type="string"/>
+  <constant name="ScintFrameBeamLoopX" value="15. * mm"/>
+  <constant name="BremScintFrameWidthOffset" value="15.*cm"/>
+  <constant name="CerenkovChannels" value="240"/>
+  <constant name="CerenkovStrawHeight" value="200. *mm"/>
+  <constant name="CerenkovChannelLayers" value="4"/>
+  <constant name="CerenkovStrawInnerRadius" value="4.02/2. * mm"/>
+  <constant name="CerenkovStrawGraphiteLayerThickness" value="6. * 0.001 * mm"/>
+  <constant name="CerenkovStrawAlLayerThickness" value="0.2 * 0.001 * mm"/>
+  <constant name="CerenkovStrawKaptonLayerThickness" value="25 * 0.001 * mm"/>
+  <constant name="CerenkovStrawPolyurethaneLayerThickness" value="5 * 0.001 * mm"/>
+  <constant name="CerenkovElectronicsBoardThickness" value="2. * mm"/>
+  <constant name="CerenkovShieldingPlateThickness" value="0.0001 * mm"/>
+  <constant name="CerenkovBoxThickness" value="0.9 * cm"/>
+  <constant name="CerenkovBeamWindowThickness" value="0.15 * mm"/>
+  <constant name="CerenkovStrawXFrequency" value="16. * mm"/>
+  <constant name="CerenkovStrawZFrequency" value="16. * mm"/>
+  <constant name="CerenkovStrawLayerOffset" value="4. * mm"/>
+  <constant name="CerenkovStrawPlateBuffer" value="1. * cm"/>
+  <constant name="CerenkovSupportThickness" value="1. * cm"/>
+  <constant name="CerenkovSupportPosYtoStage" value="CerenkovBoxThickness + 5. * mm"/>
+  <constant name="CerenkovBeamWindowY" value="15. * mm"/>
+  <constant name="CerenkovUpperSupporttoElectronicsBoard" value="5. * mm"/>
+  <constant name="CerenkovTotalBoxHeight" value="CerenkovStrawHeight + 2*CerenkovBoxThickness + 2* CerenkovSupportThickness + CerenkovElectronicsBoardThickness + CerenkovUpperSupporttoElectronicsBoard + 5. * mm"/>
+  <constant name="CerenkovTotalBoxLength" value="2*((CerenkovChannels/CerenkovChannelLayers - 1)*CerenkovStrawXFrequency/2. + (CerenkovChannelLayers-1)*CerenkovStrawLayerOffset/2. + CerenkovStrawInnerRadius + 2*(CerenkovStrawGraphiteLayerThickness+CerenkovStrawAlLayerThickness+CerenkovStrawKaptonLayerThickness+CerenkovStrawPolyurethaneLayerThickness) + CerenkovStrawPlateBuffer + CerenkovBoxThickness + CerenkovShieldingPlateThickness)"/>
+  <constant name="ScintBaseMaterial" value="G4_POLYETHYLENE" type="string"/>
+  <constant name="ScintPhosphorMaterial" value="G4_GADOLINIUM_OXYSULFIDE" type="string"/>
+  <constant name="ScintFinishMaterial" value="G4_POLYETHYLENE" type="string"/>
+  <constant name="CerenkovMetal" value="Aluminium" type="string"/>
+  <constant name="CerenkovMedium" value="Air20Refractive" type="string"/>
+  <constant name="CerenkovStrawGraphiteLayerMaterial" value="G4_GRAPHITE" type="string"/>
+  <constant name="CerenkovStrawAlLayerMaterial" value="Aluminium" type="string"/>
+  <constant name="CerenkovStrawKaptonLayerMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="CerenkovStrawPolyurethaneLayerMaterial" value="G4_POLYETHYLENE" type="string"/>
+  <constant name="CerenkovElectronicsBoardMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="CerenkovShieldingPlateMaterial" value="Air20" type="string"/>
+  <constant name="ScintCameraX" value="29. *mm"/>
+  <constant name="ScintCameraY" value="29. *mm"/>
+  <constant name="ScintCameraZ" value="42. *mm"/>
+  <constant name="ScintCameraAngle" value="22. *deg"/>
+  <constant name="ScintCameraApertureZ" value="12. *mm"/>
+  <constant name="ScintCameraApertureOuter" value="29. *mm"/>
+  <constant name="ScintCameraApertureInner" value="20. *mm"/>
+  <constant name="ScintCameraShieldThickness" value="2. *cm"/>
+  <constant name="ScintCameraSupportThickness" value="5. *cm"/>
+  <constant name="ScintCameraPlatformZ" value="15. *cm"/>
+  <constant name="StickScintScreentoBeamWindow" value="0"/>
+  <constant name="ScintCameraMaterial" value="Aluminium" type="string"/>
+  <constant name="ScintCameraShieldMaterial" value="Lead" type="string"/>
+  <constant name="ScintCameraApertureMaterial" value="Air20" type="string"/>
+  <constant name="ScintCameraSupportMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamDumpR" value="13.0 *cm"/>
+  <constant name="BeamDumpZ" value="50.0 *cm"/>
+  <constant name="BeamDumpFrontZpos" value="350 *cm + DumpMagnetZpos + DumpMagnetZ/2.0"/>
+  <constant name="BeamDumpFrontXpos" value="13.5 *cm"/>
+  <constant name="BeamDumpYpos" value="0.0 *mm"/>
+  <constant name="BeamDumpAngle" value="atan2(BeamDumpFrontXpos, fabs(BeamDumpFrontZpos - DumpMagnetZpos))"/>
+  <constant name="BeamDumpZpos" value="BeamDumpFrontZpos + 0.5*BeamDumpZ*cos(BeamDumpAngle)"/>
+  <constant name="BeamDumpXpos" value="BeamDumpFrontXpos + 0.5*BeamDumpZ*sin(BeamDumpAngle)"/>
+  <constant name="DumpBeamHoleRin" value="BPipeR - BPipeThickness"/>
+  <constant name="DumpBeamHoleRout" value="BPipeR - BPipeThickness"/>
+  <constant name="BeamDumpMaterial" value="Copper" type="string"/>
+  <constant name="BeamDumpInsertR" value="6.5 *cm"/>
+  <constant name="BeamDumpInsertZ" value="20.0 *cm"/>
+  <constant name="BeamDumpInsertMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamDumpProductionCut" value="5.0 *cm"/>
+  <constant name="BeamDumpPipeMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamDumpPipeR" value="0.5*63.0 *mm"/>
+  <constant name="BeamDumpPipeThickness" value="1.0 *mm"/>
+  <constant name="DumpCleanMagZpoz" value="-290.0 *cm"/>
+  <constant name="DumpCleanMagZ" value="100.0 *cm"/>
+  <constant name="DumpCleanMagX" value="20.0 *cm"/>
+  <constant name="DumpCleanMagY" value="20.0 *cm"/>
+  <constant name="DumpCleanMagThickness" value="20.0 *cm"/>
+  <constant name="DumpCleanMagField" value="14000.0*gauss"/>
+  <constant name="ShieldingMaterial" value="Iron" type="string"/>
+  <constant name="ShieldingZpos" value="0.0 *cm"/>
+  <constant name="ShieldingX" value="300.0 *cm"/>
+  <constant name="ShieldingY" value="290.0 *cm"/>
+  <constant name="ShieldingDXBeamWall" value="61.5 *cm"/>
+  <constant name="ShieldingZ" value="150.0 *cm"/>
+  <constant name="ShieldingDeepZ" value="100.0 *cm"/>
+  <constant name="ShieldingDeepMargine" value="2.0 *cm"/>
+  <constant name="ShieldingProductionCut" value="5.0 *cm"/>
+  <constant name="ShieldingAbsorberX" value="20.0 *cm"/>
+  <constant name="ShieldingAbsorberZ" value="20.0 *cm"/>
+  <constant name="ShieldingAbsorberMaterial" value="Lead" type="string"/>
+  <constant name="ShieldingAbsorberSlitX" value="2.0 *cm"/>
+  <constant name="ShieldingAbsorberSlitZ" value="5.0 *cm"/>
+  <constant name="ShieldingAbsorberTopZ" value="30.0 *cm"/>
+  <constant name="BeamPipeSplitterZ" value="100.0 *cm"/>
+  <constant name="IPMagnetXpos" value="0.0 *mm"/>
+  <constant name="IPMagnetYpos" value="0.0 *mm"/>
+  <constant name="IPMagnetZpos" value="(150.0 + 55.0) *cm"/>
+  <constant name="OPPPDetZtoMagnet" value="130.0 *cm"/>
+  <constant name="OPPPDetXPos" value="BPipeR + 5.0*mm"/>
+  <constant name="OPPPDetYLowPos" value="150.0 *mm"/>
+  <constant name="OPPPDetX" value="100.0 *cm"/>
+  <constant name="OPPPDetY" value="10.0 *cm"/>
+  <constant name="OPPPDetZ" value="70.0 *cm"/>
+  <constant name="OPPPDetMaterial" value="Air20" type="string"/>
+  <constant name="OPPPTrackerX" value="OPPPDetX"/>
+  <constant name="OPPPTrackerY" value="OPPPDetY"/>
+  <constant name="OPPPTrackerZ" value="0.05 *mm"/>
+  <constant name="OPPPTrackerDZ" value="10.0 *cm"/>
+  <constant name="OPPPTrackerNLayers" value="4"/>
+  <constant name="OPPPTrackerMaterial" value="Silicon" type="string"/>
+  <constant name="OPPPTrackerNCellX" value="34200"/>
+  <constant name="OPPPTrackerNCellY" value="3720"/>
+  <constant name="OPPPCaloX" value="OPPPDetX"/>
+  <constant name="OPPPCaloY" value="OPPPDetY"/>
+  <constant name="OPPPCaloZ" value="OPPPDetZ - OPPPTrackerNLayers * (OPPPTrackerZ + OPPPTrackerDZ)"/>
+  <constant name="OPPPCaloMaterial" value="Tungsten" type="string"/>
+  <constant name="BTargetX" value="10.0 *cm"/>
+  <constant name="BTargetY" value="10.0 *cm"/>
+  <constant name="BTargetZ" value="0.035 *mm"/>
+  <constant name="BTargetChamberMagnetGapZ" value="20.0 *cm"/>
+  <constant name="BTargetMaterial" value="Tungsten" type="string"/>
+  <constant name="TargetChamberX" value="300.0 *mm"/>
+  <constant name="TargetChamberY" value="300.0 *mm"/>
+  <constant name="TargetChamberZ" value="10.0 *cm"/>
+  <constant name="TargetChamberXPos" value="8.0 *cm"/>
+  <constant name="TargetChamberThickness" value="5.0 *mm"/>
+  <constant name="TargetChamberMaterial" value="Aluminium" type="string"/>
+  <constant name="TargetChamberMotorMaterial" value="StainlessSteel" type="string"/>
+  <constant name="TargetChamberMotorX" value="150.0 *mm"/>
+  <constant name="TargetChamberMotorY" value="15.0 *mm"/>
+  <constant name="TargetChamberMotorZ" value="45.0 *mm"/>
+  <constant name="TargetFrameD" value="15.0 *mm"/>
+  <constant name="TargetFrameZ" value="10.0 *mm"/>
+  <constant name="TargetFrameMaterial" value="Aluminium" type="string"/>
+  <constant name="TargetFrameHolderR" value="1.5 * TargetFrameZ"/>
+  <constant name="TargetFrameHolderGroveY" value="5.0 *mm"/>
+  <constant name="ChamberTargetVolX" value="BTargetX"/>
+  <constant name="ChamberTargetVolY" value="BTargetY"/>
+  <constant name="ChamberTargetVolZ" value="TargetFrameZ"/>
+  <constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(DumpMagnetZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/>
+  <constant name="BPipeRLG" value="BPipeR"/>
+  <constant name="GTargetX" value="5.0 *cm"/>
+  <constant name="GTargetY" value="5.0 *cm"/>
+  <constant name="GTargetZ" value="0.01 *mm"/>
+  <constant name="GTargetZpos" value="6.5 *m"/>
+  <constant name="GTargetMaterial" value="Tungsten" type="string"/>
+  <constant name="GTargetType" value="tfoil" type="string"/>
+  <constant name="GTargetContainerX" value="2.0 * GTargetX"/>
+  <constant name="GTargetContainerY" value="2.0 * GTargetX"/>
+  <!--constant name="GTargetContainerZ" value="(GTargetZ &lt; 1.0*cm) ? 10.0 *cm : 2.0 * GTargetZ"/-->
+  <constant name="GTargetContainerZ" value="10.0 *cm"/>
+  <constant name="CollimatorMaterial" value="Lead" type="string"/>
+  <constant name="CollimatorSupportMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="CollimatorZ" value="50.0 *cm"/>
+  <constant name="CollimatorZpos" value="GTargetZpos + CollimatorZ/2.0 + 50.0*cm"/>
+  <constant name="CollimatorRout" value="5.0 *cm"/>
+  <constant name="CollimatorRin" value="0.4 *cm"/>
+  <constant name="GMagnetXpos" value="0.0 *cm"/>
+  <constant name="GMagnetYpos" value="0.0 *cm"/>
+  <constant name="GMagnetY" value="97.0 *cm"/>
+  <constant name="GMagnetX" value="73.75 *cm"/>
+  <constant name="GMagnetZ" value="128.0 *cm"/>
+  <constant name="GMagnetZpos" value="CollimatorZpos + 1.5*CollimatorZ + GMagnetZ/2.0 + 2.0*50.0*cm"/>
+  <constant name="GMagFieldY" value="1.0*tesla"/>
+  <constant name="GMagCoilThickness" value="150.0* mm"/>
+  <constant name="GMagCoilH" value="160.0* mm"/>
+  <constant name="GMagnetCutX" value="36.0*cm"/>
+  <constant name="GMagnetCutY" value="47.0*cm"/>
+  <constant name="GMagneteffY" value="5.0*cm"/>
+  <constant name="GMagnetCoreX" value="18.0*cm"/>
+  <constant name="GMFieldX" value="30.0*cm"/>
+  <constant name="GMFieldLength" value="980.0 *mm"/>
+  <constant name="QBeamPipeContainerX" value="GMagnetCoreX"/>
+  <constant name="GChamberTBWallThickness" value="5.0 *mm"/>
+  <constant name="GammaBPipeWindowThickness" value="0.5 *mm"/>
+  <constant name="WideBeamPipeContainerX" value="GMagnetCutX - GMFieldX"/>
+  <constant name="GammaMagnetBeamPipeXGap" value="1.0 *mm"/>
+  <constant name="ComptonDetX" value="100.0 *cm"/>
+  <constant name="ComptonDetY" value="10.0 *cm"/>
+  <constant name="ComptonDetZ" value="50.0 *cm"/>
+  <constant name="ComptonDetXpos" value="10.0 *cm + ComptonDetX/2.0"/>
+  <constant name="ComptonDetYpos" value="0.0 *cm"/>
+  <constant name="ComptonDetZpos" value="GMagnetZpos + 0.75 *m + 0.5*(ComptonDetZ + GMFieldLength)"/>
+  <constant name="ComptonDetMaterial" value="Air20" type="string"/>
+  <constant name="ComptonLysoX" value="100.0*cm"/>
+  <constant name="ComptonLysoY" value="5.0 *cm"/>
+  <constant name="ComptonLysoZ" value="0.5 *mm"/>
+  <constant name="ComptonLysoNCellX" value="2000"/>
+  <constant name="ComptonLysoNCellY" value="100"/>
+  <constant name="ComptonLysoMaterial" value="G4_GADOLINIUM_OXYSULFIDE" type="string"/>
+  <constant name="ComptonLysoZpos" value="GMagnetZpos + 0.75 *m + 0.5*(ComptonLysoZ + GMFieldLength)"/>
+  <constant name="ComptonLysoXpos" value="1.0 *cm + ComptonLysoX/2.0"/>
+  <constant name="LYSODetTopPlateX" value="520.0 *mm"/>
+  <constant name="LYSODetTopPlateZ" value="70.0 *mm"/>
+  <constant name="LYSODetBottomSupportX" value="520.0 *mm"/>
+  <constant name="LYSODetBottomSupportZ" value="350.0 *mm"/>
+  <constant name="LYSODetSupportBallH" value="20.0 *mm"/>
+  <constant name="LYSOPedestaMaterial" value="Aluminium" type="string"/>
+  <constant name="LYSOBasePlateX" value="2.0*(LYSODetTopPlateX + 1.0 *cm)"/>
+  <constant name="LYSOBasePlateY" value="100.0 *mm"/>
+  <constant name="LYSOBasePlateZ" value="500.0 *mm"/>
+  <constant name="ComptonTrackerX" value="ComptonDetX"/>
+  <constant name="ComptonTrackerY" value="ComptonDetY"/>
+  <constant name="ComptonTrackerZ" value="0.05 *mm"/>
+  <constant name="ComptonTrackerDZ" value="5.0 *cm"/>
+  <constant name="ComptonTrackerNLayers" value="4"/>
+  <constant name="ComptonTrackerMaterial" value="Silicon" type="string"/>
+  <constant name="ComptonTrackerNCellX" value="34200"/>
+  <constant name="ComptonTrackerNCellY" value="3720"/>
+  <constant name="ComptonCaloX" value="ComptonDetX"/>
+  <constant name="ComptonCaloY" value="ComptonDetY"/>
+  <constant name="ComptonCaloZ" value="ComptonDetZ - ComptonTrackerNLayers * (ComptonTrackerZ + ComptonTrackerDZ)"/>
+  <constant name="ComptonCaloMaterial" value="Tungsten" type="string"/>
+  <constant name="GammaDumpProductionCut" value="1.0 *mm"/>
+  <constant name="GammaBeamDumpZpos" value="ComptonDetZpos + 3.0 *m"/>
+  <constant name="GammaBeamDumpZ" value="100.0 *cm"/>
+  <constant name="GammaBeamDumpR" value="20.0 *cm"/>
+  <constant name="GammaBeamDumpMaterial" value="G4_W" type="string"/>
+  <constant name="GammaBeamDumpSupportMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="GammaBeamDumpPlugRin" value="BPipeRLG"/>
+  <constant name="GammaBeamDumpPlugZ" value="15.0 *cm"/>
+  <constant name="GammaBeamDumpPlugMaterial" value="Copper" type="string"/>
+  <constant name="GammaBeamDumpShieldingX" value="1800.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingY" value="2600.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingZ" value="1600.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="GammaBeamDumpShieldingGapX" value="800.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingGapY" value="800.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingPlugZ" value="1000.0 *mm"/>
+  <constant name="GammaBeamDumpShieldingPlugMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="GammaBeamDumpWrapMaterial" value="G4_Pb" type="string"/>
+  <constant name="GammaBeamDumpWrapR" value="50.0 *cm"/>
+  <constant name="GammaBeamDumpBSMRAirR" value="100.0*mm"/>
+  <constant name="GammaBeamDumpBSMRAirGapZ" value="200.0*mm"/>
+  <constant name="GammaBeamDumpMagnetGapZ" value="50.0 *mm"/>
+  <constant name="GammaBeamDumpMagnetThick" value="100.0 *mm"/>
+  <constant name="GammaBeamDumpMagnetMaterial" value="G4_Fe" type="string"/>
+  <constant name="GammaBeamDumpMagField" value="1.5 *tesla"/>
+  <constant name="GammaMonitorDetMaterial" value="Air20" type="string"/>
+  <constant name="GammaMonitorSupportMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="GammaMonitorHolderMaterial" value="StainlessSteel" type="string"/>
+  <constant name="GammaCaloZ" value="50.0 *cm"/>
+  <constant name="GammaCaloZpos" value="GammaBeamDumpZpos - 0.5*(GammaBeamDumpZ + GammaCaloZ) - 100.0*mm"/>
+  <constant name="GammaCaloMaterial" value="LG_TF1" type="string"/>
+  <constant name="GammaCaloFoilMaterial" value="Aluminium" type="string"/>
+  <constant name="GammaCaloFoilThickness" value="0.016 *mm"/>
+  <constant name="LeadGlassX" value="3.8 *cm"/>
+  <constant name="LeadGlassY" value="3.8 *cm"/>
+  <constant name="LeadGlassZ" value="45.0 *cm"/>
+  <constant name="CalSupportMaterial" value="StainlessSteel" type="string"/>
+  <constant name="CalSupportR" value="12.0 *cm"/>
+  <constant name="CalSupporthickness" value="1.0 *cm"/>
+  <constant name="CAbsorberMaterial" value="Lead" type="string"/>
+  <constant name="CAbsorberThickness" value="40.0 *mm"/>
+  <constant name="CAbsorberZpos" value="GammaBeamDumpZpos - 0.5*(GammaBeamDumpZ + CAbsorberThickness) - 20.0*mm"/>
+  <constant name="ComptShieldingMaterial" value="Iron" type="string"/>
+  <constant name="ComptShieldingMaterial2" value="Aluminium" type="string"/>
+  <constant name="ComptShieldingZpos" value="ComptonDetZpos + 1.3 *m"/>
+  <constant name="ComptShieldingX" value="180.0 *cm"/>
+  <constant name="ComptShieldingY" value="260 *cm"/>
+  <constant name="ComptShieldingZ" value="80.0 *cm"/>
+  <constant name="ComptShieldingProductionCut" value="5.0 *cm"/>
+  <constant name="ComptShieldingSuppY" value="1.0 *m"/>
+  <constant name="ComptShieldingPlateMaterial" value="Lead" type="string"/>
+  <constant name="IPChamberMaterial" value="StainlessSteel" type="string"/>
+  <constant name="IPRmin" value="452.44 *mm"/>
+  <constant name="IPRmax" value="457.20 *mm"/>
+  <constant name="IPHight" value="269.88 *mm"/>
+  <constant name="IPRHoleCut" value="76.505 *mm"/>
+<!-- These are probably not used, it is for the first cylindical version fo the IP chamber -->
+  <constant name="IPChamberPipeLength" value="47.15 *mm"/>
+  <constant name="IPChamberPipeFlangedR" value="20.0 *mm"/>
+  <constant name="IPChamberPipeFlangeThickness" value="10.0 *mm"/>
+  <constant name="IPChamberBottomThickness" value="22.23 *mm"/>
+  <constant name="IPChamberTopThickness" value="12.7 *mm"/>
+  <constant name="IPChamberTopR" value="514.35 *mm"/>
+  <constant name="IPChamberSupportH" value="-0.5*IPHight - IPChamberBottomThickness - FloorSurfaceYpos"/>
+  <constant name="IPChamberSupportR" value="40.0 *mm"/>
+  <constant name="IPChamberSupportRpos" value="0.7*IPRmin"/>
+<!-- ^^^ cylindrical IP chamber ^^^ -->
+  <constant name="TypMBMagnetX" value="1196.0 *mm"/>
+  <constant name="TypMBMagnetY" value="672.0 *mm"/>
+  <constant name="TypMBMagnetZ" value="1520.0 *mm"/>
+  <constant name="TypMBMagnetCoreZ" value="1396.0 *mm"/>
+  <constant name="TypMBMagnetHoleX" value="330.0 *mm"/>
+  <constant name="TypMBMagnetEndCapHoleX" value="371.0 *mm"/>
+  <constant name="TypMBMagnetEndCapHoleOutX" value="428.74 *mm"/>
+  <constant name="TypMBMagnetHoleY" value="108.0 *mm"/>
+  <constant name="TypMBMagnetEndCapZ" value="50.0 *mm"/>
+  <constant name="TypMBMagnetEndCapW" value="804.0 *mm"/>
+  <constant name="TypMBFieldLength" value="1029 *mm"/>
+  <constant name="TypMBWireMaterial" value="Copper" type="string"/>
+  <constant name="TypMBWireGap" value="20.0 *mm"/>
+  <constant name="TypMBWireXW" value="100.0 *mm"/>
+  <constant name="TypMBWireXT" value="50.0 *mm"/>
+  <constant name="TypMBCoreL" value="1080.0 *mm"/>
+  <constant name="TypMBWireL" value="TypMBCoreL + 2.0*TypMBWireGap"/>
+  <constant name="TypMBWireH" value="330.0 *mm"/>
+  <constant name="TypMBWireYShift" value="100.0*mm"/>
+  <constant name="TypMBCoreW" value="TypMBWireH + 2.0*(TypMBWireXW + TypMBWireGap)"/>
+  <constant name="TypMBCoreT" value="0.5*(TypMBMagnetY - TypMBMagnetHoleY)"/>
+  <constant name="TypMBWedgeLFraction" value="0.3"/>
+  <constant name="TypMBSupportH" value="-FloorSurfaceYpos - TypMBMagnetY/2.0"/>
+  <constant name="TypMBSupportV" value="-FloorSurfaceYpos - TypMBMagnetX/2.0"/>
+  <constant name="TypMBSupportR" value="40.0 *mm"/>
+  <constant name="TypMBSupportPosDz" value="800.0 *mm"/>
+  <constant name="TypMBSupportPosDx" value="0.7*TypMBMagnetX"/>
+  <constant name="FlashMMiddleCutY" value="310.32 *mm"/>
+  <constant name="FlashMMiddleCutX" value="570.0 *mm"/>
+  <constant name="FlashMFieldGapY" value="59.92 *mm"/>
+  <constant name="FlashMagnetX" value="980.0 *mm"/>
+  <constant name="FlashMagnetY" value="700.0 *mm"/>
+  <constant name="FlashMagnetZ" value="1200.0 *mm"/>
+  <constant name="FlashMagnetCutD" value="50.0 *mm"/>
+  <constant name="FlashMagnetCoilZ" value="1440.0 *mm"/>
+  <constant name="FlashMagnetCoilD" value="100.0 *mm"/>
+  <constant name="FlashMagnetCoilH" value="110.0 *mm"/>
+  <constant name="FlashMagnetCoilGapH" value="10.0 *mm"/>
+  <constant name="FlashMagnetCoreX" value="FlashMMiddleCutX - 2.0*FlashMagnetCoilH - 4.0*FlashMagnetCoilGapH"/>
+  <constant name="FlashMagnetCoreZ" value="1200.0 *mm"/>
+  <constant name="FlashMFieldX" value="FlashMMiddleCutX"/>
+  <constant name="FlashMagneteffY" value="FlashMFieldGapY"/>
+  <constant name="FlashMFieldLength" value="FlashMagnetCoreZ"/>
+  <constant name="IPMAgnetBeamPipeXGap" value="1.0 *mm"/>
+  <constant name="VacChamberMaterial" value="BeamPipeMaterial" type="string"/>
+  <constant name="VacChamberSideMaterial" value="BeamPipeMaterial" type="string"/>
+  <constant name="VacChamberWindowMaterial" value="Aluminium" type="string"/>
+  <constant name="VacChamberXZWallThickness" value="20.0 *mm"/>
+  <constant name="VacChamberDetXZWidth" value="580.0*mm"/>
+  <constant name="VacChamberMagXZWidth" value="FlashMFieldX - 2.0*IPMAgnetBeamPipeXGap"/>
+  <constant name="VacChambertoOPPPDetZGap" value="20.0 *mm"/>
+  <constant name="VacChamberHight" value="TypMBMagnetHoleY"/>
+  <constant name="VacChamberWindowThickness" value="0.30 *mm"/>
+  <constant name="VacChamberWindowX" value="500.0 *mm"/>
+  <constant name="VacChamberWindowY" value="20.0 *mm"/>
+  <constant name="VacChamberSideWallThickness" value="20.0 *mm"/>
+  <constant name="VacChamberFrontThickness" value="20.0 *mm"/>
+  <constant name="VacChamberFrontCutX" value="500.0 *mm"/>
+  <constant name="VacChamberFrontCutY" value="20.0 *mm"/>
+  <constant name="VacChamberFrontCutXpos" value="45.0 *mm"/>
+  <constant name="VacChamberWindowPanelX" value="556.0 *mm"/>
+  <constant name="VacChamberWindowPanelY" value="76.0 *mm"/>
+  <constant name="VacChamberWindowPanelZ" value="10.0 *mm"/>
+  <constant name="VacChamberWindowPanelXpos" value="0.5 * 16.5 *mm"/>
+  <constant name="VacChamberWindowPanelCutY" value="20.0 *mm"/>
+  <constant name="VacChamberWindowPanelCutX" value="500.0 *mm"/>
+  <constant name="VacChamberWindowPanelCutXpos" value="28 *mm"/>
+  <constant name="VacChamberReinforceBarX" value="0.5*65.0 *mm"/>
+  <constant name="VacChamberReinforceBarZ" value="30.0 *mm"/>
+  <constant name="VacChamberReinforceFilletXZ" value="15.0 *mm"/>
+  <constant name="VacChamberFrameLX" value="30.0 *mm"/>
+  <constant name="VacChamberFrameLY" value="60.0 *mm"/>
+  <constant name="VacChamberFrameHX" value="305.0 *mm"/>
+  <constant name="VacChamberFrameHY" value="60.0 *mm"/>
+  <constant name="VacChamberFrameHZ" value="30.0 *mm"/>
+  <constant name="TAUIChamberMaterial" value="StainlessSteel" type="string"/>
+  <constant name="TAUIChamberBottomX" value="1620.0 *mm"/>
+  <constant name="TAUIChamberBottomY" value="45.0 *mm"/>
+  <constant name="TAUIChamberBottomZ" value="2120.0 *mm"/>
+  <constant name="TAUIChamberX" value="1500.0 *mm"/>
+  <constant name="TAUIChamberY" value="550.0 *mm"/>
+  <constant name="TAUIChamberZ" value="2000.0 *mm"/>
+  <constant name="TAUIChamberTopX" value="TAUIChamberBottomX"/>
+  <constant name="TAUIChamberTopZ" value="TAUIChamberBottomZ"/>
+  <constant name="TAUIChamberTopY" value="TAUIChamberBottomY"/>
+  <constant name="TAUIChamberSideThickness" value="30.0 *mm"/>
+  <constant name="TAUIChamberFrontThickness" value="30.0 *mm"/>
+  <constant name="TAUIChamberXpos" value="0.5*TAUIChamberX - TAUIChamberSideThickness - 920.0 *mm"/>
+  <constant name="TAUIChamberYpos" value="-0.5*TAUIChamberY - TAUIChamberBottomY + 270.0 *mm"/>
+  <constant name="TAUIChamberZpos" value="0.5*TAUIChamberZ - TAUIChamberSideThickness - 807.52 *mm"/>
+  <constant name="TAUIChamberBeamBottomY" value="TAUIChamberY/2.0 + TAUIChamberBottomY - TAUIChamberYpos"/>
+  <constant name="TAUIChamberSupportR" value="0.5* 168.30 *mm"/>
+  <constant name="TAUIChamberSupportH" value="-TAUIChamberBeamBottomY - FloorSurfaceYpos"/>
+  <constant name="TAUIChamberPipeLength" value="(100.0 + 20.0)*mm"/>
+  <constant name="TAUIChamberPipeFlangedH" value="65.0 *mm"/>
+  <constant name="TAUIChamberPipeFlangedL" value="20.0 *mm"/>
+  <constant name="IPContainerZ" value="TAUIChamberZ + 2.0*TAUIChamberPipeLength"/>
+  <constant name="TAUIChamberElPipeRIn" value="100.0 *mm"/>
+  <constant name="TAUIChamberElPipeROut" value="115.0 *mm"/>
+  <constant name="TAUIChamberBBoardX" value="TAUIChamberX - 2.0*TAUIChamberSideThickness - 100.0 *mm"/>
+  <constant name="TAUIChamberBBoardY" value="12.6 *mm"/>
+  <constant name="TAUIChamberBBoardZ" value="TAUIChamberZ - 2.0*TAUIChamberSideThickness - 100.0 *mm"/>
+  <constant name="TAUIChamberBBoardGapY" value="10.0 *mm"/>
+  <constant name="TAUIChamberBBoardMaterial" value="StainlessSteel" type="string"/>
+  <constant name="TAUIChamberMirrorMaterial" value="G4_SILICON_DIOXIDE" type="string"/>
+  <!-- skipped vector TAUIChamberMirrorR = {110.0*mm, 110.0*mm, 110.0*mm, 110.0*mm, 82.5*mm, 82.5*mm} -->
+  <!-- skipped vector TAUIChamberMirrorD = {28.0*mm, 28.0*mm, 28.0*mm, 28.0*mm, 21.0*mm, 21.0*mm} -->
+  <!-- skipped vector TAUIChamberMirrorTheta = {5.0*pi/4.0, 5.0*pi/4.0, -5.0*pi/4.0, pi/4.0, pi, 0.0} -->
+  <!-- skipped vector TAUIChamberMirrorXpos = {-720.0*mm, -370.0*mm, -145.0*mm, 165.0*mm, -160.0*mm, 160.0*mm} -->
+  <!-- skipped vector TAUIChamberMirrorZpos = {-525.0*mm, -225.0*mm, -525.0*mm, -225.0*mm, 505.0*mm, -505.0*mm} -->
+  <!-- skipped vector TAUIChamberMirrorName = {&quot;_0&quot;, &quot;_1&quot;, &quot;_2&quot;, &quot;_3&quot;, &quot;_4&quot;, &quot;_5&quot;} -->
+<!-- TAUIChamberMirrorR -->
+
+  <constant name="TAUIChamberNMirrors" value="6"/>
+
+  <constant name="TAUIChamberMirrorR_0" value="110.0*mm"/>
+  <constant name="TAUIChamberMirrorR_1" value="110.0*mm"/>
+  <constant name="TAUIChamberMirrorR_2" value="110.0*mm"/>
+  <constant name="TAUIChamberMirrorR_3" value="110.0*mm"/>
+  <constant name="TAUIChamberMirrorR_4" value="82.5*mm"/>
+  <constant name="TAUIChamberMirrorR_5" value="82.5*mm"/>
+
+<!-- TAUIChamberMirrorD -->
+  <constant name="TAUIChamberMirrorD_0" value="28.0*mm"/>
+  <constant name="TAUIChamberMirrorD_1" value="28.0*mm"/>
+  <constant name="TAUIChamberMirrorD_2" value="28.0*mm"/>
+  <constant name="TAUIChamberMirrorD_3" value="28.0*mm"/>
+  <constant name="TAUIChamberMirrorD_4" value="21.0*mm"/>
+  <constant name="TAUIChamberMirrorD_5" value="21.0*mm"/>
+
+<!-- TAUIChamberMirrorTheta -->
+  <constant name="TAUIChamberMirrorTheta_0" value="5.0*pi/4.0"/>
+  <constant name="TAUIChamberMirrorTheta_1" value="5.0*pi/4.0"/>
+  <constant name="TAUIChamberMirrorTheta_2" value="-5.0*pi/4.0"/>
+  <constant name="TAUIChamberMirrorTheta_3" value="pi/4.0"/>
+  <constant name="TAUIChamberMirrorTheta_4" value="pi"/>
+  <constant name="TAUIChamberMirrorTheta_5" value="0.0"/>
+
+<!-- TAUIChamberMirrorXpos -->
+  <constant name="TAUIChamberMirrorXpos_0" value="-720.0*mm"/>
+  <constant name="TAUIChamberMirrorXpos_1" value="-370.0*mm"/>
+  <constant name="TAUIChamberMirrorXpos_2" value="-145.0*mm"/>
+  <constant name="TAUIChamberMirrorXpos_3" value="165.0*mm"/>
+  <constant name="TAUIChamberMirrorXpos_4" value="-160.0*mm"/>
+  <constant name="TAUIChamberMirrorXpos_5" value="160.0*mm"/>
+
+<!-- TAUIChamberMirrorZpos -->
+  <constant name="TAUIChamberMirrorZpos_0" value="-525.0*mm"/>
+  <constant name="TAUIChamberMirrorZpos_1" value="-225.0*mm"/>
+  <constant name="TAUIChamberMirrorZpos_2" value="-525.0*mm"/>
+  <constant name="TAUIChamberMirrorZpos_3" value="-225.0*mm"/>
+  <constant name="TAUIChamberMirrorZpos_4" value="505.0*mm"/>
+  <constant name="TAUIChamberMirrorZpos_5" value="-505.0*mm"/>
+
+<!-- TAUIChamberMirrorName -->
+  <constant name="TAUIChamberMirrorName_0" type="string" value="_0"/>
+  <constant name="TAUIChamberMirrorName_1" type="string" value="_1"/>
+  <constant name="TAUIChamberMirrorName_2" type="string" value="_2"/>
+  <constant name="TAUIChamberMirrorName_3" type="string" value="_3"/>
+  <constant name="TAUIChamberMirrorName_4" type="string" value="_4"/>
+  <constant name="TAUIChamberMirrorName_5" type="string" value="_5"/>
+
+  <constant name="TAUIChamberMirrorR_0" value="110.0*mm"/>
+  <constant name="TAUIChamberMirrorR_1" value="110.0*mm"/>
+
+  <constant name="TAUIChamberMirrorHolderMaterial" value="Aluminium" type="string"/>
+  <constant name="TAUIChamberMirrorRingH" value="10.0 *mm"/>
+  <constant name="TAUIChamberMirrorRingMaterial" value="Aluminium" type="string"/>
+  <constant name="ICBBoardTableGapY" value="155.0 *mm"/>
+  <constant name="ICBBoardTableX" value="1220.0 *mm"/>
+  <constant name="ICBBoardTableY" value="555.0 *mm"/>
+  <constant name="ICBBoardTableZ" value="1600.0 *mm"/>
+  <constant name="ICBBoardTableLegR" value="145.0 *mm"/>
+  <constant name="IPVolumeZ" value="0.025 *mm"/>
+  <constant name="IPVolumeR" value="50.0 *mm"/>
+  <constant name="OPPPDetOffsetZ" value="5.0 *mm"/>
+  <constant name="OPPPDetSupportMaterial" value="StainlessSteel" type="string"/>
+  <constant name="OPPPDetBottomSupportX" value="580.0 *mm"/>
+  <constant name="OPPPDetBottomSupportY" value="20.0 *mm"/>
+  <constant name="OPPPDetBottomSupportZ" value="560.0 *mm"/>
+  <constant name="OPPPDetSupportBallH" value="28.28 *mm"/>
+  <constant name="OPPPDetTopPlateX" value="580.0 *mm"/>
+  <constant name="OPPPDetTopPlateY" value="15.0 *mm"/>
+  <constant name="OPPPDetTopPlateZ" value="360.0 *mm"/>
+  <constant name="OPPPAngleHolderX" value="8.0 *mm"/>
+  <constant name="OPPPAngleHolderY" value="20.0 *mm"/>
+  <constant name="OPPPAngleHolderZ" value="25.0 *mm"/>
+  <constant name="OPPPAngleHolderH" value="5.0 *mm"/>
+  <constant name="OPPPAngleHolderT" value="3.0 *mm"/>
+  <constant name="OPPPAngleHolderBaseX" value="13.0 *mm"/>
+  <constant name="OPPPAngleHolderBaseY" value="10.0 *mm"/>
+  <constant name="OPPPAngleHolderBaseT" value="5.0 *mm"/>
+  <constant name="OPPPAngleHolderLCutX" value="4 *mm"/>
+  <constant name="OPPPAngleHolderLCutY" value="8 *mm"/>
+  <constant name="OPPPAngleHolderRCutR" value="2 *mm"/>
+  <constant name="OPPPAngleHolderTopCutXY" value="1.5 *mm"/>
+  <constant name="OPPPColdPlateMaterial" value="ColdPlateMaterial" type="string"/>
+  <constant name="OPPPFrameMaterial" value="CarbonFiber" type="string"/>
+  <constant name="OPPPStaveSideMaterial" value="StaveEndCapMaterial" type="string"/>
+  <constant name="OPPPStaveHolderMaterial" value="Aluminium" type="string"/>
+  <constant name="OPPPColdPlateCarbonFiberThikness" value="0.165 *mm"/>
+  <constant name="OPPPColdPlateEpoxyThikness" value="0.100 *mm"/>
+  <constant name="OPPPCoolingPipeR" value="(0.5*1.024 + 0.025) *mm"/>
+  <constant name="OPPPCoolingPipeWall" value="0.025 *mm"/>
+  <constant name="OPPPCoolingPipeYpos" value="3.0 *mm"/>
+  <constant name="OPPPCoolingPipeMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="OPPPCoolingMaterial" value="G4_WATER" type="string"/>
+  <constant name="OPPPColdPlateX" value="290.0 *mm"/>
+  <constant name="OPPPColdPlateY" value="15.0 *mm"/>
+  <constant name="OPPPTrussX" value="15.0 *mm"/>
+  <constant name="OPPPTrussZ" value="4.9 *mm"/>
+  <constant name="OPPPTrussTopXY" value="0.7 *mm"/>
+  <constant name="OPPPTrussTopThickness" value="0.3 *mm"/>
+  <constant name="OPPPNTruss" value="19"/>
+  <constant name="OPPPStaveSideZ" value="2.0 *mm"/>
+  <constant name="OPPPStaveSideZpos" value="0.2 *mm"/>
+  <constant name="OPPPStaveLiftY" value="10.0 *mm"/>
+  <constant name="OPPPStaveX" value="318.0 *mm"/>
+  <constant name="OPPPStaveInOutZ" value="12.0 *mm"/>
+  <constant name="OPPPStaveInOutX" value="40.0 *mm"/>
+  <constant name="OPPPTrackerInterLayerZ" value="100.0 *mm"/>
+  <constant name="OPPPSesorFPCMaterial1" value="G4_KAPTON" type="string"/>
+  <constant name="OPPPSesorFPCMaterial2" value="Aluminium" type="string"/>
+  <constant name="OPPPSesorFPCLayer1Z" value="0.1 *mm"/>
+  <constant name="OPPPSesorFPCLayer2Z" value="0.05 *mm"/>
+  <constant name="OPPPNStaveSensors" value="9"/>
+  <constant name="OPPPStaveSensorsGapX" value="0.1 *mm"/>
+  <constant name="OPPPSensorX" value="30.0 *mm"/>
+  <constant name="OPPPSensorY" value="15.0 *mm"/>
+  <constant name="OPPPSensorZ" value="0.05 *mm"/>
+  <constant name="OPPPSensorNCellX" value="1024"/>
+  <constant name="OPPPSensorNCellY" value="512"/>
+  <constant name="OPPPSensorPixelX" value="0.02924 *mm"/>
+  <constant name="OPPPSensorPixelY" value="0.02688 *mm"/>
+  <constant name="OPPPSensorPixelZ" value="0.025 *mm"/>
+  <constant name="OPPPTrackerActiveX" value="OPPPNStaveSensors * (OPPPSensorX + OPPPStaveSensorsGapX) - OPPPStaveSensorsGapX"/>
+  <constant name="OPPPHexapodMaterial" value="StainlessSteel" type="string"/>
+  <constant name="OPPPHexapodUpR" value="250.0/2.0 *mm"/>
+  <constant name="OPPPHexapodUpH" value="21.5 *mm"/>
+  <constant name="OPPPHexapodDownR" value="348.0/2.0 *mm"/>
+  <constant name="OPPPHexapodDownH" value="30.0 *mm"/>
+  <constant name="OPPPHexapodY" value="328.0 *mm"/>
+  <constant name="OPPPHexapodThickness" value="10.0 *mm"/>
+  <constant name="OPPPBasePlateMaterial" value="StainlessSteel" type="string"/>
+  <constant name="OPPPBasePlateX" value="2.0 * (OPPPDetBottomSupportX + OPPPDetXPos)"/>
+  <constant name="OPPPBasePlateY" value="100.0 *mm"/>
+  <constant name="OPPPBasePlateZ" value="OPPPDetBottomSupportZ"/>
+  <constant name="OPPPBasePlateR" value="50.0 *mm"/>
+  <constant name="OPPPServiceSupportX" value="72.0 *mm"/>
+  <constant name="OPPPServiceSupportY" value="OPPPDetTopPlateY"/>
+  <constant name="OPPPServiceSupportZ" value="410.0 *mm"/>
+  <constant name="OPPPServiceSupportTubeX" value="181.0 *mm"/>
+  <constant name="OPPPServiceSupportTubeRin" value="4.5 *mm"/>
+  <constant name="OPPPServiceSupportTubeThickness" value="1.5 *mm"/>
+  <constant name="OPPPServiceSupportTubeMaterial" value="StainlessSteel" type="string"/>
+  <constant name="OPPPServiceCoolPipeRout" value="1.0 *mm"/>
+  <constant name="OPPPServiceCoolPipeThick" value="0.35 *mm"/>
+  <constant name="OPPPServiceCoolPipeYdist" value="5.0 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrL" value="4.0 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrRin" value="0.5 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrRout" value="1.0 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrSL" value="6.0 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrSRin" value="0.5 *mm"/>
+  <constant name="OPPPServiceCoolPipeCnctrSRout" value="OPPPServiceCoolPipeRout - OPPPServiceCoolPipeThick"/>
+  <constant name="OPPPServiceCoolPipeCnctrMaterial" value="StaveEndCapMaterial" type="string"/>
+  <constant name="OPPPServiceCoolPipeMaterial" value="G4_POLYVINYL_CHLORIDE" type="string"/>
+  <constant name="OPPPInnerServiceCoolPipeDZ" value="30.0 *mm"/>
+  <constant name="OPPPInnerServiceCoolPipeBentR" value="300.0 *mm"/>
+  <constant name="OPPPServiceCablMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="OPPPInnerServiceCablSec0X" value="50.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec0Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec0Z" value="2.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec0Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPInnerServiceCablSec1X" value="50.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec1Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec1Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPInnerServiceCablSec20X" value="80.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec20Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec20Thick" value="OPPPSensorZ"/>
+  <constant name="OPPPInnerServiceCablSec21X" value="80.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec21Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec21Z" value="17.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec21Thick" value="OPPPSesorFPCLayer1Z"/>
+  <constant name="OPPPInnerServiceCablSec22X" value="80.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec22Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec22Z" value="20.0 *mm"/>
+  <constant name="OPPPInnerServiceCablSec22Thick" value="OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPInnerServiceCablSec31Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec31Thick" value="OPPPSesorFPCLayer1Z"/>
+  <constant name="OPPPInnerServiceCablSec32Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPInnerServiceCablSec32Thick" value="OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPOuterServiceCablSec0X" value="40.0 *mm"/>
+  <constant name="OPPPOuterServiceCablSec0Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPOuterServiceCablSec0Z" value="3.0 *mm"/>
+  <constant name="OPPPOuterServiceCablSec0Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPOuterServiceCablSec1Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPOuterServiceCablSec1Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPSideOutServiceCablSec0X" value="50.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec0Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec0Z" value="3.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec0Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPSideOutServiceCablSec1X" value="30.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec1Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec1Thick" value="OPPPSensorZ + OPPPSesorFPCLayer1Z + OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPSideOutServiceCablSec20X" value="145.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec20Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec20Thick" value="OPPPSensorZ"/>
+  <constant name="OPPPSideOutServiceCablSec21X" value="50.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec21Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec21Z" value="3.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec21Thick" value="OPPPSesorFPCLayer1Z"/>
+  <constant name="OPPPSideOutServiceCablSec22X" value="50.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec22Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec22Z" value="15.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec22Thick" value="OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPSideOutServiceCablSec31X" value="95.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec31Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec31Thick" value="OPPPSesorFPCLayer1Z"/>
+  <constant name="OPPPSideOutServiceCablSec32X" value="80.0 *mm"/>
+  <constant name="OPPPSideOutServiceCablSec32Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideOutServiceCablSec32Thick" value="OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPSideInServiceCablSec01X" value="185.0 *mm"/>
+  <constant name="OPPPSideInServiceCablSec01Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideInServiceCablSec01Thick" value="OPPPSesorFPCLayer1Z"/>
+  <constant name="OPPPSideInServiceCablSec02X" value="185.0 *mm"/>
+  <constant name="OPPPSideInServiceCablSec02Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPSideInServiceCablSec02Thick" value="OPPPSesorFPCLayer2Z"/>
+  <constant name="OPPPServiceCablTermBase1X" value="25.0 *mm"/>
+  <constant name="OPPPServiceCablTermBase1Z" value="12.0 *mm"/>
+  <constant name="OPPPServiceCablTermMid1X" value="25.0 *mm"/>
+  <constant name="OPPPServiceCablTermMid1Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPServiceCablTermMid1Z" value="5.0 *mm"/>
+  <constant name="OPPPServiceCablTermBase2X" value="25.0 *mm"/>
+  <constant name="OPPPServiceCablTermBase2Z" value="25.0 *mm"/>
+  <constant name="OPPPServiceCablTermMid2X" value="25.0 *mm"/>
+  <constant name="OPPPServiceCablTermMid2Y" value="OPPPColdPlateY"/>
+  <constant name="OPPPServiceCablTermMid2Z" value="5.0 *mm"/>
+  <constant name="OPPPServiceCablTermMaterial" value="Aluminium" type="string"/>
+  <constant name="TrackerElectronicsRackMaterial" value="Lead" type="string"/>
+  <constant name="TrackerElectronicsRackX" value="600.0 *mm"/>
+  <constant name="TrackerElectronicsRackY" value="900.0 *mm"/>
+  <constant name="TrackerElectronicsRackZ" value="600.0 *mm"/>
+  <constant name="TrackerElectronicsRackThick" value="50.0 *mm"/>
+  <constant name="TrackerElectronicsPCBThick" value="3.0 *mm"/>
+  <constant name="TrackerElectronicsRackXpos" value="100.0 *mm"/>
+  <constant name="ECalX" value="550.0 *mm"/>
+  <constant name="ECalY" value="55.0 *mm"/>
+  <constant name="ECalZ" value="200.0 *mm"/>
+  <constant name="ECalNLayers" value="21"/>
+  <constant name="ECalSensorPixelX" value="5.0 *mm"/>
+  <constant name="ECalSensorPixelY" value="5.0 *mm"/>
+  <!--constant name="ECalSensorNCellX" value="static_cast&lt;G4int&gt;(ECalX/ECalSensorPixelX + 0.5)"/-->
+  <!--constant name="ECalSensorNCellY" value="static_cast&lt;G4int&gt;(ECalY/ECalSensorPixelY + 0.5)"/-->
+  <constant name="ECalSensorNCellX" value="110"/>
+  <constant name="ECalSensorNCellY" value="11"/>
+  <constant name="OPPPTrackerECalZ" value="30.0 *mm"/>
+  <constant name="ECalTopPlateZ" value="OPPPDetBottomSupportZ - OPPPDetTopPlateZ - OPPPTrackerECalZ"/>
+  <constant name="ECalXpos" value="BPipeR + 15.0*mm"/>
+  <constant name="ECalCasingTopY" value="10.0 *mm"/>
+  <constant name="ECalCasingSideX" value="10.0 *mm"/>
+  <constant name="ECalCasingBackZ" value="10.0 *mm"/>
+  <constant name="ECalCasingGapZ" value="20.0 *mm"/>
+  <constant name="ECalCasingMaterial" value="StainlessSteel" type="string"/>
+  <constant name="ECalPipeShieldX" value="5.0 *mm"/>
+  <constant name="ECalPipeShieldY" value="6.0 * BPipeR"/>
+  <constant name="ECalPipeShieldZ" value="1000.0 *mm"/>
+  <!--constant name="ECalPipeShieldShiftZ" value="35.0 *mm &lt; VacChambertoOPPPDetZGap ? 35.0 *mm : VacChambertoOPPPDetZGap/2.0"/-->
+  <constant name="ECalPipeShieldShiftZ" value="35.0 *mm"/>
+  <constant name="ECalPipeShieldMaterial" value="Tungsten" type="string"/>
+  <constant name="OPPPECalPCBX" value="ECalX"/>
+  <constant name="OPPPECalPCBY" value="30.0 *mm"/>
+  <constant name="OPPPECalPCBZ" value="3.0 *mm"/>
+  <constant name="OPPPECalPCBMaterial" value="ECAL_FR4" type="string"/>
+  <constant name="ECalDumpShieldMaterialInner" value="Iron" type="string"/>
+  <constant name="ECalDumpShieldMaterialOuter" value="G4_POLYETHYLENE" type="string"/>
+  <constant name="ECalDumpShieldX" value="OPPPDetTopPlateX"/>
+  <constant name="ECalDumpShieldY" value="300.0 *mm"/>
+  <constant name="ECalDumpShieldInnerZ" value="400.0 *mm"/>
+  <constant name="ECalDumpShieldOuterZ" value="150.0 *mm"/>
+  <constant name="ECalDumpShieldXpos" value="OPPPDetXPos"/>
+  <constant name="ECalDumpShieldYpos" value="0.0"/>
+  <constant name="ECalDumpShieldZpos" value="200.0 *mm"/>
+  <constant name="HICSDumpFrontZPos" value="7.0 *m"/>
+  <constant name="HICSDumpFrontXPos" value="(9.0 + 1.2) *cm"/>
+  <constant name="HICSDumpR" value="15.0 *cm"/>
+  <constant name="HICSDumpZ" value="75.0 *cm"/>
+  <constant name="HICSDumpAlInsertR" value="4.0 *cm"/>
+  <constant name="HICSDumpAlInsertZ" value="30.0 *cm"/>
+  <constant name="HICSDumpAirInsertR" value="2.0 *cm"/>
+  <constant name="HICSDumpAirInsertZ" value="15.0 *cm"/>
+  <constant name="HICSDumpMaterial" value="Lead" type="string"/>
+  <constant name="HICSDumpAlInsertMaterial" value="Aluminium" type="string"/>
+  <constant name="HICSDumpProductionCut" value="1.0 *cm"/>
+  <constant name="HICSDump2TPosX" value="9.5 *cm"/>
+  <constant name="HICSShieldingSideMaterial" value="Aluminium" type="string"/>
+  <constant name="HICSShieldingMiddleMaterial" value="Lead" type="string"/>
+  <constant name="HICSShieldingTopMaterial" value="Iron" type="string"/>
+  <constant name="HICSShieldingSupportMaterial" value="ShieldingConcrete" type="string"/>
+  <constant name="HICSShieldingXPos" value="-60.0 *cm"/>
+  <constant name="HICSShieldingX" value="2.0 *m"/>
+  <constant name="HICSShieldingY" value="2.4 * HICSDumpR"/>
+  <constant name="HICSShieldingSideZ" value="20.0 *cm"/>
+  <constant name="HICSShieldingMiddleZ" value="30.0 *cm"/>
+  <constant name="HICSShieldingGapX" value="1.0 *m"/>
+  <constant name="HICSShieldingGapY" value="2.0 *cm"/>
+  <constant name="HICSShieldingSupportZ" value="1.5 *m"/>
+  <constant name="HICSShieldingSupportY" value="3.0 *m"/>
+  <constant name="HICSNeutronAbsorberMaterial" value="BoratedPolyethyleneConcrete" type="string"/>
+  <constant name="HICSNeutronAbsorberX" value="HICSShieldingX"/>
+  <constant name="HICSNeutronAbsorberY" value="HICSShieldingY"/>
+  <constant name="HICSNeutronAbsorberZ" value="170.0 *mm"/>
+  <constant name="ComptonElBackshift" value="OPPPDetZtoMagnet + 1.5*m"/>
+  <constant name="ScintCameraYpos" value="45.*cm"/>
+  <constant name="ScintCameraZpos" value="IPMagnetZpos + FlashMFieldLength/2.0 + ComptonElBackshift + (ScintBaseZ + ScintPhosphorZ + ScintFinishZ - OPPPDetTopPlateZ)/2.0 + 1.*m"/>
+  <constant name="HICSScintilatorXPosMag1T" value="(36+30+10) *mm"/>
+  <constant name="HICSCherenkovXPosMag1T" value="(20.25 + 30 + 10)*mm"/>
+  <constant name="ComptonElectronBeamtoStageY" value="15 * cm"/>
+  <constant name="HICSScintSupportBallH" value="50 *mm"/>
+  <constant name="HICSDetSupportMaterial" value="StainlessSteel" type="string"/>
+  <constant name="HICSDetBottomSupportX" value="2.0 * 580.0 *mm"/>
+  <constant name="HICSDetBottomSupportY" value="20.0 *mm"/>
+  <constant name="HICSDetBottomSupportZ" value="625. * mm"/>
+  <constant name="HICSBasePlateX" value="2.0 * (OPPPDetBottomSupportX + OPPPDetXPos)"/>
+  <constant name="HICSBasePlateY" value="100.0 *mm"/>
+  <constant name="HICSBasePlateZ" value="OPPPDetBottomSupportZ"/>
+  <constant name="HICSBasePlateR" value="50.0 *mm"/>
+  <constant name="BremBasePlateMaterial" value="StainlessSteel" type="string"/>
+  <constant name="BremBasePlateX" value="2.0 * (OPPPDetBottomSupportX + OPPPDetXPos)"/>
+  <constant name="BremBasePlateY" value="100.0 *mm"/>
+  <constant name="BremBasePlateZ" value="2 * OPPPDetBottomSupportZ"/>
+  <constant name="BremBasePlateR" value="50.0 *mm"/>
+  <constant name="HICSBasePlateMaterial" value="StainlessSteel" type="string"/>
+  <constant name="BeamProfilerContanerMaterial" value="Air20" type="string"/>
+  <constant name="BeamProfilerContanerX" value="200.0 *mm"/>
+  <constant name="BeamProfilerContanerY" value="150.0 *mm"/>
+  <constant name="BeamProfilerContanerZ" value="150.0 *mm"/>
+  <constant name="BeamProfilerContanerD" value="3.0 *mm"/>
+  <constant name="BeamProfilerContanerWallMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamProfilerWindowX" value="20.0 *mm"/>
+  <constant name="BeamProfilerWindowY" value="20.0 *mm"/>
+  <constant name="BeamProfilerWindowZ" value="0.005 *mm"/>
+  <constant name="BeamProfilerWindowMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="BeamProfilerSensorX" value="25.0 *mm"/>
+  <constant name="BeamProfilerSensorY" value="25.0 *mm"/>
+  <constant name="BeamProfilerSensorZ" value="0.1 *mm"/>
+  <constant name="BeamProfilerMetalizationZ" value="0.005 *mm"/>
+  <constant name="bp2zpos" value="11800*mm"/>
+  <!-- skipped vector BeamProfilerZpos = {bp2zpos, bp2zpos + 15.0*mm} -->
+  <constant name="BeamProfilerSensorMaterial" value="G4_ALUMINUM_OXIDE" type="string"/>
+  <constant name="BeamProfilerNCellX" value="5000"/>
+  <constant name="BeamProfilerNCellY" value="5000"/>
+  <constant name="BeamPipe2ProfilerZ" value="bp2zpos - 100.0*mm - ComptonLysoZpos"/>
+  <constant name="BeamProfilerSensorMetalization" value="Aluminium" type="string"/>
+  <constant name="BeamProfilerV408Material" value="StainlessSteel" type="string"/>
+  <constant name="BeamProfilerV408X" value="105.0 *mm"/>
+  <constant name="BeamProfilerV408Y" value="25.0 *mm"/>
+  <constant name="BeamProfilerV408Z" value="80.0 *mm"/>
+  <constant name="BeamProfilerMotorGap" value="40 *mm"/>
+  <constant name="BeamProfilerQ545Material" value="StainlessSteel" type="string"/>
+  <constant name="BeamProfilerQ545X" value="45.0 *mm"/>
+  <constant name="BeamProfilerQ545Y" value="63.0 *mm"/>
+  <constant name="BeamProfilerQ545Z" value="15.0 *mm"/>
+  <constant name="BeamProfilerPCBX" value="60.0 *mm"/>
+  <constant name="BeamProfilerPCBY" value="60.0 *mm"/>
+  <constant name="BeamProfilerPCBZ" value="3.0 *mm"/>
+  <constant name="BeamProfilerPCBCutX" value="22.0 *mm"/>
+  <constant name="BeamProfilerPCBCutY" value="22.0 *mm"/>
+  <constant name="BeamProfilerPCBHolderX" value="50.0 *mm"/>
+  <constant name="BeamProfilerPCBHolderY" value="50.0 *mm"/>
+  <constant name="BeamProfilerPCBHolderZ" value="7.0 *mm"/>
+  <constant name="BeamProfilerPCBHolderCutR" value="15.0 *mm"/>
+  <constant name="BeamProfilerPCBHolderMaterial" value="Aluminium" type="string"/>
+  <constant name="BeamProfilerAngleSupportX" value="30.0 *mm"/>
+  <constant name="BeamProfilerAngleSupportD" value="5.0 *mm"/>
+  <constant name="BeamProfilerAngleSupportMaterial" value="Aluminium" type="string"/>
+  <constant name="GamVacChamberGap" value="20.0 *mm"/>
+  <constant name="BeamPipeLidMaterial" value="G4_KAPTON" type="string"/>
+  <constant name="BeamPipeLidThickness" value="0.2 *mm"/>
+  <constant name="BSMCaloMaterial" value="G4_PbWO4" type="string"/>
+  <constant name="BSMCaloX" value="2005.0 *mm"/>
+  <constant name="BSMCaloY" value="2005.0 *mm"/>
+  <constant name="BSMCaloLayerZ" value="0.5 * 8.903 *mm"/>
+  <constant name="BSMCaloNLayers" value="40"/>
+  <constant name="BSMCaloZPos" value="16.0 *m + 1.13*m"/>
+  <constant name="BSMCaloNCellX" value="401"/>
+  <constant name="BSMCaloNCellY" value="401"/>
+</define>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Detector entry for the IP magnet (FlashMagnet model).
+  Include in the <detectors> section of your main XML via:
+      <include ref="IPMagnet.xml"/>
+
+  The xpos/ypos/zpos values mirror lxs->IPMagnetXpos/Ypos/Zpos.
+  fieldvolname must be unique per magnet placement across the full geometry.
+  rotate="true" applies a pi/2 rotation around Z (as in ConstructDumpMagnet).
+  support="true" places the support table and pedestal.
+-->
+<detectors>
+  <detector id="4" name="IPMagnet" type="LxMagnet">
+    <magnet model="FlashMagnet"
+            xpos="IPMagnetXpos"
+            ypos="IPMagnetYpos"
+            zpos="IPMagnetZpos"
+            rotate="false"
+            fieldvolname="logicIPMagnetField"
+            support="true"/>
+  </detector>
+</detectors>

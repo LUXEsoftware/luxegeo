@@ -1,0 +1,782 @@
+
+/control/alias bpipeColor   "0.5  0.5  0.5  1.0"
+/control/alias vacuumColor  "0.0  0.4  0.4  1.0"
+#/control/alias vacuumVisibility false
+/control/alias vacuumVisibility true
+/control/alias containerVisibility false
+#/control/alias containerVisibility true
+/control/alias containerColor  "0.3  0.3  0.3  0.5"
+/control/alias bpipeWindowColor "0.0  0.9  0.9  0.8"
+/control/alias fieldVolumeVisibility true
+/control/alias fieldVolumeColor  "0.3  0.3  0.3  0.3"
+/control/alias tableColor     "0.48  0.48  0.25   1.0"
+/control/alias pedestalColor  "0.5   0.5   0.5    1.0"
+/control/alias waterColor     "0.1  0.74   0.97   1.0"
+/control/alias flatCableColor "0.75  0.75  0.75   1.0"
+/control/alias ScintFrameColor "0 0.1 0.1 0.1 0.9"
+/control/alias CerenkovColor "0  0.5  0  0.5  0.6"
+/control/alias UG03Visibility true
+#/control/alias UG03Visibility false
+
+/control/alias caliceTungstenVis  "0  1.0  0.0  1.0  1.0"
+/control/alias calicePlasticVis   "0  0.3  0.0  0.3  0.5"
+/control/alias caliceSiVis        "0  1.0  0.0  0.0  1.0"
+/control/alias caliceAlVis        "0  4.0  4.0  1.0  1.0"
+/control/alias calicePCBVis       "0  0.0  1.0  0.0  1.0"
+/control/alias caliceCFVis        "0  0.0  0.0  0.0  0.5"
+/control/alias caliceCuVis        "0  1.0  0.5  0.0  0.5"
+
+/vis/viewer/set/style surface
+
+#/vis/viewer/set/lightsThetaPhi 130 30 deg
+#/vis/viewer/set/lightsThetaPhi 45 120 deg
+/vis/viewer/set/lightsThetaPhi 60 120 deg
+
+# Logical volumes settings 
+############################
+
+/vis/geometry/set/visibility World 0 false
+
+# IP area settings
+#/vis/geometry/set/colour      logicIPContainer 0 {containerColor}
+#/vis/geometry/set/visibility  logicIPContainer 0 {containerVisibility}
+#/vis/geometry/set/colour      logicIPContainerVacuum 0 {vacuumColor}
+#/vis/geometry/set/visibility  logicIPContainerVacuum 0 {vacuumVisibility}
+#/vis/geometry/set/colour logicIPBoxXY  0  0.1  0.9  0.1  1.0 
+#/vis/geometry/set/colour logicIPFront  0  0.9  0.5  0.5  1.0
+#/vis/geometry/set/colour logicElectronPipe 0 {bpipeColor}
+#/vis/geometry/set/colour      logicElectronPipeVac 0 {vacuumColor}
+#/vis/geometry/set/visibility  logicElectronPipeVac 0 {vacuumVisibility}
+#/vis/geometry/set/colour logicLaserPipe 0 {bpipeColor}
+#/vis/geometry/set/colour      logicLaserPipeVac 0 {vacuumColor}
+#/vis/geometry/set/visibility  logicLaserPipeVac 0 {vacuumVisibility}
+
+# Beam Dump Magnet settings
+/vis/geometry/set/visibility logicDMContainer 0 {containerVisibility}
+/vis/geometry/set/colour      logicDMContainer 0 {containerColor}
+/vis/geometry/set/colour logicDMBoxXY 0  0.9  0.1  0.1  0.95
+/vis/geometry/set/colour logicDMBPipe 0 {bpipeColor}
+/vis/geometry/set/colour logicDMBPipeWindow 0 {bpipeWindowColor}
+/vis/geometry/set/colour logicDMBPipeVac  0 {vacuumColor}
+
+# Scintillator/Cerenkov visibility settings
+/vis/geometry/set/colour scintArmLogical         0  0.25 0  0.75 0.6
+/vis/geometry/set/visibility scintArmMotherLogical         0  0
+
+/vis/geometry/set/colour scintFrameLegLogical {ScintFrameColor}
+/vis/geometry/set/colour scintFrameBarLogical {ScintFrameColor}
+/vis/geometry/set/colour scintSupportLegLogical {ScintFrameColor}
+/vis/geometry/set/colour scintSupportLegLogicalE {ScintFrameColor}
+/vis/geometry/set/colour BremScintFrameLegLogical {ScintFrameColor}
+/vis/geometry/set/colour BremScintFrameBarLogical {ScintFrameColor}
+/vis/geometry/set/colour BremScintFrameSupportLeg1Logical {ScintFrameColor}
+/vis/geometry/set/colour BremScintFrameSupportLeg2Logical {ScintFrameColor}
+/vis/geometry/set/visibility BremScintArmMotherLogical 0 0
+
+/vis/geometry/set/colour ComptonElectronScintillator         2  0.25 0  0.75 0.6
+/vis/geometry/set/visibility ComptonElectronScintillator         0 0
+
+/vis/geometry/set/visibility CerenkovMotherLogical 0 0 
+/vis/geometry/set/colour CerenkovBoxLogical  {CerenkovColor}
+/vis/geometry/set/colour CerenkovShieldingPlateUpperLogical {CerenkovColor}
+/vis/geometry/set/colour CerenkovShieldingPlateLowerLogical {CerenkovColor}
+/vis/geometry/set/colour CerenkovShieldingPlateSideLogical {CerenkovColor}
+
+/vis/geometry/set/visibility CerenkovBoxLogical  2 1
+
+/vis/geometry/set/visibility CerenkovBoxInnerLogical 0 {containerVisibility}
+/vis/geometry/set/colour     CerenkovBoxInnerLogical 0 {containerColor}
+
+/vis/geometry/set/colour CerenkovStrawMotherLogical 0 0.1 0.1 0.1 0.9
+/vis/geometry/set/colour CerenkovSupportPlateLogical 0.48  0.48  0.25   1.0
+/vis/geometry/set/colour CerenkovElectronicsBoardLogical 2 0.75 0.25 0.75 0.9
+
+/vis/geometry/set/colour ScintCameraMotherBoxLogical  2 0.75 0.25 0.75 0.9
+
+/vis/geometry/set/colour ScintCameraScaffoldLegLogical 0 {bpipeColor}
+/vis/geometry/set/colour ScintCameraScaffoldPlatformLogical  0 {bpipeColor}
+
+/vis/geometry/set/colour logicBremDetTableTop   {tableColor}
+/vis/geometry/set/colour logicBremDetTableLeg   {tableColor}
+/vis/geometry/set/colour logicBremDetPedestal   {pedestalColor}
+
+/vis/geometry/set/colour logicBremScintCameraSupportTableTop   {tableColor}
+/vis/geometry/set/colour logicBremScintCameraSupportTableLeg   {tableColor}
+
+/vis/geometry/set/colour logicHICSDetectorTableTop  {tableColor}
+/vis/geometry/set/colour logicHICSDetectorTableLeg  {tableColor}
+/vis/geometry/set/colour logicHICSDetectorPedestal  {pedestalColor}
+
+# IP beam dump settings
+/vis/geometry/set/colour logicBeamDump 0  0.1  0.6  0.95  1.0
+/vis/geometry/set/colour logicDumpBeamPipe     0 {bpipeColor}
+/vis/geometry/set/colour logicDumpBeamPipeVac   0 {vacuumColor}
+/vis/geometry/set/colour logicBeamPipeNextToDump      0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeNextToDumpVac   0 {vacuumColor}
+
+# IP shielding settings
+/vis/geometry/set/colour logicShielding         0  0.95  0.7   0.1   0.5
+/vis/geometry/set/colour logicShieldAbsorber    0  0.0   0.27  0.92  1.0
+/vis/geometry/set/colour logicShieldAbsSlit     0  0.0   0.89  0.92  1.0
+/vis/geometry/set/colour logicShieldAbsorberTop 0  0.0   0.27  0.92  1.0
+
+/vis/geometry/set/colour logicShieldingPipe    0 {bpipeColor}
+/vis/geometry/set/colour logicShieldingPipeVac 0 {vacuumColor}
+
+# IP beam splitter to beam dump settings
+/vis/geometry/set/colour logicBeamSplitContainer 0 {containerColor}
+/vis/geometry/set/visibility logicBeamSplitContainer 0 {containerVisibility}
+/vis/geometry/set/colour logicBeamSplit      0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeMB     0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeMBVac  0 {vacuumColor}
+/vis/geometry/set/colour logicBeamPipeMD     0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeMDVac  0 {vacuumColor}
+/vis/geometry/set/colour logicBeamPipeSIP    0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeSIPVac 0 {vacuumColor}
+# /vis/geometry/set/colour logicBeamPipeSD     0 {bpipeColor}
+# /vis/geometry/set/colour logicBeamPipeSDVac  0 {vacuumColor}
+/vis/geometry/set/colour logicBeamPipeIPM    0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeIPMVac 0 {vacuumColor}
+
+/vis/geometry/set/colour logicDetContainer 0 {containerColor}
+/vis/geometry/set/visibility logicDetContainer 0 {containerVisibility}
+/vis/geometry/set/colour logicOpppTracker 0  0.7  0.2  0.95  1.0
+/vis/geometry/set/colour logicOpppCalo 0  0.7  0.2  0.95  1.0
+
+/vis/geometry/set/colour logicBPipeDContainer  0 {containerColor}
+/vis/geometry/set/visibility logicBPipeDContainer  0 {containerVisibility}
+/vis/geometry/set/colour logicBPipeD       0 {bpipeColor}
+/vis/geometry/set/colour logicBPipeWindowD 0 {bpipeWindowColor}
+
+/vis/geometry/set/colour logicGammaDump 0  0.8  0.8  0.1  1.0
+/vis/geometry/set/colour logicBeamPipeGammaD    0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeGammaDVac 0 {vacuumColor}
+
+/vis/geometry/set/colour     logicTargetChamberContainer  0 {containerColor}
+/vis/geometry/set/visibility logicTargetChamberContainer  0 {containerVisibility}
+/vis/geometry/set/colour     logicTargetChamberBox    0  0.8  0.8  0.1  0.5
+/vis/geometry/set/colour     logicBremsTarget         0  0.8  0.8  0.1  1.0
+/vis/geometry/set/colour     logicTargetFrame         0  0.6  0.6  0.6  1.0
+/vis/geometry/set/colour     logicTFrameHolder        0  0.5  0.6  0.6  1.0
+/vis/geometry/set/colour     logicTCMotorH            0  0.32  0.10  0.87  1.0
+
+/vis/geometry/set/colour     logicBTargetContainer    0 {containerColor}
+/vis/geometry/set/visibility logicBTargetContainer    0 {containerVisibility}
+/vis/geometry/set/colour     logicBremsTargetChamberSupportTop      {tableColor}
+/vis/geometry/set/colour     logicBremsTargetChamberSupportLeg      {tableColor}
+/vis/geometry/set/colour     logicBremsTargetChamberSupportPedestal {pedestalColor}
+
+/vis/geometry/set/colour logicBeamPipeTM     0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeTMVac  0 {vacuumColor}
+/vis/geometry/set/colour logicBeamPipeInc    0 {bpipeColor}
+/vis/geometry/set/colour logicBeamPipeIncVac 0 {vacuumColor}
+
+/vis/geometry/set/colour     logicIPMContainer      0 {containerColor}
+/vis/geometry/set/visibility logicIPMContainer  0 {containerVisibility}
+/vis/geometry/set/colour     logicIPMBoxXY    0  0.9  0.1  0.1  0.95
+/vis/geometry/set/colour     logicIPMBPipe    0 {bpipeColor}
+/vis/geometry/set/visibility logicIPMBPipeVac 0 {vacuumVisibility}
+/vis/geometry/set/colour     logicIPMBPipeVac 0 {vacuumColor}
+/vis/geometry/set/colour     logicIPMBPipeWindow 0 {bpipeWindowColor}
+
+# Compton Detector settings
+/vis/geometry/set/colour     logicComptonDetContainer 0 {containerColor}
+/vis/geometry/set/visibility logicComptonDetContainer 0 {containerVisibility}
+/vis/geometry/set/colour     logicComptonTracker      0  0.8  0.2  0.85  1.0
+/vis/geometry/set/colour     logicComptonCalo         0  0.8  0.2  0.85  1.0
+
+/vis/geometry/set/colour     logicGammaTargetContainer  0 {containerColor}
+/vis/geometry/set/visibility logicGammaTargetContainer  0 {containerVisibility}
+/vis/geometry/set/colour     GlogicAbsorber             0  0.8  0.8  0.1  1.0
+/vis/geometry/set/colour     logicGammaTargetChamberSupportTop      {tableColor}
+/vis/geometry/set/colour     logicGammaTargetChamberSupportLeg      {tableColor}
+/vis/geometry/set/colour     logicGammaTargetChamberSupportPedestal {pedestalColor}
+
+/vis/geometry/set/visibility logicGMContainer    0 {containerVisibility}
+/vis/geometry/set/colour     logicGMContainer    0 {containerColor}
+/vis/geometry/set/colour     logicGMBoxXY        0  0.8  0.1  0.1  0.95
+/vis/geometry/set/colour     logicGammaMBPipe    0 {bpipeColor}
+/vis/geometry/set/visibility logicGammaMBPipeVac 0 {vacuumVisibility}
+/vis/geometry/set/colour     logicGammaMBPipeVac 0 {vacuumColor}
+/vis/geometry/set/colour     logicGammaMBPipeWindow 0 {bpipeWindowColor}
+
+/vis/geometry/set/colour     logicBeamPipeGTGM    0 {bpipeColor}
+/vis/geometry/set/visibility logicBeamPipeGTGMVac 0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeGTGMVac 0 {vacuumColor}
+
+/vis/geometry/set/colour     logicBPipeComptonContainer 0 {containerColor}
+/vis/geometry/set/visibility logicBPipeComptonContainer 0 {containerVisibility}
+/vis/geometry/set/colour     logicBPipeComptonD         0 {bpipeColor} 
+/vis/geometry/set/colour     logicBPipeWindowComptonD   0 {bpipeWindowColor}
+# /vis/geometry/set/visibility logicBPipeComptonDVac    0 {vacuumVisibility}
+# /vis/geometry/set/colour     logicBPipeComptonDVac    0 {vacuumColor}
+
+/vis/geometry/set/colour     logicBeamPipeOPPPDGT    0 {bpipeColor}
+/vis/geometry/set/visibility logicBeamPipeOPPPDGTVac 0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeOPPPDGTVac 0 {vacuumColor}
+
+/vis/geometry/set/colour     logicComptShielding   0  0.2  0.2  0.2  1.0
+/vis/geometry/set/colour     logicComptShielding2  0  0.3  0.3  0.3  1.0
+/vis/geometry/set/colour     logicShieldingPlate   0.13 0.05 0.06 1.0
+
+/vis/geometry/set/colour     logicGammaMonitorContainer 0 {containerColor}
+/vis/geometry/set/visibility logicGammaMonitorContainer 0 {containerVisibility}
+/vis/geometry/set/colour     logicLeadGlass        0.643137 0.505882 0.886275 1
+/vis/geometry/set/colour     logicLGFoil           0.125 0.047 0.059 1
+/vis/geometry/set/colour     logicCalSupport        0.6 0.5 0.8 1
+
+/vis/geometry/set/colour     logicGammaBeamDumpContainer 0 {containerColor}
+/vis/geometry/set/visibility logicGammaBeamDumpContainer 0 {containerVisibility}
+/vis/geometry/set/colour     logicGammaBeamDump      0  0.1  0.6  0.95  1.0
+/vis/geometry/set/colour     logicBeamDumpPlug       0  0.1  0.7  0.95  1.0
+/vis/geometry/set/colour     logicGBDShielding       0  0.3  0.3  0.3   1.0
+/vis/geometry/set/colour     logicGBDShieldingPlug   0  0.2  0.3  0.2   1.0
+/vis/geometry/set/colour     logicGammaBeamDumpWrap  0  0.1  0.8  0.95  0.5
+/vis/geometry/set/colour     logicBeamDumpPlugWrap   0  0.1  0.7  0.95  0.5
+/vis/geometry/set/colour     logicGammaBeamDumpBSMAir  0  0.04  0.2  0.92 1.0
+/vis/geometry/set/colour     logicGammaBeamDumpMagnet  0  0.97  0.25 0.12 1.0
+
+/vis/geometry/set/colour     logicGammaBeamDumpSupport  0.5   0.5   0.5   1.0
+/vis/geometry/set/colour     logicGammaMonitorSupport  0.5   0.5   0.5   1.0
+/vis/geometry/set/colour     logicGammaMonitorHolder  0.8   0.8   0.8   1.0
+
+# Beam cleaning magnet (after the dump/collimatior) settings
+# /vis/geometry/set/visibility logicCleaningMContainer 0 {containerVisibility}
+# /vis/geometry/set/colour logicCleaningMContainer 0 {containerColor}
+# /vis/geometry/set/colour logicCleaningMBoxXY 0  0.9  0.1  0.1  0.95
+# /vis/geometry/set/colour logicCleaningMBPipe    0 {bpipeColor}
+# /vis/geometry/set/colour logicCleaningMBPipeWindow 0 {bpipeWindowColor}
+# /vis/geometry/set/visibility logicCleaningMBPipeVac 0 {vacuumVisibility}
+# /vis/geometry/set/colour logicCleaningMBPipeVac 0 {vacuumColor}
+# /vis/geometry/set/colour logicBeamPipeCMagD    0 {bpipeColor}
+# /vis/geometry/set/visibility logicBeamPipeCMagDVac 0 {vacuumVisibility}
+# /vis/geometry/set/colour logicBeamPipeCMagDVac 0 {vacuumColor}
+# /vis/geometry/set/colour logicBeamPipeSCMag    0 {bpipeColor}
+# /vis/geometry/set/visibility logicBeamPipeSCMagVac 0 {vacuumVisibility}
+# /vis/geometry/set/colour logicBeamPipeSCMagVac 0 {vacuumColor}
+
+# Beam TypMB Magnet settings
+/control/alias copperWireColor   "0.9  0.3  0.05  1.0"
+#/control/alias magnetCoreColor   "0.21  0.25  0.22  0.4"
+/control/alias magnetCoreColor   "0.15  0.7  0.15  0.4"
+/vis/geometry/set/colour     logicTypMBMagnetContainer 0 {containerColor}
+/vis/geometry/set/visibility logicTypMBMagnetContainer 0 {containerVisibility}
+/vis/geometry/set/colour   logicTypMBWireSide   0 {copperWireColor}
+/vis/geometry/set/colour   logicTypMBWireFront  0 {copperWireColor}
+/vis/geometry/set/colour   logicTypMBWireV      0 {copperWireColor}
+/vis/geometry/set/colour   logicTypMBWireLR     0 {copperWireColor}
+/vis/geometry/set/colour   logicTypMBWireHR     0 {copperWireColor}
+
+/vis/geometry/set/colour   logicTypMBWireTopBar 0 {magnetCoreColor}
+/vis/geometry/set/colour   logicMagCoreBox      0 {magnetCoreColor}
+/vis/geometry/set/colour   logicTypMBCoreEndCap 0 {magnetCoreColor}
+/vis/geometry/set/colour   logicTypMBCoreSide   0 {magnetCoreColor}
+/vis/geometry/set/colour   logicTypMBEndCap     0  0.15  0.7  0.15  0.5
+
+/vis/geometry/set/colour   logicTypMBEndCap2    0  0.15  0.7  0.15  1.0
+/vis/geometry/set/colour   logicTypMBEndCap3    0  0.15  0.7  0.15  1.0
+/vis/geometry/set/colour   logicTypMBSupport    0  0.05  0.5  0.1   1.0
+/vis/geometry/set/colour   logicSupportDumpMagnet    0  0.05  0.5  0.1   1.0
+/vis/geometry/set/colour   logicSupportIPMagnet      0  0.05  0.5  0.1   1.0
+/vis/geometry/set/colour   logicIPMagnetSupportLeg   {tableColor}
+
+/vis/geometry/set/colour   logicDMBPipeContainer   0 {containerColor}
+/vis/geometry/set/visibility logicDMBPipeContainer 0 {containerVisibility}
+/vis/geometry/set/colour   logicIPMBPipeContainer   0 {containerColor}
+/vis/geometry/set/visibility logicIPMBPipeContainer 0 {containerVisibility}
+
+/vis/geometry/set/visibility  logicDumpMagnetField 0 {fieldVolumeVisibility}
+/vis/geometry/set/colour      logicDumpMagnetField 0 {fieldVolumeColor}
+/vis/geometry/set/colour      logicDumpMagnetSupportLeg   {tableColor}
+
+/vis/geometry/set/visibility  logicIPMagnetField 0 {fieldVolumeVisibility}
+/vis/geometry/set/colour      logicIPMagnetField 0 {fieldVolumeColor}
+
+/vis/geometry/set/colour   logicFlashMagnetHalf    0 {magnetCoreColor}
+/vis/geometry/set/colour   logicFlashMagnetCore    0 {magnetCoreColor}
+/vis/geometry/set/colour   logicFlashMagnetCoilZ   0 {copperWireColor}
+/vis/geometry/set/colour   logicFlashMagnetCoilX   0 {copperWireColor}
+/vis/geometry/set/colour   logicFlashMCoilR        0 {copperWireColor}
+
+# IP Chamber
+/control/alias IPChamberColor   "0.77  0.95  0.97  1.0"
+/vis/geometry/set/colour     logicIPContainer 0 {vacuumColor}
+/vis/geometry/set/visibility logicIPContainer 0 {containerVisibility}
+
+/vis/geometry/set/colour     logicIPChamberBottom     0  {IPChamberColor}
+/vis/geometry/set/colour     logicIPChamberTopFlange  0  {IPChamberColor}
+/vis/geometry/set/colour     logicIPChamberTop        0  0.24  0.32  0.50  0.4
+/vis/geometry/set/colour     logicIPChamberSupport    0  {IPChamberColor}
+
+#/control/loop ip_chmber_color.mac section 0 8 1
+# /vis/geometry/set/colour  IPSide{section}logicWithHole     0  {IPChamberColor} 
+# /vis/geometry/set/colour  IPChambePipe{section}logic       0  {IPChamberColor}
+# /vis/geometry/set/colour  IPChambePipe{section}logicVac    0  {vacuumColor}
+# /vis/geometry/set/colour  IPChambePipe{section}logicFlange 0  {IPChamberColor}
+
+/vis/geometry/set/colour     logicVCContainer    0  {containerColor}
+/vis/geometry/set/visibility logicVCContainer    0  {containerVisibility}
+/vis/geometry/set/colour     logicVCXZWall       0  0.47  0.35  0.93  1.0
+/vis/geometry/set/colour     logicSideWall       0  0.69  0.35  0.93  0.7
+/vis/geometry/set/colour     logicVCFront        0  0.47  0.35  0.93  1.0
+/vis/geometry/set/colour     logicVCReinforceBar     0  0.37  0.25  0.93  1.0
+/vis/geometry/set/colour     logicVCReinforceFillet  0  0.37  0.35  0.83  1.0
+/vis/geometry/set/colour     logicVCWindowPanel    0  0.79  0.78  0.58  0.7
+/vis/geometry/set/colour     logicVCFrameLBar      0  0.37  0.35  0.83  1.0
+/vis/geometry/set/colour     logicVCFrameHBar      0  0.37  0.35  0.83  1.0
+
+/vis/geometry/set/colour     logicVCWindowBeamPipe 0  {bpipeColor}
+/vis/geometry/set/colour     logicBeamPipeVCG      0  {bpipeColor}
+/vis/geometry/set/visibility logicBeamPipeVCGVac   0  {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeVCGVac   0  {vacuumColor}
+
+/vis/geometry/set/colour     logicVCMagFieldJoin       0  0.57  0.54  0.68  0.7
+/vis/geometry/set/visibility logicVCMagFieldJoinVac    0  {vacuumVisibility}
+/vis/geometry/set/colour     logicVCMagFieldJoinVac    0  {vacuumColor}
+/vis/geometry/set/colour     logicVCMagFieldJoin1      0  0.57  0.54  0.68  0.7
+/vis/geometry/set/visibility logicVCMagFieldJoin1Vac   0  {vacuumVisibility}
+/vis/geometry/set/colour     logicVCMagFieldJoin1Vac   0  {vacuumColor}
+
+/vis/geometry/set/colour     logicTAUICContainer 0  {containerColor}
+/vis/geometry/set/visibility logicTAUICContainer 0  {containerVisibility}
+/vis/geometry/set/colour     logicTAUICTop                0  0.24  0.32  0.50  0.4
+/vis/geometry/set/colour     logicTAUICBottom             0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUICSide               0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUICFront              0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUICFPRear             0  {IPChamberColor}
+/vis/geometry/set/colour     logicIPChamberSupport        0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUICSupport            0  {IPChamberColor}
+/vis/geometry/set/visibility logicTAUIChamberBPipeVac     0  {vacuumVisibility}
+/vis/geometry/set/colour     logicTAUIChamberBPipeVac     0  {vacuumColor}
+/vis/geometry/set/colour     logicTAUIChamberBPipe        0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUIChamberBPipeFlange  0  {IPChamberColor}
+/vis/geometry/set/colour     logicTAUIChamberBPipeOut     0  {IPChamberColor}
+/vis/geometry/set/visibility logicTAUIChamberBPipeOutVac  0  {vacuumVisibility}
+/vis/geometry/set/colour     logicTAUIChamberBPipeOutVac  0  {vacuumColor}
+
+/vis/geometry/set/colour     logicTAUICBBoard             0  0.46  0.46  0.46
+/vis/geometry/set/colour     logicICMirror_0              0  0.94  0.97  0.17
+/vis/geometry/set/colour     logicICMirror_1              0  0.97  0.71  0.17
+/vis/geometry/set/colour     logicICMirror_2              0  0.94  0.97  0.17
+/vis/geometry/set/colour     logicICMirror_3              0  0.97  0.71  0.17
+/vis/geometry/set/colour     logicICMirror_4              0  0.36  0.36  0.36
+/vis/geometry/set/colour     logicICMirror_5              0  0.36  0.36  0.36
+/vis/geometry/set/colour     logicICMirrorHold_0          0  0.64  0.67  0.57
+/vis/geometry/set/colour     logicICMirrorHold_1          0  0.64  0.67  0.57
+/vis/geometry/set/colour     logicICMirrorHold_2          0  0.64  0.67  0.57
+/vis/geometry/set/colour     logicICMirrorHold_3          0  0.64  0.67  0.57
+/vis/geometry/set/colour     logicICMirrorHold_4          0  0.64  0.67  0.57
+/vis/geometry/set/colour     logicICMirrorHold_5          0  0.64  0.67  0.57
+/vis/geometry/set/colour     ICMirrorRing_0               0  0.46  0.36  0.36
+/vis/geometry/set/colour     ICMirrorRing_1               0  0.46  0.36  0.36
+/vis/geometry/set/colour     ICMirrorRing_2               0  0.46  0.36  0.36
+/vis/geometry/set/colour     ICMirrorRing_3               0  0.46  0.36  0.36
+/vis/geometry/set/colour     ICMirrorRing_4               0  0.46  0.36  0.36
+/vis/geometry/set/colour     ICMirrorRing_5               0  0.76  0.76  0.76
+/vis/geometry/set/colour     logicICBBoardTableTop        0  0.36  0.91  0.86
+/vis/geometry/set/colour     logicICBBoardTableLeg        0  0.31  0.68  0.61
+/vis/geometry/set/colour     logicICBBoardSupportLeg      0  0.74  0.93  0.93
+
+/vis/geometry/set/colour     logicTypMBMagSimpContainer 0  {containerColor}
+/vis/geometry/set/visibility logicTypMBMagSimpContainer 0  {containerVisibility}
+/vis/geometry/set/colour     logicTypMBSimpleSupport    0  {magnetCoreColor}
+/vis/geometry/set/colour     logicTypMBSimpWireTopBar   0  {magnetCoreColor}
+/vis/geometry/set/colour     logicMagSimpCoreBox        0  {magnetCoreColor}
+/vis/geometry/set/colour     logicTypMBSimpCoreEndCap   0  {magnetCoreColor}
+
+/vis/geometry/set/colour     logicIPVolume   0    0.9  0.05  0.05  0.7
+
+/vis/geometry/set/colour     logicTruss        0    0.4  0.4  0.4   1.0
+/vis/geometry/set/colour     logicTrussBar     0    0.4  0.4  0.4   1.0
+#/vis/geometry/set/colour     logicTrussBar    0    0.9  0.05  0.05 1.0
+/vis/geometry/set/colour     logicColdPlate    0    0.05  0.7  0.5  0.7
+/vis/geometry/set/colour     logicTrussEndCap  0    0.05  0.3  0.9  1.0
+/vis/geometry/set/colour     logicStaveSideIn  0    0.9  0.3  0.9  1.0
+/vis/geometry/set/colour     logicStaveSideOut 0    0.9  0.3  0.9  1.0
+/vis/geometry/set/colour     logicTrkCoolPipe  0    0.3  0.9  0.3  1.0
+/vis/geometry/set/colour     logicTrkCoolWater 0    0.2  0.2  0.9  1.0
+/vis/geometry/set/colour     logicAngleHold    0    0.3  0.3  0.9  1.0
+/vis/geometry/set/colour     logicAngleHoldTip 0    0.3  0.3  0.9  1.0
+
+/vis/geometry/set/colour     logicStaveSensorContainer  0  {containerColor}
+/vis/geometry/set/visibility logicStaveSensorContainer  0  {containerVisibility}
+/vis/geometry/set/colour     solidFPCLayer1    0  0.9  0.9  0.1  0.9
+/vis/geometry/set/colour     solidFPCLayer2    0  0.6  0.6  0.1  0.9
+/vis/geometry/set/colour     logicOPPPTrackerL  0  {containerColor}
+/vis/geometry/set/visibility logicOPPPTrackerL  0  {containerVisibility}
+/vis/geometry/set/colour     logicOPPPTrackerR  0  {containerColor}
+/vis/geometry/set/visibility logicOPPPTrackerR  0  {containerVisibility}
+/vis/geometry/set/colour     logicFPCLayer1     0  0.3  0.6  0.7  0.9
+/vis/geometry/set/colour     logicFPCLayer2     0  0.7  0.6  0.3  0.9
+/vis/geometry/set/colour     logicOPPPSensitive 0  0.9  0.9  0.3  0.9
+/vis/geometry/set/colour     logicOPPPSensor    0  0.9  0.8  0.2  0.9
+
+/vis/geometry/set/colour     logicOPPPTopPlate        0  0.1  0.65  0.72   1.0
+/vis/geometry/set/colour     logicOPPPBottomSupport   0  0.05  0.52  0.58  1.0
+/vis/geometry/set/colour     logicOPPPDetSupportBall  0  0.54  0.93  0.98  1.0
+
+/vis/geometry/set/colour     logicOPPPHexTop      0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicOPPPHexMiddle   0.55  0.65  0.07   1.0
+/vis/geometry/set/colour     logicOPPPHexBottom   0.61  0.72  0.07   1.0
+
+/vis/geometry/set/colour     logicTrackerLHexTop      0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicTrackerLHexBottom   0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicTrackerLHexMiddle   0.55  0.65  0.07   1.0
+
+/vis/geometry/set/colour     logicTrackerRHexTop      0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicTrackerRHexBottom   0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicTrackerRHexMiddle   0.55  0.65  0.07   1.0
+
+/vis/geometry/set/colour     logicTrackerEcalTableTop   {tableColor}
+/vis/geometry/set/colour     logicTrackerEcalTableLeg   {tableColor}
+/vis/geometry/set/colour     logicTrackerEcalPedestal   {pedestalColor}
+
+/vis/geometry/set/colour     logicOPPPServiceSupport        0  0.1  0.65  0.72   1.0
+/vis/geometry/set/colour     logicOPPPServiceSupportTube    0  0.1  0.65  0.72   1.0
+
+/vis/geometry/set/colour     logicInServCoolPipeCnctr    0    0.8   0.3   0.8  1.0
+/vis/geometry/set/colour     logicInServCoolPipeCnctrW   0    {waterColor}
+/vis/geometry/set/colour     logicInServCoolPipeCnctrS   0    0.8   0.3   0.8  1.0
+/vis/geometry/set/colour     logicInServCoolPipeCnctrSW  0    {waterColor}
+/vis/geometry/set/colour     logicInServCoolPipeCnctrSP  0    0.26  0.54  0.9  1.0
+
+/vis/geometry/set/colour     logicInServCoolPipe0    0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicInServCoolPipe0W   0    {waterColor}
+/vis/geometry/set/colour     logicInServCoolPipe1    0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicInServCoolPipe1W   0    {waterColor}
+/vis/geometry/set/colour     logicInServCoolPipeR    0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicInServCoolPipeRW   0    {waterColor}
+
+/vis/geometry/set/colour     logicInServFlatCblSec0  0    {flatCableColor}
+/vis/geometry/set/colour     logicInServFlatCblSec1  0    {flatCableColor}
+/vis/geometry/set/colour     logicInServFlatCblSec20 0    0.6   0.96  0.19  1.0
+/vis/geometry/set/colour     logicInServFlatCblSec21 0    0.96  0.71  0.19  1.0
+/vis/geometry/set/colour     logicInServFlatCblSec22 0    0.19  0.97  0.83  1.0
+/vis/geometry/set/colour     logicInServFlatCblSec31 0    0.96  0.71  0.19  1.0
+/vis/geometry/set/colour     logicInServFlatCblSec32 0    0.19  0.97  0.83  1.0
+
+/vis/geometry/set/colour     logicOutServCoolPipe0   0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicOutServCoolPipe0W  0    {waterColor}
+/vis/geometry/set/colour     logicOutServFlatCblSec0   0    {flatCableColor}
+/vis/geometry/set/colour     logicOutServFlatCblSec1   0    {flatCableColor}
+
+/vis/geometry/set/colour     logicOPPPServSideContainerL  0  {containerColor}
+/vis/geometry/set/visibility logicOPPPServSideContainerL  0  {containerVisibility}
+/vis/geometry/set/colour     logicOPPPServSideContainerR  0  {containerColor}
+/vis/geometry/set/visibility logicOPPPServSideContainerR  0  {containerVisibility}
+
+/vis/geometry/set/colour     logicSideInServCoolPipe    0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicSideInServCoolPipeW   0    {waterColor}
+/vis/geometry/set/colour     logicSdInServFlatCblSec01  0    0.96  0.71  0.19  1.0
+/vis/geometry/set/colour     logicSdInServFlatCblSec02  0    0.19  0.97  0.83  1.0
+
+/vis/geometry/set/colour     logicSideServCoolPipe      0    0.26  0.54  0.9  1.0
+/vis/geometry/set/colour     logicSideServCoolPipeW     0    {waterColor}
+/vis/geometry/set/colour     logicSdOutServFlatCblSec0  0    {flatCableColor}
+/vis/geometry/set/colour     logicSdOutServFlatCblSec1  0    {flatCableColor}
+/vis/geometry/set/colour     logicSdOutServFlatCblSec20 0    0.6   0.96  0.19  1.0
+/vis/geometry/set/colour     logicSdOutServFlatCblSec21 0    0.96  0.71  0.19  1.0
+/vis/geometry/set/colour     logicSdOutServFlatCblSec22 0    0.19  0.97  0.83  1.0
+/vis/geometry/set/colour     logicSdOutServFlatCblSec31 0    0.96  0.71  0.19  1.0
+/vis/geometry/set/colour     logicSdOutServFlatCblSec32 0    0.19  0.97  0.83  1.0
+
+/vis/geometry/set/colour     logicOPPPCableTermBase1   0  0.57  0.66  0.65  1.0
+/vis/geometry/set/colour     logicOPPPCableTermMid1    0  0.63  0.62  0.78  1.0
+/vis/geometry/set/colour     logicOPPPCableTermBase2   0  0.57  0.66  0.65  1.0
+/vis/geometry/set/colour     logicOPPPCableTermMid2    0  0.63  0.62  0.78  1.0
+
+/vis/geometry/set/colour     logicTrackerElectronicsRackContainer  0  {containerColor}
+/vis/geometry/set/visibility logicTrackerElectronicsRackContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicTrackerElectronicsRack           0  0.21  0.21  0.21  0.9
+/vis/geometry/set/colour     logicTrackerElectronicsXYPCB          0  0.71  0.12  0.04  1.0
+/vis/geometry/set/colour     logicTrackerElectronicsYZPCB          0  0.65  0.12  0.15  1.0
+/vis/geometry/set/colour     logicTrackerElectronicsXZPCB          0  0.65  0.25  0.04  1.0
+
+/vis/geometry/set/colour     logicECalContainer  0  {containerColor}
+/vis/geometry/set/visibility logicECalContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicBaseUnit  0  {containerColor}
+/vis/geometry/set/visibility logicBaseUnit  0  {containerVisibility}
+/vis/geometry/set/colour     logicBaseUnit_T  0  {containerColor}
+/vis/geometry/set/visibility logicBaseUnit_T  0  {containerVisibility}
+
+/vis/geometry/set/colour     logicAbs0_MGS     0.45  0.03  0.94   1.0
+/vis/geometry/set/colour     logicECalSensor   0.94  0.68  0.03   1.0
+/vis/geometry/set/colour     logicMetalV       0.52  0.49  0.55   1.0
+/vis/geometry/set/colour     logicFanoutFrnt   0.95  0.99  0.44   1.0
+/vis/geometry/set/colour     logicFanoutBack   0.95  0.99  0.44   1.0
+
+/vis/geometry/set/colour     logicECalPCBContainer  0  {containerColor}
+/vis/geometry/set/visibility logicECalPCBContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicECalPCB           0  0.71  0.12  0.04  1.0
+
+/vis/geometry/set/colour     logicECalCasingTop        0  0.63  0.77  0.77  0.5
+/vis/geometry/set/colour     logicECalCasingSide       0  0.63  0.77  0.77  0.5
+/vis/geometry/set/colour     logicECalCasingBack       0  0.63  0.77  0.77  0.5
+/vis/geometry/set/colour     logicECalPipeShield       0  0.95  0.70  0.70  1.0
+
+/vis/geometry/set/colour     logicECalSupportBall 0  0.54  0.93  0.98  1.0
+/vis/geometry/set/colour     logicECalTopPlate    0  0.1  0.65  0.72   1.0
+
+#/vis/geometry/set/colour     logicCaliceLayerContainer  0  {containerColor}
+#/vis/geometry/set/visibility logicCaliceLayerContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicCaliceStackContainer  0  {containerColor}
+/vis/geometry/set/visibility logicCaliceStackContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicCaliceECalContainer   0  {containerColor}
+/vis/geometry/set/visibility logicCaliceECalContainer   0  {containerVisibility}
+
+/vis/geometry/set/colour  logicCalicePolyethyleneProto0 {calicePlasticVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens19103  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber4  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu5  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi7  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu9  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB10  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191014  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber15  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu16  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi18  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu20  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB21  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191025  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber26  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu27  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi29  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu31  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB32  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191036  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber37  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu38  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi40  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu42  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB43  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191047  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber48  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu49  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi51  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu53  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB54  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191058  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber59  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu60  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi62  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu64  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB65  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191069  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber70  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu71  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi73  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu75  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB76  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191079  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber80  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu81  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi83  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu85  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB86  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191089  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber90  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu91  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi93  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu95  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB96  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens191099  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber100  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu101  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi103  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu105  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB106  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens1910109  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber110  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu111  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi113  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu115  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB116  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens1910119  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber120  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu121  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi123  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu125  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB126  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens1910129  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber130  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu131  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi133  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu135  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB136  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens1910139  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber140  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu141  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi143  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu145  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB146  {calicePCBVis}
+/vis/geometry/set/colour  logicCaliceTungstenDens1910149  {caliceTungstenVis}
+/vis/geometry/set/colour  logicCaliceCarbonFiber150  {caliceCFVis}
+/vis/geometry/set/colour  logicCaliceCu151  {caliceCuVis}
+/vis/geometry/set/colour  logicCaliceSi153  {caliceSiVis}
+/vis/geometry/set/colour  logicCaliceCu155  {caliceCuVis}
+/vis/geometry/set/colour  logicCalicePCB156  {calicePCBVis}
+
+#/vis/geometry/set/colour     logicCaliceAbsorber        0  0.45  0.03  0.94   1.0
+#/vis/geometry/set/colour     logicCaliceAl              0  0.55  0.55  0.65   1.0
+#/vis/geometry/set/colour     logicCalicePCB             0  0.55  0.98  0.58   1.0
+#/vis/geometry/set/colour     logicCaliceSi              0  0.94  0.68  0.03   1.0
+#/vis/geometry/set/colour     logicCaliceCu              0  0.94  0.68  0.55   1.0
+#/vis/geometry/set/colour     logicCaliceCarbonFiber     0  0.21  0.21  0.21   1.0
+
+/vis/geometry/set/colour     logicCaliceECalCasing      0  0.93  0.77  0.77   0.5
+
+/vis/geometry/set/colour     logicECalDumpShieldContainer  0  {containerColor}
+/vis/geometry/set/visibility logicECalDumpShieldContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicECalDumpShieldInner      0  0.94  0.87  0.32  1.0
+/vis/geometry/set/colour     logicECalDumpShieldOuter      0  0.66  0.64  0.46  1.0
+/vis/geometry/set/colour     logicECalDumpShielPedestal    0  {pedestalColor}
+
+/vis/geometry/set/colour     logicGMagnetYoke     0.003  0.36  93.0 1.0
+/vis/geometry/set/colour     logicGMagnetCore     0.003  0.36  93.0 1.0
+/vis/geometry/set/colour     logicGMagnetCoil     0.98 0.83 0.23 1.0
+/vis/geometry/set/colour     logicSupportGMagnet  0.003  0.36  93.0 1.0
+/vis/geometry/set/visibility  logicGMagnetField 0 {fieldVolumeVisibility}
+/vis/geometry/set/colour      logicGMagnetField 0 {fieldVolumeColor}
+/vis/geometry/set/colour      logicGMagnetSupportLeg {tableColor}
+
+/vis/geometry/set/colour     logicCollimator         0.4   0.4   0.4   1.0
+/vis/geometry/set/colour     logicCollimatorSupport  0.5   0.5   0.5   1.0
+/vis/geometry/set/colour     logicComptonLysoCal     0.95  0.43  0.2   1.0
+
+/vis/geometry/set/colour     logicHICSDump             0  0.1  0.6  0.95  0.95
+#/vis/geometry/set/colour     logicHICSDump             0  0.1  0.6  0.95  1.0
+/vis/geometry/set/colour     logicHICSDumpAlInsert     0  0.8  0.6  0.95  0.9
+/vis/geometry/set/colour     logicHICSDumpAirInsert    0  0.3  0.3  0.3  0.4
+/vis/geometry/set/colour     logicHICSShieldingSide    0  0.80  0.60  0.70  1.0
+/vis/geometry/set/colour     logicHICSShieldingMiddle  0  0.64  0.57  0.45  1.0
+/vis/geometry/set/colour     logicHICSSSupportTop      0  0.95  0.7  0.1  0.5
+/vis/geometry/set/colour     logicHICSShieldPedestal   0  0.95  0.7  0.1  0.5
+#/vis/geometry/set/colour     logicHICSSSupportTop      0  0.5   0.5   0.5   1.0
+#/vis/geometry/set/colour     logicHICSShieldPedestal   0  0.5   0.5   0.5   1.0
+/vis/geometry/set/colour     logicNeutronAbsorberSide         0  0.36   0.58   0.97   1.0
+/vis/geometry/set/colour     logicHICSNeutronAbsorberTop      0  0.36   0.58   0.97   1.0
+/vis/geometry/set/colour     logicHICSNeutronAbsorberBottom   0  0.36   0.58   0.97   1.0
+
+/vis/geometry/set/colour     logicHICSScintTopPlate       0  0.1  0.65  0.72   1.0
+/vis/geometry/set/colour     logicHICSScintSupportBall    0  0.54  0.93  0.98  1.0
+/vis/geometry/set/colour     logicHICSScintBottomSupport  0  0.05  0.52  0.58  1.0
+/vis/geometry/set/colour     logicHICSCherTopPlate        0  0.1  0.65  0.72   1.0
+/vis/geometry/set/colour     logicHICSCherSupportBall  0  0.54  0.93  0.98  1.0
+/vis/geometry/set/colour     logicHICSHexTop           0.61  0.72  0.07   1.0
+/vis/geometry/set/colour     logicHICSHexMiddle        0.55  0.65  0.07   1.0
+/vis/geometry/set/colour     logicHICSHexBottom        0.61  0.72  0.07   1.0
+
+/vis/geometry/set/colour     logicLYSOPedestal         0  0.97  0.92  0.36  1.0
+/vis/geometry/set/colour     logicLYSOTopPlate         0  0.1   0.65  0.72  1.0
+/vis/geometry/set/colour     logicLYSOBottomSupport    0  0.05  0.52  0.58  1.0
+/vis/geometry/set/colour     logicLYSODetSupportBall   0  0.54  0.93  0.98  1.0
+/vis/geometry/set/colour     logicLYSOHexTop           0  0.61  0.72  0.07  1.0 
+/vis/geometry/set/colour     logicLYSOHexMiddle        0  0.55  0.65  0.07  1.0
+/vis/geometry/set/colour     logicLYSOHexBottom        0  0.61  0.72  0.07  1.0
+
+/vis/geometry/set/colour     logicGammaSpectrTableTop  0  0.48  0.48  0.25  1.0
+/vis/geometry/set/colour     logicGammaSpectrTableLeg  0  0.48  0.48  0.25  1.0
+/vis/geometry/set/colour     logicGammaSpectrPedestal  0  0.5   0.5   0.5   1.0
+
+/vis/geometry/set/colour     logicHICSDump2T     0  0.1  0.65  0.90  0.95
+#/vis/geometry/set/colour     logicHICSDump2T     0  0.1  0.65  0.90  1.0
+
+/vis/geometry/set/visibility logicBeamProfilerContainer  0 {containerVisibility}
+/vis/geometry/set/colour     logicBeamProfilerContainer  0 {containerColor}
+/vis/geometry/set/visibility logicBPSensorContainer   0 {containerVisibility}
+/vis/geometry/set/colour     logicBPSensorContainer   0 {containerColor}
+
+/vis/geometry/set/colour     logicBeamProfilerBox     0  0.71  0.72  0.66  1.0
+/vis/geometry/set/colour     logicBPBoxFront          0  0.71  0.72  0.66  1.0
+/vis/geometry/set/colour     logicBPBoxWindow         0  0.92  0.75  0.01  0.9
+/vis/geometry/set/colour     logicBPSensor            0  0.88  0.30  0.80  1.0
+/vis/geometry/set/colour     logicBPSensorMetal       0  0.63  0.77  0.72  1.0
+/vis/geometry/set/colour     logicBPPCB               0  0.08  0.50  0.0   1.0
+/vis/geometry/set/colour     logicBPPCBHold           0  0.30  0.99  1.0   1.0
+/vis/geometry/set/colour     logicBPPCBHoldSide       0  0.30  0.99  1.0   1.0
+/vis/geometry/set/colour     logicQ545                0  0.32  0.10  0.87  1.0
+/vis/geometry/set/colour     logicV408                0  0.95  0.70  0.70  1.0
+/vis/geometry/set/colour     logicBPAngSup            0  0.57  0.86  0.63  1.0
+/vis/geometry/set/colour     logicProfilerTableTop    0  {tableColor}
+/vis/geometry/set/colour     logicProfilerTableLeg    0  {tableColor}
+/vis/geometry/set/colour     logicProfilerPedestal    0  {pedestalColor}
+
+/vis/geometry/set/visibility logicGVCContainer  0 {fieldVolumeVisibility}
+/vis/geometry/set/colour     logicGVCContainer  0 {fieldVolumeColor}
+
+/vis/geometry/set/visibility logicGammaMagnetPipeContainer  0 {fieldVolumeVisibility}
+/vis/geometry/set/colour     logicGammaMagnetPipeContainer  0 {fieldVolumeColor}
+/vis/geometry/set/colour     logicGammaMagnetWidePipeContainer  0 {containerColor}
+/vis/geometry/set/visibility logicGammaMagnetWidePipeContainer  0 {containerVisibility}
+/vis/geometry/set/colour     logicBeamPipeGamma2ndCMagF 0 {bpipeColor}
+/vis/geometry/set/colour     logicBeamPipeGamma1stC2ndC 0 {bpipeColor}
+/vis/geometry/set/colour     logicBeamPipeGammaT1stC 0 {bpipeColor}
+/vis/geometry/set/visibility logicBeamPipeGamma2ndCMagFVac  0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeGamma2ndCMagFVac  0 {vacuumColor}
+/vis/geometry/set/visibility logicBeamPipeGamma1stC2ndCVac  0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeGamma1stC2ndCVac  0 {vacuumColor}
+/vis/geometry/set/visibility logicBeamPipeGammaT1stCVac     0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeGammaT1stCVac     0 {vacuumColor}
+/vis/geometry/set/visibility logicBeamPipeGammaHICSdumpVac  0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeGammaHICSdumpVac  0 {vacuumColor}
+
+/vis/geometry/set/visibility logicBeamPipeVCGVac            0 {vacuumVisibility}
+/vis/geometry/set/colour     logicBeamPipeVCGVac            0 {vacuumColor}
+/vis/geometry/set/colour     logicGVCContainer              0 {containerColor}
+/vis/geometry/set/visibility logicGVCContainer              0 {containerVisibility}
+/vis/geometry/set/colour     logicGamChamTopBot             0 0.42   0.32   0.57 1
+/vis/geometry/set/colour     logicGamChamSideWall           0 0.949   0.674   1 1 
+/vis/geometry/set/colour     logicGVCWindow           0 0.949   0.674   1 1
+/vis/geometry/set/colour     logicGamChamTop          0  0.63  0.77  0.77  0.5
+/vis/geometry/set/colour     logicGamChamBottom       0  0.63  0.77  0.77  0.5
+/vis/geometry/set/colour     logicGamMagPipeFrontWind 0 0.949   0.674   1 1
+/vis/geometry/set/colour     logicGamMagWidePipeFront 0 0.94902 0.67451 1 1
+/vis/geometry/set/colour     logicGamMagWidePipeRear  0 0.94902 0.67451 1 1
+/vis/geometry/set/colour     logicGamMagPipeRear      0 0.949   0.674   1 1
+
+/vis/geometry/set/colour     logicBeamPipeVCGLid      0.90  0.40  0.2   1.0
+
+/vis/geometry/set/colour     logicBSMCaloContainer  0  {containerColor}
+/vis/geometry/set/visibility logicBSMCaloContainer  0  {containerVisibility}
+/vis/geometry/set/colour     logicBSMCaloLayer      0  0.98  0.56  0.09  1.0
+/vis/geometry/set/colour     logicBSMCaloPedestal   0  {pedestalColor}
+/vis/geometry/set/colour     logicBSMCaloTableTop   0  {tableColor}
+/vis/geometry/set/colour     logicBSMCaloTableLeg   0  {tableColor}
+
+/vis/geometry/set/colour     logicFloor          0  0.75  0.78  0.77  1.0
+/vis/geometry/set/colour     logicTunnelA      0  0.71  0.82  0.87  1.0
+/vis/geometry/set/colour     logicTunnelB      0  0.71  0.82  0.87  1.0
+/vis/geometry/set/colour     logicTunnelC      0  0.71  0.82  0.87  1.0
+/vis/geometry/set/colour     logicTunnelD      0  0.71  0.82  0.87  1.0
+
+/vis/geometry/set/colour     logicCeillingA      0  0.90  0.93  0.91  1.0
+/vis/geometry/set/colour     logicCeillingB      0  0.90  0.93  0.91  1.0
+/vis/geometry/set/colour     logicCeillingC      0  0.90  0.93  0.91  1.0
+/vis/geometry/set/colour     logicBackWall       0  0.87  0.86  0.82  1.0
+/vis/geometry/set/colour     logicBeamWallA      0  0.71  0.82  0.87  1.0
+/vis/geometry/set/colour     logicBeamWallB      0  0.82  0.87  0.86  1.0
+/vis/geometry/set/colour     logicBeamWallC      0  0.79  0.82  0.87  1.0
+/vis/geometry/set/colour     logicOuterWallA     0  0.71  0.82  0.87  1.0
+/vis/geometry/set/colour     logicOuterWallB     0  0.82  0.87  0.86  1.0
+/vis/geometry/set/colour     logicStairCaseA     0  0.87  0.86  0.82  1.0
+/vis/geometry/set/colour     logicStairCaseB     0  0.79  0.82  0.87  1.0
+
+/vis/geometry/set/colour     logicXFELDumpPLC    0  0.94  0.65  0.67  0.9
+/vis/geometry/set/colour     logicXFELDumpPLCIn  0  0.76  0.33  0.37  1.0
+/vis/geometry/set/colour     logicVehicleRack    0  0.59  0.36  0.92  0.9
+/vis/geometry/set/colour     logicVehicleRackIn  0  0.78  0.64  0.97  1.0
+/vis/geometry/set/colour     logicXFELDumpPLCShieldingFe   0  0.94  0.87  0.32  1.0
+/vis/geometry/set/colour     logicXFELDumpPLCShieldingPE1  0  0.66  0.64  0.46  1.0
+/vis/geometry/set/colour     logicXFELDumpPLCShieldingPE2  0  0.66  0.64  0.46  1.0
+
+/vis/geometry/set/visibility logicCeillingA   0  {UG03Visibility}
+/vis/geometry/set/visibility logicCeillingB   0  {UG03Visibility}
+/vis/geometry/set/visibility logicCeillingC   0  {UG03Visibility}
+/vis/geometry/set/visibility logicBackWall    0  {UG03Visibility}
+/vis/geometry/set/visibility logicBeamWallA   0  {UG03Visibility}
+/vis/geometry/set/visibility logicBeamWallB   0  {UG03Visibility}
+/vis/geometry/set/visibility logicBeamWallC   0  {UG03Visibility}
+/vis/geometry/set/visibility logicOuterWallA  0  {UG03Visibility}
+/vis/geometry/set/visibility logicOuterWallB  0  {UG03Visibility}
+/vis/geometry/set/visibility logicStairCaseB  0  {UG03Visibility}
+/vis/geometry/set/visibility logicStairCaseA  0  {UG03Visibility}

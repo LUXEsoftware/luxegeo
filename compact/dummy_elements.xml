@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<materials>
+  <element name="He" formula="He" Z="2">
+    <atom type="A" unit="g/mol"  value="4.002602"/>
+  </element>
+  <element name="Li" formula="Li" Z="3">
+    <atom type="A" unit="g/mol"  value="6.94"/>
+  </element>
+  <element name="Be" formula="Be" Z="4">
+    <atom type="A" unit="g/mol"  value="9.0121831"/>
+  </element>
+  <element name="F" formula="F" Z="9">
+    <atom type="A" unit="g/mol"  value="18.998403163"/>
+  </element>
+  <element name="Ne" formula="Ne" Z="10">
+    <atom type="A" unit="g/mol"  value="20.1797"/>
+  </element>
+  <element name="P" formula="P" Z="15">
+    <atom type="A" unit="g/mol"  value="30.973761998"/>
+  </element>
+  <element name="Sc" formula="Sc" Z="21">
+    <atom type="A" unit="g/mol"  value="44.955908"/>
+  </element>
+  <element name="Ti" formula="Ti" Z="22">
+    <atom type="A" unit="g/mol"  value="47.867"/>
+  </element>
+  <element name="V" formula="V" Z="23">
+    <atom type="A" unit="g/mol"  value="50.9415"/>
+  </element>
+  <element name="Cr" formula="Cr" Z="24">
+    <atom type="A" unit="g/mol"  value="51.9961"/>
+  </element>
+  <element name="Co" formula="Co" Z="27">
+    <atom type="A" unit="g/mol"  value="58.933194"/>
+  </element>
+  <element name="Zn" formula="Zn" Z="30">
+    <atom type="A" unit="g/mol"  value="65.38"/>
+  </element>
+  <element name="Ga" formula="Ga" Z="31">
+    <atom type="A" unit="g/mol"  value="69.723"/>
+  </element>
+  <element name="Ge" formula="Ge" Z="32">
+    <atom type="A" unit="g/mol"  value="72.63"/>
+  </element>
+  <element name="Se" formula="Se" Z="34">
+    <atom type="A" unit="g/mol"  value="78.971"/>
+  </element>
+  <element name="Kr" formula="Kr" Z="36">
+    <atom type="A" unit="g/mol"  value="83.798"/>
+  </element>
+  <element name="Rb" formula="Rb" Z="37">
+    <atom type="A" unit="g/mol"  value="85.4678"/>
+  </element>
+  <element name="Sr" formula="Sr" Z="38">
+    <atom type="A" unit="g/mol"  value="87.62"/>
+  </element>
+  <element name="Y" formula="Y" Z="39">
+    <atom type="A" unit="g/mol"  value="88.90584"/>
+  </element>
+  <element name="Zr" formula="Zr" Z="40">
+    <atom type="A" unit="g/mol"  value="91.224"/>
+  </element>
+  <element name="Nb" formula="Nb" Z="41">
+    <atom type="A" unit="g/mol"  value="92.90637"/>
+  </element>
+  <element name="Mo" formula="Mo" Z="42">
+    <atom type="A" unit="g/mol"  value="95.95"/>
+  </element>
+  <element name="Tc" formula="Tc" Z="43">
+    <atom type="A" unit="g/mol"  value="98.0"/>
+  </element>
+  <element name="Ru" formula="Ru" Z="44">
+    <atom type="A" unit="g/mol"  value="101.07"/>
+  </element>
+  <element name="Rh" formula="Rh" Z="45">
+    <atom type="A" unit="g/mol"  value="102.9055"/>
+  </element>
+  <element name="Pd" formula="Pd" Z="46">
+    <atom type="A" unit="g/mol"  value="106.42"/>
+  </element>
+  <element name="Ag" formula="Ag" Z="47">
+    <atom type="A" unit="g/mol"  value="107.8682"/>
+  </element>
+  <element name="Cd" formula="Cd" Z="48">
+    <atom type="A" unit="g/mol"  value="112.414"/>
+  </element>
+  <element name="In" formula="In" Z="49">
+    <atom type="A" unit="g/mol"  value="114.818"/>
+  </element>
+  <element name="Sn" formula="Sn" Z="50">
+    <atom type="A" unit="g/mol"  value="118.71"/>
+  </element>
+  <element name="Sb" formula="Sb" Z="51">
+    <atom type="A" unit="g/mol"  value="121.76"/>
+  </element>
+  <element name="Te" formula="Te" Z="52">
+    <atom type="A" unit="g/mol"  value="127.6"/>
+  </element>
+  <element name="I" formula="I" Z="53">
+    <atom type="A" unit="g/mol"  value="126.90447"/>
+  </element>
+  <element name="Xe" formula="Xe" Z="54">
+    <atom type="A" unit="g/mol"  value="131.293"/>
+  </element>
+  <element name="Cs" formula="Cs" Z="55">
+    <atom type="A" unit="g/mol"  value="132.90545196"/>
+  </element>
+  <element name="Ba" formula="Ba" Z="56">
+    <atom type="A" unit="g/mol"  value="137.327"/>
+  </element>
+  <element name="La" formula="La" Z="57">
+    <atom type="A" unit="g/mol"  value="138.90547"/>
+  </element>
+  <element name="Ce" formula="Ce" Z="58">
+    <atom type="A" unit="g/mol"  value="140.116"/>
+  </element>
+  <element name="Pr" formula="Pr" Z="59">
+    <atom type="A" unit="g/mol"  value="140.90766"/>
+  </element>
+  <element name="Nd" formula="Nd" Z="60">
+    <atom type="A" unit="g/mol"  value="144.242"/>
+  </element>
+  <element name="Pm" formula="Pm" Z="61">
+    <atom type="A" unit="g/mol"  value="145.0"/>
+  </element>
+  <element name="Sm" formula="Sm" Z="62">
+    <atom type="A" unit="g/mol"  value="150.36"/>
+  </element>
+  <element name="Eu" formula="Eu" Z="63">
+    <atom type="A" unit="g/mol"  value="151.964"/>
+  </element>
+  <element name="Tb" formula="Tb" Z="65">
+    <atom type="A" unit="g/mol"  value="158.92535"/>
+  </element>
+  <element name="Dy" formula="Dy" Z="66">
+    <atom type="A" unit="g/mol"  value="162.5"/>
+  </element>
+  <element name="Ho" formula="Ho" Z="67">
+    <atom type="A" unit="g/mol"  value="164.93033"/>
+  </element>
+  <element name="Er" formula="Er" Z="68">
+    <atom type="A" unit="g/mol"  value="167.259"/>
+  </element>
+  <element name="Tm" formula="Tm" Z="69">
+    <atom type="A" unit="g/mol"  value="168.93422"/>
+  </element>
+  <element name="Yb" formula="Yb" Z="70">
+    <atom type="A" unit="g/mol"  value="173.045"/>
+  </element>
+  <element name="Lu" formula="Lu" Z="71">
+    <atom type="A" unit="g/mol"  value="174.9668"/>
+  </element>
+  <element name="Hf" formula="Hf" Z="72">
+    <atom type="A" unit="g/mol"  value="178.49"/>
+  </element>
+  <element name="Ta" formula="Ta" Z="73">
+    <atom type="A" unit="g/mol"  value="180.94788"/>
+  </element>
+  <element name="Re" formula="Re" Z="75">
+    <atom type="A" unit="g/mol"  value="186.207"/>
+  </element>
+  <element name="Os" formula="Os" Z="76">
+    <atom type="A" unit="g/mol"  value="190.23"/>
+  </element>
+  <element name="Ir" formula="Ir" Z="77">
+    <atom type="A" unit="g/mol"  value="192.217"/>
+  </element>
+  <element name="Pt" formula="Pt" Z="78">
+    <atom type="A" unit="g/mol"  value="195.084"/>
+  </element>
+  <element name="Au" formula="Au" Z="79">
+    <atom type="A" unit="g/mol"  value="196.966569"/>
+  </element>
+  <element name="Hg" formula="Hg" Z="80">
+    <atom type="A" unit="g/mol"  value="200.592"/>
+  </element>
+  <element name="Tl" formula="Tl" Z="81">
+    <atom type="A" unit="g/mol"  value="204.38"/>
+  </element>
+</materials>

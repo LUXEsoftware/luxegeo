@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Detector entry for the dump magnet (FlashMagnet model).
+  Include in the <detectors> section of your main XML via:
+      <include ref="DumpMagnet_dd4hep.xml"/>
+
+  The xpos/ypos/zpos values mirror lxs->DumpMagnetXpos/Ypos/Zpos.
+  fieldvolname must be unique per magnet placement across the full geometry.
+  rotate="true" applies a pi/2 rotation around Z (as in ConstructDumpMagnet).
+  support="true" places the support table and pedestal.
+-->
+<detectors>
+  <detector id="3" name="DumpMagnet" type="LxMagnet">
+    <magnet model="FlashMagnet"
+            xpos="DumpMagnetXpos"
+            ypos="DumpMagnetYpos"
+            zpos="DumpMagnetZpos"
+            rotate="true"
+            fieldvolname="logicDumpMagnetField"
+            support="true"/>
+  </detector>
+</detectors>
