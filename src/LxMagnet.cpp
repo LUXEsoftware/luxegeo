@@ -123,7 +123,7 @@ static Ref_t create_LxMagnet(dd4hep::Detector& description,
     fieldVol = FlashMagnetAssembly::GetFieldVolumeStatic(description, fieldvolname);
     if (detName == "DumpMagnet") AddDumpMagnetFieldGeometry(description, fieldVol);
     if (detName == "IPMagnet") AddIPMagnetFieldGeometry(description, fieldVol);
-    if (detName == "GammaMagnet") AddGammaMagnetFieldGeometry(description, fieldVol);
+    if (detName == "GMagnet") AddGammaMagnetFieldGeometry(description, fieldVol);
   }
   // else if (model == "TypMBMagnet") {
   //   fieldVol = TypMBMagnetAssembly::GetFieldVolume(description, fieldvolname);

@@ -24,6 +24,8 @@ set(sources
   ./src/LxInteractionChamber.cpp
   ./src/FlashMagnetAssembly.cpp
   ./src/LxMagnet.cpp
+  ./src/LxBeamPipes.cpp
+  ./src/LxBeamPipes_geo.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Detector entry for LxBeamPipes.
+  Include in the <detectors> section of your main XML via:
+      <include ref="LxBeamPipes.xml"/>
+  Pipe sections are built and placed in the order listed.
+  Comment out any section not needed.
+-->
+<detectors>
+  <detector id="5" name="BeamPipes" type="LxBeamPipes">
+    <pipe name="BeamPipeToDump"/>
+    <pipe name="BeamPipeToIP"/>
+    <pipe name="GammaVacuumChamber"/>
+  </detector>
+</detectors>

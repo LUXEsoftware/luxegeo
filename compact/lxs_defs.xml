@@ -125,7 +125,7 @@
   <constant name="DumpCleanMagThickness" value="20.0 *cm"/>
   <constant name="DumpCleanMagField" value="14000.0*gauss"/>
   <constant name="ShieldingMaterial" value="Iron" type="string"/>
-  <constant name="ShieldingZpos" value="0.0 *cm"/>
+  <!--constant name="ShieldingZpos" value="0.0 *cm"/--> <!-- this is not used, it is calculated in LxBeamPipes::ConstructBeamPipeToIP() -->
   <constant name="ShieldingX" value="300.0 *cm"/>
   <constant name="ShieldingY" value="290.0 *cm"/>
   <constant name="ShieldingDXBeamWall" value="61.5 *cm"/>
