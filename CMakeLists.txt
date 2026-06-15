@@ -27,6 +27,7 @@ set(sources
   ./src/LxBeamPipes.cpp
   ./src/LxBeamPipes_geo.cpp
   ./src/LxDetChamberAssembly.cpp
+  ./src/LxHICSBeamDump.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need

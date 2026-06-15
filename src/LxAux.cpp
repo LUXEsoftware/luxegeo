@@ -154,3 +154,102 @@ dd4hep::Volume LxAux::BuildPedestal(dd4hep::Detector&  description,
   Volume logicPedestal("logic" + volname, solidPedestal, pedestalMaterial);
   return logicPedestal;
 }
+
+
+dd4hep::Assembly LxAux::BuildHexapod(dd4hep::Detector&  description,
+                                     const std::string& pname,
+                                     double&            hexhight)
+{
+  // Hexapod support assembly, centred in Y.
+  // hexhight is first used to shorten the middle section from OPPPHexapodY,
+  // then updated to the actual height of the assembly returned.
+  Material opppHexapodMaterial = description.material(
+      description.constant<std::string>("OPPPHexapodMaterial"));
+
+  double OPPPHexapodUpR        = description.constant<double>("OPPPHexapodUpR");
+  double OPPPHexapodUpH        = description.constant<double>("OPPPHexapodUpH");
+  double OPPPHexapodDownR      = description.constant<double>("OPPPHexapodDownR");
+  double OPPPHexapodDownH      = description.constant<double>("OPPPHexapodDownH");
+  double OPPPHexapodY          = description.constant<double>("OPPPHexapodY");
+
+  std::string lgc = "logic";
+  std::string sld = "solid";
+
+  std::string topvolname = pname + "HexTop";
+  std::string botvolname = pname + "HexBottom";
+  std::string midvolname = pname + "HexMiddle";
+
+  Tube   solidOPPPHexTop(0.0, OPPPHexapodUpR,   OPPPHexapodUpH/2.0,   0.0, 2.0*M_PI);
+  Volume logicOPPPHexTop(lgc + topvolname, solidOPPPHexTop, opppHexapodMaterial);
+
+  Tube   solidOPPPHexBottom(0.0, OPPPHexapodDownR, OPPPHexapodDownH/2.0, 0.0, 2.0*M_PI);
+  Volume logicOPPPHexBottom(lgc + botvolname, solidOPPPHexBottom, opppHexapodMaterial);
+
+  double hexmh    = OPPPHexapodY - OPPPHexapodUpH - OPPPHexapodDownH - hexhight;
+  double hexmrup  = 0.9 * OPPPHexapodUpR;
+  double hexmrdwn = 0.9 * OPPPHexapodDownR;
+  hexhight = OPPPHexapodUpH + OPPPHexapodDownH + hexmh;
+
+  // Commented: cone version
+  // Cone solidOPPPHexMiddle(hexmh/2.0,
+  //     hexmrdwn - OPPPHexapodThickness, hexmrdwn,
+  //     hexmrup  - OPPPHexapodThickness, hexmrup);
+
+  // Polycone leg profile
+  double hsphi = M_PI / 6.0;
+  Position lupposl(hexmrup  * std::cos(-hsphi/2.0),  hexhight/2.0 - OPPPHexapodUpH,   hexmrup  * std::sin(-hsphi/2.0));
+  Position ldwposl(hexmrdwn * std::cos( hsphi/2.0), -hexhight/2.0 + OPPPHexapodDownH, hexmrdwn * std::sin( hsphi/2.0));
+  ROOT::Math::XYZVector lposdifl(lupposl.X() - ldwposl.X(),
+                                  lupposl.Y() - ldwposl.Y(),
+                                  lupposl.Z() - ldwposl.Z());
+  double hexsidel = lposdifl.R();
+
+  std::vector<double> rohexleg{0.0, 7.5,  7.5,  25.0, 25.0, 7.5,  7.5,  0.0};
+  std::vector<double> rihexleg{0.0, 5.0,  5.0,  22.0, 22.0, 5.0,  5.0,  0.0};
+  std::vector<double>  lhexleg{0.0, 0.04, 0.14, 0.16, 0.84, 0.86, 0.96, 1.0};
+  std::for_each(rohexleg.begin(), rohexleg.end(), [=](double& x){ x *= dd4hep::mm; });
+  std::for_each(rihexleg.begin(), rihexleg.end(), [=](double& x){ x *= dd4hep::mm; });
+  // Scale lhexleg by hexsidel and convert units to mm (values above are in mm already)
+  std::for_each(lhexleg.begin(), lhexleg.end(), [=](double& x){ x *= hexsidel; });
+
+  Polycone solidOPPPHexMiddle(0.0, 2.0*M_PI, rihexleg, rohexleg, lhexleg);
+  Volume   logicOPPPHexMiddle(lgc + midvolname, solidOPPPHexMiddle, opppHexapodMaterial);
+
+  Assembly oppHexapodAssembly(pname + "HexapodAssembly");
+
+  // Top disc — G4RotationMatrix(G4ThreeVector(-1,0,0), pi/2): axis-angle around -X by pi/2
+  // → RotationZYX(0, 0, -pi/2)
+  RotationZYX discRot(0.0, 0.0, -M_PI/2.0);
+  oppHexapodAssembly.placeVolume(logicOPPPHexTop,
+      Transform3D(discRot, Position(0.0,  (hexhight - OPPPHexapodUpH)/2.0,   0.0)));
+  oppHexapodAssembly.placeVolume(logicOPPPHexBottom,
+      Transform3D(discRot, Position(0.0, -(hexhight - OPPPHexapodDownH)/2.0, 0.0)));
+
+  // Six legs: two groups of three, each rotated 120 degrees apart
+  // Geant4: rotateY(theta) then rotateZ(phi) on default matrix
+  // = intrinsic Y then Z = fixed-frame Z first then Y = RotationZYX(phi, theta, 0)
+  // This did not work and was replaced explicit rotations as in original G4 code.
+  for (int nl = 0; nl < 3; ++nl) {
+    double phinl = nl * 2.0*M_PI/3.0;
+    Position luppos(hexmrup  * std::cos(phinl - hsphi/2.0),  hexhight/2.0 - OPPPHexapodUpH,   hexmrup  * std::sin(phinl - hsphi/2.0));
+    Position ldwpos(hexmrdwn * std::cos(phinl + hsphi/2.0), -hexhight/2.0 + OPPPHexapodDownH, hexmrdwn * std::sin(phinl + hsphi/2.0));
+    ROOT::Math::XYZVector lposdif(luppos.X()-ldwpos.X(), luppos.Y()-ldwpos.Y(), luppos.Z()-ldwpos.Z());
+    double theta = lposdif.Theta();
+    double phi   = lposdif.Phi();
+    RotationZYX rleg = RotationZYX() * RotationZ(phi) * RotationY(theta);
+    oppHexapodAssembly.placeVolume(logicOPPPHexMiddle, Transform3D(rleg, ldwpos));
+  }
+
+  for (int nl = 0; nl < 3; ++nl) {
+    double phinl = nl * 2.0*M_PI/3.0 - 2.0*hsphi;
+    Position luppos(hexmrup  * std::cos(phinl + hsphi/2.0),  hexhight/2.0 - OPPPHexapodUpH,   hexmrup  * std::sin(phinl + hsphi/2.0));
+    Position ldwpos(hexmrdwn * std::cos(phinl - hsphi/2.0), -hexhight/2.0 + OPPPHexapodDownH, hexmrdwn * std::sin(phinl - hsphi/2.0));
+    ROOT::Math::XYZVector lposdif(luppos.X()-ldwpos.X(), luppos.Y()-ldwpos.Y(), luppos.Z()-ldwpos.Z());
+    double theta = lposdif.Theta();
+    double phi   = lposdif.Phi();
+    RotationZYX rleg = RotationZYX() * RotationZ(phi) * RotationY(theta);
+    oppHexapodAssembly.placeVolume(logicOPPPHexMiddle, Transform3D(rleg, ldwpos));
+  }
+
+  return oppHexapodAssembly;
+}

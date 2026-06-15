@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal detector entry for LxHICSBeamDump.
+  Include in the <detectors> section of your main XML via:
+      <include ref="LxHICSBeamDump.xml"/>
+  All geometry constants are expected in the <define> section of the main XML.
+-->
+<detectors>
+  <detector id="7" name="HICSBeamDump" type="LxHICSBeamDump">
+  </detector>
+</detectors>

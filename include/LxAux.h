@@ -28,6 +28,14 @@ public:
                                       const std::string& pname,
                                       double xs, double ys, double zs);
 
+  // Build a hexapod support assembly.
+  // hexhight: on entry, amount subtracted from OPPPHexapodY for the middle section;
+  //           on exit, updated to the actual height of the returned assembly.
+  // Assembly is centred in Y.
+  static dd4hep::Assembly BuildHexapod(dd4hep::Detector&  description,
+                                       const std::string& pname,
+                                       double&            hexhight);
+
   // Merge all placed volumes from srcAssembly (offset by translation+rotation)
   // into dstAssembly. Mirrors LxAux::AddAssmblyVolumes behaviour.
   static void AddAssemblyVolumes(dd4hep::Assembly&   dstAssembly,
