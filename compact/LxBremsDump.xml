@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Minimal detector entry for LxBremsDump.
+  Include in the <detectors> section of your main XML via:
+      <include ref="LxBremsDump.xml"/>
+  All geometry constants are expected in the <define> section of the main XML.
+-->
+<detectors>
+  <detector id="9" name="BremsDump" type="LxBremsDump">
+  </detector>
+</detectors>

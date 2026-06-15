@@ -53,6 +53,7 @@
   <include ref="./LxBeamPipes.xml"/>
   <include ref="./LxDetChamberAssembly.xml"/>
   <include ref="./LxHICSBeamDump.xml"/>
+  <include ref="./LxBremsDump.xml"/>
 
 
   <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins
