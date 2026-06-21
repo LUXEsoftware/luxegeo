@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Detector entry for LxDetectorGammaCalo8.
+  Include in the main XML via:
+      <include ref="LxDetectorGammaCalo8_dd4hep.xml"/>
+
+  The readout definition must be included before the detector entry.
+  Cell sizes are computed from lead glass dimensions:
+      cell_x = LeadGlassX / 8   (8 cells in X)
+      cell_y = LeadGlassY / 8   (8 cells in Y)
+      cell_z = LeadGlassZ / 9   (9 cells in Z)
+
+  see DDCore/include/DDSegmentation/BitFieldCoder.h
+
+  Bit layout (total 32 bits, well within 64-bit limit):
+      system : 8 bits  (GammaMonitor container)
+      module : 6 bits  (LGFoil — up to 64 modules, NLGblocks=8 needs 4)
+      x      : 6 bits signed  (8 cells → need 4 bits + sign; 6 is comfortable)
+      y      : 6 bits signed
+      z      : 6 bits signed  (9 cells → need 4 bits + sign; 6 is comfortable)
+-->
+
+<lccdd>
+
+  <readouts>
+    <readout name="GammaMonitorHits">
+      <!--<id>system:8,module:6,sensor:6,x:6:-3,y:6:-3,z:6:-3</id>-->
+      <id>system:8,module:6,x:-6,y:-6,z:-6</id>
+      <!--<id>system:8,module:6,x:6,y:6,z:6</id>-->
+      <segmentation type="CartesianGridXYZ"
+                    grid_size_x="LeadGlassX/8.0"
+                    grid_size_y="LeadGlassY/8.0"
+                    grid_size_z="LeadGlassZ/9.0"/>
+    </readout>
+  </readouts>
+
+  <detectors>
+    <detector id="18" name="GammaMonitor" type="LxDetectorGammaCalo8"  readout="GammaMonitorHits">
+    </detector>
+  </detectors>
+
+</lccdd>
