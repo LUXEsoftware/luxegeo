@@ -24,9 +24,7 @@
 
   <readouts>
     <readout name="GammaMonitorHits">
-      <!--<id>system:8,module:6,sensor:6,x:6:-3,y:6:-3,z:6:-3</id>-->
       <id>system:8,module:6,x:-6,y:-6,z:-6</id>
-      <!--<id>system:8,module:6,x:6,y:6,z:6</id>-->
       <segmentation type="CartesianGridXYZ"
                     grid_size_x="LeadGlassX/8.0"
                     grid_size_y="LeadGlassY/8.0"
