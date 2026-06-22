@@ -215,9 +215,9 @@
 /vis/geometry/set/visibility logicBeamPipeOPPPDGTVac 0 {vacuumVisibility}
 /vis/geometry/set/colour     logicBeamPipeOPPPDGTVac 0 {vacuumColor}
 
-/vis/geometry/set/colour     logicComptShielding   0  0.2  0.2  0.2  1.0
-/vis/geometry/set/colour     logicComptShielding2  0  0.3  0.3  0.3  1.0
-/vis/geometry/set/colour     logicShieldingPlate   0.13 0.05 0.06 1.0
+/vis/geometry/set/colour     logicComptShielding       0  0.2  0.2  0.2  1.0
+/vis/geometry/set/colour     logicComptShielding2      0  0.3  0.3  0.3  1.0
+/vis/geometry/set/colour     logicComptShieldingPlate  0  0.13 0.05 0.06 1.0
 
 /vis/geometry/set/colour     logicGammaMonitorContainer 0 {containerColor}
 /vis/geometry/set/visibility logicGammaMonitorContainer 0 {containerVisibility}
