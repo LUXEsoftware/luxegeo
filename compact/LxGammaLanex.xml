@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entry for LxDetectorComptonFluka (LYSO Compton spectrometer).
+  Include in the main XML via:
+      <include ref="LxGammaLanex.xml"/>
+
+  Readout bit layout:
+      system : 8 bits  — envelope assembly (detector system ID)
+      module : 6 bits  — logicComptonLysoCal placement (0=+X, 1=-X)
+      x      : 16 bits signed — CartesianGridXY cell in X (ComptonLysoNCellX cells)
+      y      : 8  bits signed — CartesianGridXY cell in Y (ComptonLysoNCellY cells)
+
+  Cell sizes are computed from crystal dimensions and cell counts:
+      grid_size_x = ComptonLysoX / ComptonLysoNCellX
+      grid_size_y = ComptonLysoY / ComptonLysoNCellY
+-->
+
+<readouts>
+  <readout name="LysoCalHits">
+    <id>system:8,module:6,x:-16,y:-8</id>
+    <segmentation type="CartesianGridXY"
+                  grid_size_x="ComptonLysoX/ComptonLysoNCellX"
+                  grid_size_y="ComptonLysoY/ComptonLysoNCellY"/>
+  </readout>
+</readouts>
+
+<detectors>
+  <detector id="19" name="ComptonSpectrometer" type="LxDetectorComptonFluka"
+            readout="LysoCalHits">
+  </detector>
+</detectors>
+
+</lccdd>

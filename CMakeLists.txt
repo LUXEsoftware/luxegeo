@@ -30,6 +30,7 @@ set(sources
   ./src/LxHICSBeamDump.cpp
   ./src/LxBremsDump.cpp
   ./src/LxGammaCalo.cpp
+  ./src/LxGammaLanex.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need
