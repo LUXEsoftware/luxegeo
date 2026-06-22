@@ -185,7 +185,8 @@
   <constant name="ChamberTargetVolX" value="BTargetX"/>
   <constant name="ChamberTargetVolY" value="BTargetY"/>
   <constant name="ChamberTargetVolZ" value="TargetFrameZ"/>
-  <constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(DumpMagnetZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/>
+  <!--constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(DumpMagnetZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/-->
+  <!--constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(FlashMagnetCoilZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/-->
   <constant name="BPipeRLG" value="BPipeR"/>
   <constant name="GTargetX" value="5.0 *cm"/>
   <constant name="GTargetY" value="5.0 *cm"/>
@@ -370,6 +371,7 @@
   <constant name="FlashMagneteffY" value="FlashMFieldGapY"/>
   <constant name="FlashMFieldLength" value="FlashMagnetCoreZ"/>
   <constant name="IPMAgnetBeamPipeXGap" value="1.0 *mm"/>
+  <constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(FlashMagnetCoilZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/>
   <constant name="VacChamberMaterial" value="BeamPipeMaterial" type="string"/>
   <constant name="VacChamberSideMaterial" value="BeamPipeMaterial" type="string"/>
   <constant name="VacChamberWindowMaterial" value="Aluminium" type="string"/>

@@ -11,5 +11,7 @@
     <pipe name="BeamPipeToDump"/>
     <pipe name="BeamPipeToIP"/>
     <pipe name="GammaVacuumChamber"/>
+    <pipe name="BeamPipeTM"/>
+    <pipe name="BeamPipeInc"/>
   </detector>
 </detectors>

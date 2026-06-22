@@ -21,6 +21,8 @@ LxBeamPipes::LxBeamPipes(dd4hep::Detector& description, dd4hep::Volume& motherVo
   fFunctionMap["BeamPipeToDump"]      = &LxBeamPipes::ConstructBeamPipeToDump;
   fFunctionMap["BeamPipeToIP"]        = &LxBeamPipes::ConstructBeamPipeToIP;
   fFunctionMap["GammaVacuumChamber"]  = &LxBeamPipes::ConstructGammaVacuumChamber;
+  fFunctionMap["BeamPipeTM"]          = &LxBeamPipes::ConstructBeamPipeTM;
+  fFunctionMap["BeamPipeInc"]         = &LxBeamPipes::ConstructBeamPipeInc;
 }
 
 
@@ -434,3 +436,79 @@ void LxBeamPipes::ConstructGammaVacuumChamber()
   pvLid.addPhysVolID("BeamPipeVCGProfLid", 0);
   if (OverlapTest) pvLid.ptr()->CheckOverlaps();
 }
+
+
+void LxBeamPipes::ConstructBeamPipeTM()
+{
+  Material beamPipeMaterial = fDescription.material(
+      fDescription.constant<std::string>("BeamPipeMaterial"));
+  Material vacuumMaterial   = fDescription.material(
+      fDescription.constant<std::string>("BeamPipeVacuumMaterial"));
+
+  double BPipeR          = fDescription.constant<double>("BPipeR");
+  double BPipeThickness  = fDescription.constant<double>("BPipeThickness");
+  double DumpMagnetZpos  = fDescription.constant<double>("DumpMagnetZpos");
+  double BTargetZpos     = fDescription.constant<double>("BTargetZpos");
+  double TargetChamberZ  = fDescription.constant<double>("TargetChamberZ");
+  double FlashMFieldLength = fDescription.constant<double>("FlashMFieldLength");
+  bool   OverlapTest     = (fDescription.constant<int>("OverlapTest") != 0);
+
+//   double BTargetChamberMagnetGapZ = fDescription.constant<double>("BTargetChamberMagnetGapZ");
+//   double dumpMagnetZ = fDescription.constant<double>("FlashMagnetCoilZ");
+//   G4double dumpMagnetZ = lxs->FlashMagnetCoilZ;
+//
+//   double fZposAbs = DumpMagnetZpos - 0.5*(dumpMagnetZ + TargetChamberZ) - BTargetChamberMagnetGapZ;
+//   BTargetZpos = fZposAbs;
+//  <constant name="BTargetZpos" value="DumpMagnetZpos - 0.5*(DumpMagnetZ + TargetChamberZ) - BTargetChamberMagnetGapZ"/>
+
+
+  double lpipe_tm = DumpMagnetZpos - BTargetZpos
+                    - 0.5*(TargetChamberZ + FlashMFieldLength);
+
+  Tube   solidBeamPipeTM(BPipeR - BPipeThickness, BPipeR, lpipe_tm/2.0, 0.0, 2.0*M_PI);
+  Volume logicBeamPipeTM("logicBeamPipeTM", solidBeamPipeTM, beamPipeMaterial);
+  PlacedVolume pvTM = fMotherVol.placeVolume(logicBeamPipeTM,
+      Position(0.0, 0.0, BTargetZpos + (TargetChamberZ + lpipe_tm)/2.0));
+  pvTM.addPhysVolID("BeamPipeTM", 0);
+  if (OverlapTest) pvTM.ptr()->CheckOverlaps();
+
+  Tube   solidBeamPipeTMVac(0.0, BPipeR - BPipeThickness, lpipe_tm/2.0, 0.0, 2.0*M_PI);
+  Volume logicBeamPipeTMVac("logicBeamPipeTMVac", solidBeamPipeTMVac, vacuumMaterial);
+  PlacedVolume pvTMVac = fMotherVol.placeVolume(logicBeamPipeTMVac,
+      Position(0.0, 0.0, BTargetZpos + (TargetChamberZ + lpipe_tm)/2.0));
+  pvTMVac.addPhysVolID("BeamPipeTMVac", 0);
+  if (OverlapTest) pvTMVac.ptr()->CheckOverlaps();
+}
+
+
+void LxBeamPipes::ConstructBeamPipeInc()
+{
+  Material beamPipeMaterial = fDescription.material(
+      fDescription.constant<std::string>("BeamPipeMaterial"));
+  Material vacuumMaterial   = fDescription.material(
+      fDescription.constant<std::string>("BeamPipeVacuumMaterial"));
+
+  double BPipeR         = fDescription.constant<double>("BPipeR");
+  double BPipeThickness = fDescription.constant<double>("BPipeThickness");
+  double BTargetZpos    = fDescription.constant<double>("BTargetZpos");
+  double TargetChamberZ = fDescription.constant<double>("TargetChamberZ");
+  double WorldSizeZ     = fDescription.constant<double>("world_z");
+  bool   OverlapTest    = (fDescription.constant<int>("OverlapTest") != 0);
+
+  double lpipe_inc = BTargetZpos + WorldSizeZ/2.0 - TargetChamberZ/2.0;
+
+  Tube   solidBeamPipeInc(BPipeR - BPipeThickness, BPipeR, lpipe_inc/2.0, 0.0, 2.0*M_PI);
+  Volume logicBeamPipeInc("logicBeamPipeInc", solidBeamPipeInc, beamPipeMaterial);
+  PlacedVolume pvInc = fMotherVol.placeVolume(logicBeamPipeInc,
+      Position(0.0, 0.0, BTargetZpos - (TargetChamberZ + lpipe_inc)/2.0));
+  pvInc.addPhysVolID("BeamPipeInc", 0);
+  if (OverlapTest) pvInc.ptr()->CheckOverlaps();
+
+  Tube   solidBeamPipeIncVac(0.0, BPipeR - BPipeThickness, lpipe_inc/2.0, 0.0, 2.0*M_PI);
+  Volume logicBeamPipeIncVac("logicBeamPipeIncVac", solidBeamPipeIncVac, vacuumMaterial);
+  PlacedVolume pvIncVac = fMotherVol.placeVolume(logicBeamPipeIncVac,
+      Position(0.0, 0.0, BTargetZpos - (TargetChamberZ + lpipe_inc)/2.0));
+  pvIncVac.addPhysVolID("BeamPipeIncVac", 0);
+  if (OverlapTest) pvIncVac.ptr()->CheckOverlaps();
+}
+
