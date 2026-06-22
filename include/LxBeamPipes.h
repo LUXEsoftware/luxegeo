@@ -25,6 +25,7 @@ private:
   void ConstructGammaVacuumChamber();
   void ConstructBeamPipeTM();
   void ConstructBeamPipeInc();
+  void ConstructBeamPipeOPPPDGT();
 
   typedef void (LxBeamPipes::*ProcessFT)();
   std::map<std::string, ProcessFT> fFunctionMap;

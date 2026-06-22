@@ -13,5 +13,6 @@
     <pipe name="GammaVacuumChamber"/>
     <pipe name="BeamPipeTM"/>
     <pipe name="BeamPipeInc"/>
+    <pipe name="BeamPipeOPPPDGT"/>
   </detector>
 </detectors>
