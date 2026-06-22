@@ -774,6 +774,9 @@
   <constant name="BeamProfilerMetalizationZ" value="0.005 *mm"/>
   <constant name="bp2zpos" value="11800*mm"/>
   <!-- skipped vector BeamProfilerZpos = {bp2zpos, bp2zpos + 15.0*mm} -->
+  <constant name="BeamProfilerNZpos" value="2"/>
+  <constant name="BeamProfilerZpos0" value="bp2zpos"/>
+  <constant name="BeamProfilerZpos1" value="bp2zpos + 15.0*mm"/>
   <constant name="BeamProfilerSensorMaterial" value="G4_ALUMINUM_OXIDE" type="string"/>
   <constant name="BeamProfilerNCellX" value="5000"/>
   <constant name="BeamProfilerNCellY" value="5000"/>

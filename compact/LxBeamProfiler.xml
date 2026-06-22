@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entry for LxBeamProfiler.
+  Include in the main XML via:
+      <include ref="LxBeamProfiler.xml"/>
+
+  BeamProfilerZpos is a vector in the original code. It is expressed here
+  as indexed constants with a count:
+      <constant name="BeamProfilerNZpos"   value="2"/>
+      <constant name="BeamProfilerZpos0"  value="..."/>
+      <constant name="BeamProfilerZpos1"  value="..."/>
+
+  Readout bit layout:
+      system : 8  bits — envelope assembly (detector system ID)
+      module : 6  bits — pcbAssembly placement index (0 = first Z, 1 = second Z)
+      x      : 16 bits signed — CartesianGridXY cell in X
+      y      : 16 bits signed — CartesianGridXY cell in Y
+
+  Cell sizes computed from sensor dimensions and cell counts:
+      grid_size_x = BeamProfilerSensorX / BeamProfilerNCellX
+      grid_size_y = BeamProfilerSensorY / BeamProfilerNCellY
+-->
+
+<readouts>
+  <readout name="BeamProfilerHits">
+    <id>system:8,module:6,x:-16,y:-16</id>
+    <segmentation type="CartesianGridXY"
+                  grid_size_x="BeamProfilerSensorX/BeamProfilerNCellX"
+                  grid_size_y="BeamProfilerSensorY/BeamProfilerNCellY"/>
+  </readout>
+</readouts>
+
+<detectors>
+  <detector id="20" name="BeamProfiler" type="LxBeamProfiler"
+            readout="BeamProfilerHits">
+  </detector>
+</detectors>
+
+</lccdd>
