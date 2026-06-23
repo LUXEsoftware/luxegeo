@@ -57,6 +57,8 @@
   <include ref="./LxGammaCalo.xml"/>
   <include ref="./LxGammaLanex.xml"/>
   <include ref="./LxBeamProfiler.xml"/>
+  <include ref="./LxBremsTarget.xml"/>
+  <include ref="./LxGammaTarget.xml"/>
 
 
   <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins

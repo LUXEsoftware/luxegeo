@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entry for the bremsstrahlung target chamber.
+  Include in the main XML via:
+      <include ref="LxBremsTarget.xml"/>
+
+  zpos, targetz can reference constants defined in <define>.
+  targetmaterial is the name of a string constant whose value is the material name.
+-->
+<detectors>
+  <detector id="11" name="BremsTargetChamber" type="LxBremsTarget">
+    <target zpos="BTargetZpos"
+            targetmaterial="BTargetMaterial"
+            targetz="BTargetZ"/>
+  </detector>
+</detectors>
+</lccdd>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entry for the gamma target chamber.
+  Include in the main XML via:
+      <include ref="LxGammaTarget.xml"/>
+
+  targettype: "foil" (default) or "wire"
+-->
+<detectors>
+  <detector id="12" name="GammaTargetChamber" type="LxGammaTarget">
+    <target zpos="GTargetZpos"
+            targetmaterial="GTargetMaterial"
+            targetz="GTargetZ"
+            targettype="foil"/>
+  </detector>
+</detectors>
+</lccdd>
