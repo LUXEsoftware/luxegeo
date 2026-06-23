@@ -101,8 +101,6 @@ dd4hep::Volume LxTargetChamber::BuildChamberVolume(dd4hep::Detector& description
   // Target support assembly (frame + holder + motor)
   // -----------------------------------------------------------------------
   Assembly targetSupportAssembly = ConstructTargetSupportAssembly(description);
-//   LxAux::AddAssemblyVolumes(logicTargetChamberContainer, targetSupportAssembly,
-//                             Position(-tcshiftx, 0.0, 0.0));
   PlacedVolume pvSupportAssy = logicTargetChamberContainer.placeVolume(targetSupportAssembly,Position(-tcshiftx, 0.0, 0.0));
 
   return logicTargetChamberContainer;
@@ -150,8 +148,6 @@ void LxTargetChamber::ConstructSupport(dd4hep::Detector&  description,
 
   Assembly tablesupport = LxAux::BuildTable(description, tcname + "Support",
                                             tblx, tblhight, tblz, 1);
-//   LxAux::AddAssemblyVolumes(motherVol, tablesupport,
-//                             Position(TargetChamberXPos, -ylevel, zpos));
   PlacedVolume pvTableAssy = motherVol.placeVolume(tablesupport, Position(TargetChamberXPos, -ylevel, zpos));
 
   Volume pedestal = LxAux::BuildPedestal(description, tcname + "Support", tblx, ypestal, tblz);
