@@ -34,6 +34,7 @@ set(sources
   ./src/LxBeamProfiler.cpp
   ./src/LxTargetChamber_geo.cpp
   ./src/LxTargetChamber.cpp
+  ./src/LxCherenkov.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need

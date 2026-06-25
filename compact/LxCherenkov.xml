@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entries for LxCherenkov.
+  Include in the main XML via:
+      <include ref="LxCherenkov_dd4hep.xml"/>
+
+  The first <detector> entry builds the shared LxCherenkov instance.
+  All entries place CerenkovMotherLogical at the given position.
+
+  Claude wanted to use CartesianStripZ, but it did not seem to work, or required some more parameters.
+  Swithced to CylindricalGridPhiZ, it is more than needed, but not wrong.
+  Readout bit layout:
+      system   : 6  bits — same for all Cherenkov detectors (set via system_id attribute)
+      detector : 4  bits — unique per placement (up to 16 copies)
+      straw    : 16 bits — straw index within the detector
+      z        : 16 bits signed — CartesianStripZ cell along straw axis (local Z)
+
+  Position attributes (xpos, ypos, zpos) and rotation attributes (rotZ, rotY)
+  can reference constants defined in <define> using expression syntax.
+  rotZ and rotY are optional (default 0).
+
+  CerenkovNZSlices must be defined in <define>.
+-->
+
+<define>
+  <constant name="CerenkovNZSlices" value="20"/>
+</define>
+
+
+<readouts>
+  <readout name="CherenkovHits">
+    <id>system:6,detector:4,straw:16,phi:2,z:-16</id>
+<!--    <segmentation type="CartesianStripZ"
+    strip_size_z="CerenkovStrawHeight/CerenkovNZSlices"/> -->
+    <segmentation type="CylindricalGridPhiZ"
+                  grid_size_z="CerenkovStrawHeight/CerenkovNZSlices"
+                  grid_size_phi="2.0*pi"
+                  radius="CerenkovStrawInnerRadius"/>
+  </readout>
+</readouts>
+
+<detectors>
+
+  <!-- HICS electron Cherenkov — copy 1 -->
+  <detector id="1" name="HICSElectronCerenkov" type="LxCherenkov"
+            readout="CherenkovHits" system_id="1">
+<!--     <placement xpos="HICSElectronCerenkovXpos"
+               ypos="HICSElectronCerenkovYpos"
+               zpos="HICSElectronCerenkovZpos"/> -->
+  </detector>
+
+  <!-- Gamma spectrometer Cherenkov +X — copy 2 -->
+  <detector id="2" name="GammaSpectrometerCerenkov_L" type="LxCherenkov"
+            readout="CherenkovHits" system_id="1">
+<!--    <placement xpos="GammaSpectrometerCerenkovXpos"
+               ypos="GammaSpectrometerCerenkovYpos"
+               zpos="GammaSpectrometerCerenkovZpos"/> -->
+  </detector>
+
+  <!-- Gamma spectrometer Cherenkov -X — copy 3 -->
+  <detector id="3" name="GammaSpectrometerCerenkov_R" type="LxCherenkov"
+            readout="CherenkovHits" system_id="1">
+<!--    <placement xpos="GammaSpectrometerCerenkovXposR"
+               ypos="GammaSpectrometerCerenkovYpos"
+               zpos="GammaSpectrometerCerenkovZpos"/> -->
+  </detector>
+
+  <!-- Brem Cherenkov — copy 0, rotated -->
+  <detector id="0" name="BremCerenkov" type="LxCherenkov"
+            readout="CherenkovHits" system_id="1">
+<!--    <placement xpos="BremCerenkovXpos"
+               ypos="BremCerenkovYpos"
+               zpos="BremCerenkovZpos"
+               rotZ="-0.5*pi"
+               rotY="CerenkovAngle"/> -->
+  </detector>
+
+</detectors>
+
+</lccdd>

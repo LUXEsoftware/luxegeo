@@ -744,6 +744,7 @@
   <constant name="ScintCameraZpos" value="IPMagnetZpos + FlashMFieldLength/2.0 + ComptonElBackshift + (ScintBaseZ + ScintPhosphorZ + ScintFinishZ - OPPPDetTopPlateZ)/2.0 + 1.*m"/>
   <constant name="HICSScintilatorXPosMag1T" value="(36+30+10) *mm"/>
   <constant name="HICSCherenkovXPosMag1T" value="(20.25 + 30 + 10)*mm"/>
+  <constant name="HICSCherenkovXPosMag2T" value="68.25*mm"/>
   <constant name="ComptonElectronBeamtoStageY" value="15 * cm"/>
   <constant name="HICSScintSupportBallH" value="50 *mm"/>
   <constant name="HICSDetSupportMaterial" value="StainlessSteel" type="string"/>
