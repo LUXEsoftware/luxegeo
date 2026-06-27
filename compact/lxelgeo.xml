@@ -60,6 +60,7 @@
   <include ref="./LxBremsTarget.xml"/>
   <include ref="./LxGammaTarget.xml"/>
   <include ref="./LxCherenkov.xml"/>
+  <include ref="./LxSScreen.xml"/>
 
 
   <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins

@@ -94,7 +94,9 @@
 /vis/geometry/set/colour ScintCameraMotherBoxLogical  2 0.75 0.25 0.75 0.9
 
 /vis/geometry/set/colour ScintCameraScaffoldLegLogical 0 {bpipeColor}
-/vis/geometry/set/colour ScintCameraScaffoldPlatformLogical  0 {bpipeColor}
+/vis/geometry/set/colour ScintCameraScaffoldPlatformLogical    0 {bpipeColor}
+/vis/geometry/set/colour HICSScintCameraScaffoldLegLogical     0 {bpipeColor}
+/vis/geometry/set/colour BremScintCameraSupportPlatformLogical 0 {bpipeColor}
 
 /vis/geometry/set/colour logicBremDetTableTop   {tableColor}
 /vis/geometry/set/colour logicBremDetTableLeg   {tableColor}

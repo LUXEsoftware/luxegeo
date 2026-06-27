@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entries for LxSScreen (scintillation screen detectors).
+  Include in the main XML via:
+      <include ref="LxSScreen_dd4hep.xml"/>
+
+  The first <detector> entry (LxHICSScint) builds the shared LxSScreen instance.
+  The second entry (LxBremsScint) reuses it and also triggers support construction
+  via build_support="1".
+
+  Required constants in <define>:
+      LxScintScreenNCellX  — number of cells in X (e.g. 2000)
+      LxScintScreenNCellY  — number of cells in Y (e.g. 200)
+      IPMagFieldMag1T      — field value for 1T configuration (in Tesla or consistent units)
+      IPMagFieldMag2T      — field value for 2T configuration
+      StickScintScreentoBeamWindow — 0 or 1
+
+  Readout bit layout:
+      system   : 8  bits — same for all scint screen detectors
+      detector : 4  bits — unique per placement (0=LxBremsScint, 1=LxHICSScint)
+      x        : 16 bits signed — CartesianGridXY cell in X
+      y        : 8  bits signed — CartesianGridXY cell in Y
+
+  Cell sizes:
+      grid_size_x = ScintX / LxScintScreenNCellX
+      grid_size_y = ScintY / LxScintScreenNCellY
+-->
+
+<define>
+  <constant name="LxScintScreenNCellX" value="2000"/>
+  <constant name="LxScintScreenNCellY" value="200"/>
+</define>
+
+
+<readouts>
+  <readout name="ScintScreenHits">
+    <id>system:8,detector:4,x:-16,y:-16</id>
+    <segmentation type="CartesianGridXY"
+                  grid_size_x="ScintX/LxScintScreenNCellX"
+                  grid_size_y="ScintY/LxScintScreenNCellY"/>
+  </readout>
+</readouts>
+
+<detectors>
+
+  <!-- HICS electron scintillator screen -->
+  <detector id="31" name="LxHICSScint" type="LxSScreen"
+            readout="ScintScreenHits" system_id="2">
+  </detector>
+
+  <!-- Brem scintillator screen — also triggers support construction -->
+  <detector id="30" name="LxBremsScint" type="LxSScreen"
+            readout="ScintScreenHits" system_id="2"
+  build_support="1">
+  </detector>
+
+</detectors>
+
+</lccdd>
