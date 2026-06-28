@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entries for LxTrackerOPPP (OPPP silicon pixel tracker).
+  Include in the main XML via:
+      <include ref="LxTrackerOPPP_dd4hep.xml"/>
+
+  First <detector> entry (OPPPTrackerL) builds the shared LxTrackerOPPP instance.
+  Second entry (OPPPTrackerR) reuses it.
+
+  Readout bit layout:
+      system   : 8  bits — same for all tracker detector entries
+      detector : 4  bits — 0=TrackerL, 1=TrackerR
+      stave    : 4  bits — stave copy number within the tracker volume
+                           (up to 16 staves; 2*OPPPTrackerNLayers per side × 2 sides)
+      sensor   : 4  bits — sensor index within stave (OPPPNStaveSensors)
+      x        : 16 bits signed — CartesianGridXY cell in X (OPPPSensorPixelX pitch)
+      y        : 16 bits signed — CartesianGridXY cell in Y (OPPPSensorPixelY pitch)
+
+  Cell sizes:
+      grid_size_x = OPPPSensorPixelX
+      grid_size_y = OPPPSensorPixelY
+
+  Constants required in <define>:
+      OPPPSensorNCellX, OPPPSensorNCellY  — number of pixels per sensor
+      OPPPSensorPixelX, OPPPSensorPixelY  — pixel pitch
+-->
+
+<readouts>
+  <readout name="OPPPTrackerHits">
+    <id>system:8,detector:6,stave:6,sensor:6,x:-16,y:-16</id>
+    <segmentation type="CartesianGridXY"
+                  grid_size_x="OPPPSensorPixelX"
+                  grid_size_y="OPPPSensorPixelY"/>
+  </readout>
+</readouts>
+
+<detectors>
+
+  <!-- Left tracker arm -->
+  <detector id="50" name="OPPPTrackerL" type="LxTrackerOPPP"
+            readout="OPPPTrackerHits" system_id="60">
+  </detector>
+
+  <!-- Right tracker arm -->
+  <detector id="51" name="OPPPTrackerR" type="LxTrackerOPPP"
+            readout="OPPPTrackerHits" system_id="52">
+  </detector>
+
+</detectors>
+
+</lccdd>
+
