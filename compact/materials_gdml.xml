@@ -1,1096 +1,721 @@
+<?xml version='1.0' encoding='utf-8'?>
 <materials>
     <isotope N="12" Z="6" name="C12">
-      <atom unit="g/mole" value="12" />
+        <atom unit="g/mole" value="12" />
     </isotope>
     <isotope N="13" Z="6" name="C13">
-      <atom unit="g/mole" value="13.0034" />
+        <atom unit="g/mole" value="13.0034" />
     </isotope>
     <element name="Carbon">
-      <fraction n="0.9893" ref="C12" />
-      <fraction n="0.0107" ref="C13" />
+        <fraction n="0.9893" ref="C12" />
+        <fraction n="0.0107" ref="C13" />
     </element>
     <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
+        <atom unit="g/mole" value="27.9769" />
     </isotope>
     <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
+        <atom unit="g/mole" value="28.9765" />
     </isotope>
     <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
+        <atom unit="g/mole" value="29.9738" />
     </isotope>
     <element name="Silicon">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
+        <fraction n="0.922296077703922" ref="Si28" />
+        <fraction n="0.0468319531680468" ref="Si29" />
+        <fraction n="0.0308719691280309" ref="Si30" />
     </element>
     <isotope N="55" Z="25" name="Cr55">
-      <atom unit="g/mole" value="54.938" />
+        <atom unit="g/mole" value="54.938" />
     </isotope>
     <element name="Chrome">
-      <fraction n="1" ref="Cr55" />
+        <fraction n="1" ref="Cr55" />
     </element>
     <isotope N="55" Z="25" name="Mn55">
-      <atom unit="g/mole" value="54.938" />
+        <atom unit="g/mole" value="54.938" />
     </isotope>
     <element name="Manganese">
-      <fraction n="1" ref="Mn55" />
+        <fraction n="1" ref="Mn55" />
     </element>
     <isotope N="54" Z="26" name="Fe54">
-      <atom unit="g/mole" value="53.9396" />
+        <atom unit="g/mole" value="53.9396" />
     </isotope>
     <isotope N="56" Z="26" name="Fe56">
-      <atom unit="g/mole" value="55.9349" />
+        <atom unit="g/mole" value="55.9349" />
     </isotope>
     <isotope N="57" Z="26" name="Fe57">
-      <atom unit="g/mole" value="56.9354" />
+        <atom unit="g/mole" value="56.9354" />
     </isotope>
     <isotope N="58" Z="26" name="Fe58">
-      <atom unit="g/mole" value="57.9333" />
+        <atom unit="g/mole" value="57.9333" />
     </isotope>
     <element name="Iron">
-      <fraction n="0.05845" ref="Fe54" />
-      <fraction n="0.91754" ref="Fe56" />
-      <fraction n="0.02119" ref="Fe57" />
-      <fraction n="0.00282" ref="Fe58" />
+        <fraction n="0.05845" ref="Fe54" />
+        <fraction n="0.91754" ref="Fe56" />
+        <fraction n="0.02119" ref="Fe57" />
+        <fraction n="0.00282" ref="Fe58" />
     </element>
     <isotope N="58" Z="28" name="Ni58">
-      <atom unit="g/mole" value="57.9353" />
+        <atom unit="g/mole" value="57.9353" />
     </isotope>
     <isotope N="60" Z="28" name="Ni60">
-      <atom unit="g/mole" value="59.9308" />
+        <atom unit="g/mole" value="59.9308" />
     </isotope>
     <isotope N="61" Z="28" name="Ni61">
-      <atom unit="g/mole" value="60.9311" />
+        <atom unit="g/mole" value="60.9311" />
     </isotope>
     <isotope N="62" Z="28" name="Ni62">
-      <atom unit="g/mole" value="61.9283" />
+        <atom unit="g/mole" value="61.9283" />
     </isotope>
     <isotope N="64" Z="28" name="Ni64">
-      <atom unit="g/mole" value="63.928" />
+        <atom unit="g/mole" value="63.928" />
     </isotope>
     <element name="Nickel">
-      <fraction n="0.680769" ref="Ni58" />
-      <fraction n="0.262231" ref="Ni60" />
-      <fraction n="0.011399" ref="Ni61" />
-      <fraction n="0.036345" ref="Ni62" />
-      <fraction n="0.009256" ref="Ni64" />
+        <fraction n="0.680769" ref="Ni58" />
+        <fraction n="0.262231" ref="Ni60" />
+        <fraction n="0.011399" ref="Ni61" />
+        <fraction n="0.036345" ref="Ni62" />
+        <fraction n="0.009256" ref="Ni64" />
     </element>
     <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
+        <atom unit="g/mole" value="15.9949" />
     </isotope>
     <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
+        <atom unit="g/mole" value="16.9991" />
     </isotope>
     <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
+        <atom unit="g/mole" value="17.9992" />
     </isotope>
     <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
+        <fraction n="0.99757" ref="O16" />
+        <fraction n="0.00038" ref="O17" />
+        <fraction n="0.00205" ref="O18" />
     </element>
     <isotope N="1" Z="1" name="H1">
-      <atom unit="g/mole" value="1.00782503081372" />
+        <atom unit="g/mole" value="1.00782503081372" />
     </isotope>
     <isotope N="2" Z="1" name="H2">
-      <atom unit="g/mole" value="2.01410199966617" />
+        <atom unit="g/mole" value="2.01410199966617" />
     </isotope>
     <element name="Hydrogen">
-      <fraction n="0.999885" ref="H1" />
-      <fraction n="0.000115" ref="H2" />
+        <fraction n="0.999885" ref="H1" />
+        <fraction n="0.000115" ref="H2" />
     </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
     <element name="Si">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
+        <fraction n="0.922296077703922" ref="Si28" />
+        <fraction n="0.0468319531680468" ref="Si29" />
+        <fraction n="0.0308719691280309" ref="Si30" />
     </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
     <element name="O">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
+        <fraction n="0.99757" ref="O16" />
+        <fraction n="0.00038" ref="O17" />
+        <fraction n="0.00205" ref="O18" />
     </element>
     <isotope N="63" Z="29" name="Cu63">
-      <atom unit="g/mole" value="62.9296" />
+        <atom unit="g/mole" value="62.9296" />
     </isotope>
     <isotope N="65" Z="29" name="Cu65">
-      <atom unit="g/mole" value="64.9278" />
+        <atom unit="g/mole" value="64.9278" />
     </isotope>
     <element name="Cu">
-      <fraction n="0.6917" ref="Cu63" />
-      <fraction n="0.3083" ref="Cu65" />
+        <fraction n="0.6917" ref="Cu63" />
+        <fraction n="0.3083" ref="Cu65" />
     </element>
     <isotope N="14" Z="7" name="N14">
-      <atom unit="g/mole" value="14.0031" />
+        <atom unit="g/mole" value="14.0031" />
     </isotope>
     <isotope N="15" Z="7" name="N15">
-      <atom unit="g/mole" value="15.0001" />
+        <atom unit="g/mole" value="15.0001" />
     </isotope>
     <element name="Nitrogen">
-      <fraction n="0.99632" ref="N14" />
-      <fraction n="0.00368" ref="N15" />
+        <fraction n="0.99632" ref="N14" />
+        <fraction n="0.00368" ref="N15" />
     </element>
     <isotope N="204" Z="82" name="Pb204">
-      <atom unit="g/mole" value="203.973" />
+        <atom unit="g/mole" value="203.973" />
     </isotope>
     <isotope N="206" Z="82" name="Pb206">
-      <atom unit="g/mole" value="205.974" />
+        <atom unit="g/mole" value="205.974" />
     </isotope>
     <isotope N="207" Z="82" name="Pb207">
-      <atom unit="g/mole" value="206.976" />
+        <atom unit="g/mole" value="206.976" />
     </isotope>
     <isotope N="208" Z="82" name="Pb208">
-      <atom unit="g/mole" value="207.977" />
+        <atom unit="g/mole" value="207.977" />
     </isotope>
     <element name="Pb">
-      <fraction n="0.014" ref="Pb204" />
-      <fraction n="0.241" ref="Pb206" />
-      <fraction n="0.221" ref="Pb207" />
-      <fraction n="0.524" ref="Pb208" />
+        <fraction n="0.014" ref="Pb204" />
+        <fraction n="0.241" ref="Pb206" />
+        <fraction n="0.221" ref="Pb207" />
+        <fraction n="0.524" ref="Pb208" />
     </element>
-    <isotope N="54" Z="26" name="Fe54">
-      <atom unit="g/mole" value="53.9396" />
-    </isotope>
-    <isotope N="56" Z="26" name="Fe56">
-      <atom unit="g/mole" value="55.9349" />
-    </isotope>
-    <isotope N="57" Z="26" name="Fe57">
-      <atom unit="g/mole" value="56.9354" />
-    </isotope>
-    <isotope N="58" Z="26" name="Fe58">
-      <atom unit="g/mole" value="57.9333" />
-    </isotope>
     <element name="Fe">
-      <fraction n="0.05845" ref="Fe54" />
-      <fraction n="0.91754" ref="Fe56" />
-      <fraction n="0.02119" ref="Fe57" />
-      <fraction n="0.00282" ref="Fe58" />
+        <fraction n="0.05845" ref="Fe54" />
+        <fraction n="0.91754" ref="Fe56" />
+        <fraction n="0.02119" ref="Fe57" />
+        <fraction n="0.00282" ref="Fe58" />
     </element>
     <isotope N="180" Z="74" name="W180">
-      <atom unit="g/mole" value="179.947" />
+        <atom unit="g/mole" value="179.947" />
     </isotope>
     <isotope N="182" Z="74" name="W182">
-      <atom unit="g/mole" value="181.948" />
+        <atom unit="g/mole" value="181.948" />
     </isotope>
     <isotope N="183" Z="74" name="W183">
-      <atom unit="g/mole" value="182.95" />
+        <atom unit="g/mole" value="182.95" />
     </isotope>
     <isotope N="184" Z="74" name="W184">
-      <atom unit="g/mole" value="183.951" />
+        <atom unit="g/mole" value="183.951" />
     </isotope>
     <isotope N="186" Z="74" name="W186">
-      <atom unit="g/mole" value="185.954" />
+        <atom unit="g/mole" value="185.954" />
     </isotope>
     <element name="W">
-      <fraction n="0.0012" ref="W180" />
-      <fraction n="0.265" ref="W182" />
-      <fraction n="0.1431" ref="W183" />
-      <fraction n="0.3064" ref="W184" />
-      <fraction n="0.2843" ref="W186" />
+        <fraction n="0.0012" ref="W180" />
+        <fraction n="0.265" ref="W182" />
+        <fraction n="0.1431" ref="W183" />
+        <fraction n="0.3064" ref="W184" />
+        <fraction n="0.2843" ref="W186" />
     </element>
     <isotope N="40" Z="20" name="Ca40">
-      <atom unit="g/mole" value="39.9626" />
+        <atom unit="g/mole" value="39.9626" />
     </isotope>
     <isotope N="42" Z="20" name="Ca42">
-      <atom unit="g/mole" value="41.9586" />
+        <atom unit="g/mole" value="41.9586" />
     </isotope>
     <isotope N="43" Z="20" name="Ca43">
-      <atom unit="g/mole" value="42.9588" />
+        <atom unit="g/mole" value="42.9588" />
     </isotope>
     <isotope N="44" Z="20" name="Ca44">
-      <atom unit="g/mole" value="43.9555" />
+        <atom unit="g/mole" value="43.9555" />
     </isotope>
     <isotope N="46" Z="20" name="Ca46">
-      <atom unit="g/mole" value="45.9537" />
+        <atom unit="g/mole" value="45.9537" />
     </isotope>
     <isotope N="48" Z="20" name="Ca48">
-      <atom unit="g/mole" value="47.9525" />
+        <atom unit="g/mole" value="47.9525" />
     </isotope>
     <element name="Calcium">
-      <fraction n="0.96941" ref="Ca40" />
-      <fraction n="0.00647" ref="Ca42" />
-      <fraction n="0.00135" ref="Ca43" />
-      <fraction n="0.02086" ref="Ca44" />
-      <fraction n="4e-05" ref="Ca46" />
-      <fraction n="0.00187" ref="Ca48" />
+        <fraction n="0.96941" ref="Ca40" />
+        <fraction n="0.00647" ref="Ca42" />
+        <fraction n="0.00135" ref="Ca43" />
+        <fraction n="0.02086" ref="Ca44" />
+        <fraction n="4e-05" ref="Ca46" />
+        <fraction n="0.00187" ref="Ca48" />
     </element>
     <isotope N="23" Z="11" name="Na23">
-      <atom unit="g/mole" value="22.9898" />
+        <atom unit="g/mole" value="22.9898" />
     </isotope>
     <element name="Sodium">
-      <fraction n="1" ref="Na23" />
+        <fraction n="1" ref="Na23" />
     </element>
     <isotope N="27" Z="13" name="Al27">
-      <atom unit="g/mole" value="26.9815" />
+        <atom unit="g/mole" value="26.9815" />
     </isotope>
     <element name="Aluminum">
-      <fraction n="1" ref="Al27" />
+        <fraction n="1" ref="Al27" />
     </element>
-    <isotope N="14" Z="7" name="N14">
-      <atom unit="g/mole" value="14.0031" />
-    </isotope>
-    <isotope N="15" Z="7" name="N15">
-      <atom unit="g/mole" value="15.0001" />
-    </isotope>
-    <element name="Nitrogen">
-      <fraction n="0.99632" ref="N14" />
-      <fraction n="0.00368" ref="N15" />
-    </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
-    <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
-    </element>
-    <isotope N="180" Z="74" name="W180">
-      <atom unit="g/mole" value="179.947" />
-    </isotope>
-    <isotope N="182" Z="74" name="W182">
-      <atom unit="g/mole" value="181.948" />
-    </isotope>
-    <isotope N="183" Z="74" name="W183">
-      <atom unit="g/mole" value="182.95" />
-    </isotope>
-    <isotope N="184" Z="74" name="W184">
-      <atom unit="g/mole" value="183.951" />
-    </isotope>
-    <isotope N="186" Z="74" name="W186">
-      <atom unit="g/mole" value="185.954" />
-    </isotope>
     <element name="Tungsten">
-      <fraction n="0.0012" ref="W180" />
-      <fraction n="0.265" ref="W182" />
-      <fraction n="0.1431" ref="W183" />
-      <fraction n="0.3064" ref="W184" />
-      <fraction n="0.2843" ref="W186" />
+        <fraction n="0.0012" ref="W180" />
+        <fraction n="0.265" ref="W182" />
+        <fraction n="0.1431" ref="W183" />
+        <fraction n="0.3064" ref="W184" />
+        <fraction n="0.2843" ref="W186" />
     </element>
-    <isotope N="12" Z="6" name="C12">
-      <atom unit="g/mole" value="12" />
-    </isotope>
-    <isotope N="13" Z="6" name="C13">
-      <atom unit="g/mole" value="13.0034" />
-    </isotope>
     <element name="C">
-      <fraction n="0.9893" ref="C12" />
-      <fraction n="0.0107" ref="C13" />
+        <fraction n="0.9893" ref="C12" />
+        <fraction n="0.0107" ref="C13" />
     </element>
-    <isotope N="1" Z="1" name="H1">
-      <atom unit="g/mole" value="1.00782503081372" />
-    </isotope>
-    <isotope N="2" Z="1" name="H2">
-      <atom unit="g/mole" value="2.01410199966617" />
-    </isotope>
-    <element name="Hydrogen">
-      <fraction n="0.999885" ref="H1" />
-      <fraction n="0.000115" ref="H2" />
-    </element>
-    <isotope N="12" Z="6" name="C12">
-      <atom unit="g/mole" value="12" />
-    </isotope>
-    <isotope N="13" Z="6" name="C13">
-      <atom unit="g/mole" value="13.0034" />
-    </isotope>
-    <element name="Carbon">
-      <fraction n="0.9893" ref="C12" />
-      <fraction n="0.0107" ref="C13" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
     <element name="Silcone">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
+        <fraction n="0.922296077703922" ref="Si28" />
+        <fraction n="0.0468319531680468" ref="Si29" />
+        <fraction n="0.0308719691280309" ref="Si30" />
     </element>
     <isotope N="79" Z="35" name="Br79">
-      <atom unit="g/mole" value="78.9183" />
+        <atom unit="g/mole" value="78.9183" />
     </isotope>
     <isotope N="81" Z="35" name="Br81">
-      <atom unit="g/mole" value="80.9163" />
+        <atom unit="g/mole" value="80.9163" />
     </isotope>
     <element name="Bromine">
-      <fraction n="0.5069" ref="Br79" />
-      <fraction n="0.4931" ref="Br81" />
+        <fraction n="0.5069" ref="Br79" />
+        <fraction n="0.4931" ref="Br81" />
     </element>
-    <isotope N="14" Z="7" name="N14">
-      <atom unit="g/mole" value="14.0031" />
-    </isotope>
-    <isotope N="15" Z="7" name="N15">
-      <atom unit="g/mole" value="15.0001" />
-    </isotope>
     <element name="N">
-      <fraction n="0.99632" ref="N14" />
-      <fraction n="0.00368" ref="N15" />
+        <fraction n="0.99632" ref="N14" />
+        <fraction n="0.00368" ref="N15" />
     </element>
     <isotope N="36" Z="18" name="Ar36">
-      <atom unit="g/mole" value="35.9675" />
+        <atom unit="g/mole" value="35.9675" />
     </isotope>
     <isotope N="38" Z="18" name="Ar38">
-      <atom unit="g/mole" value="37.9627" />
+        <atom unit="g/mole" value="37.9627" />
     </isotope>
     <isotope N="40" Z="18" name="Ar40">
-      <atom unit="g/mole" value="39.9624" />
+        <atom unit="g/mole" value="39.9624" />
     </isotope>
     <element name="Ar">
-      <fraction n="0.003365" ref="Ar36" />
-      <fraction n="0.000632" ref="Ar38" />
-      <fraction n="0.996003" ref="Ar40" />
+        <fraction n="0.003365" ref="Ar36" />
+        <fraction n="0.000632" ref="Ar38" />
+        <fraction n="0.996003" ref="Ar40" />
     </element>
-    <isotope N="1" Z="1" name="H1">
-      <atom unit="g/mole" value="1.00782503081372" />
-    </isotope>
-    <isotope N="2" Z="1" name="H2">
-      <atom unit="g/mole" value="2.01410199966617" />
-    </isotope>
-    <element name="Hydrogen">
-      <fraction n="0.999885" ref="H1" />
-      <fraction n="0.000115" ref="H2" />
-    </element>
-    <isotope N="12" Z="6" name="C12">
-      <atom unit="g/mole" value="12" />
-    </isotope>
-    <isotope N="13" Z="6" name="C13">
-      <atom unit="g/mole" value="13.0034" />
-    </isotope>
-    <element name="Carbon">
-      <fraction n="0.9893" ref="C12" />
-      <fraction n="0.0107" ref="C13" />
-    </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
-    <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
-    <element name="Silcone">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
-    </element>
-    <isotope N="27" Z="13" name="Al27">
-      <atom unit="g/mole" value="26.9815" />
-    </isotope>
     <element name="Al">
-      <fraction n="1" ref="Al27" />
+        <fraction n="1" ref="Al27" />
     </element>
-    <isotope N="1" Z="1" name="H1">
-      <atom unit="g/mole" value="1.00782503081372" />
-    </isotope>
-    <isotope N="2" Z="1" name="H2">
-      <atom unit="g/mole" value="2.01410199966617" />
-    </isotope>
     <element name="H">
-      <fraction n="0.999885" ref="H1" />
-      <fraction n="0.000115" ref="H2" />
+        <fraction n="0.999885" ref="H1" />
+        <fraction n="0.000115" ref="H2" />
     </element>
     <isotope N="152" Z="64" name="Gd152">
-      <atom unit="g/mole" value="151.92" />
+        <atom unit="g/mole" value="151.92" />
     </isotope>
     <isotope N="154" Z="64" name="Gd154">
-      <atom unit="g/mole" value="153.921" />
+        <atom unit="g/mole" value="153.921" />
     </isotope>
     <isotope N="155" Z="64" name="Gd155">
-      <atom unit="g/mole" value="154.923" />
+        <atom unit="g/mole" value="154.923" />
     </isotope>
     <isotope N="156" Z="64" name="Gd156">
-      <atom unit="g/mole" value="155.922" />
+        <atom unit="g/mole" value="155.922" />
     </isotope>
     <isotope N="157" Z="64" name="Gd157">
-      <atom unit="g/mole" value="156.924" />
+        <atom unit="g/mole" value="156.924" />
     </isotope>
     <isotope N="158" Z="64" name="Gd158">
-      <atom unit="g/mole" value="157.924" />
+        <atom unit="g/mole" value="157.924" />
     </isotope>
     <isotope N="160" Z="64" name="Gd160">
-      <atom unit="g/mole" value="159.927" />
+        <atom unit="g/mole" value="159.927" />
     </isotope>
     <element name="Gd">
-      <fraction n="0.002" ref="Gd152" />
-      <fraction n="0.0218" ref="Gd154" />
-      <fraction n="0.148" ref="Gd155" />
-      <fraction n="0.2047" ref="Gd156" />
-      <fraction n="0.1565" ref="Gd157" />
-      <fraction n="0.2484" ref="Gd158" />
-      <fraction n="0.2186" ref="Gd160" />
+        <fraction n="0.002" ref="Gd152" />
+        <fraction n="0.0218" ref="Gd154" />
+        <fraction n="0.148" ref="Gd155" />
+        <fraction n="0.2047" ref="Gd156" />
+        <fraction n="0.1565" ref="Gd157" />
+        <fraction n="0.2484" ref="Gd158" />
+        <fraction n="0.2186" ref="Gd160" />
     </element>
     <isotope N="32" Z="16" name="S32">
-      <atom unit="g/mole" value="31.9721" />
+        <atom unit="g/mole" value="31.9721" />
     </isotope>
     <isotope N="33" Z="16" name="S33">
-      <atom unit="g/mole" value="32.9715" />
+        <atom unit="g/mole" value="32.9715" />
     </isotope>
     <isotope N="34" Z="16" name="S34">
-      <atom unit="g/mole" value="33.9679" />
+        <atom unit="g/mole" value="33.9679" />
     </isotope>
     <isotope N="36" Z="16" name="S36">
-      <atom unit="g/mole" value="35.9671" />
+        <atom unit="g/mole" value="35.9671" />
     </isotope>
     <element name="S">
-      <fraction n="0.9493" ref="S32" />
-      <fraction n="0.0076" ref="S33" />
-      <fraction n="0.0429" ref="S34" />
-      <fraction n="0.0002" ref="S36" />
-    </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
-    <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
-    <element name="Silicon">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
+        <fraction n="0.9493" ref="S32" />
+        <fraction n="0.0076" ref="S33" />
+        <fraction n="0.0429" ref="S34" />
+        <fraction n="0.0002" ref="S36" />
     </element>
     <isotope N="39" Z="19" name="K39">
-      <atom unit="g/mole" value="38.9637" />
+        <atom unit="g/mole" value="38.9637" />
     </isotope>
     <isotope N="40" Z="19" name="K40">
-      <atom unit="g/mole" value="39.964" />
+        <atom unit="g/mole" value="39.964" />
     </isotope>
     <isotope N="41" Z="19" name="K41">
-      <atom unit="g/mole" value="40.9618" />
+        <atom unit="g/mole" value="40.9618" />
     </isotope>
     <element name="Potassium">
-      <fraction n="0.932581" ref="K39" />
-      <fraction n="0.000117" ref="K40" />
-      <fraction n="0.067302" ref="K41" />
-    </element>
-    <isotope N="23" Z="11" name="Na23">
-      <atom unit="g/mole" value="22.9898" />
-    </isotope>
-    <element name="Sodium">
-      <fraction n="1" ref="Na23" />
+        <fraction n="0.932581" ref="K39" />
+        <fraction n="0.000117" ref="K40" />
+        <fraction n="0.067302" ref="K41" />
     </element>
     <isotope N="75" Z="33" name="As75">
-      <atom unit="g/mole" value="74.9216" />
+        <atom unit="g/mole" value="74.9216" />
     </isotope>
     <element name="Arsenic">
-      <fraction n="1" ref="As75" />
+        <fraction n="1" ref="As75" />
     </element>
-    <isotope N="58" Z="28" name="Ni58">
-      <atom unit="g/mole" value="57.9353" />
-    </isotope>
-    <isotope N="60" Z="28" name="Ni60">
-      <atom unit="g/mole" value="59.9308" />
-    </isotope>
-    <isotope N="61" Z="28" name="Ni61">
-      <atom unit="g/mole" value="60.9311" />
-    </isotope>
-    <isotope N="62" Z="28" name="Ni62">
-      <atom unit="g/mole" value="61.9283" />
-    </isotope>
-    <isotope N="64" Z="28" name="Ni64">
-      <atom unit="g/mole" value="63.928" />
-    </isotope>
     <element name="Ni">
-      <fraction n="0.680769" ref="Ni58" />
-      <fraction n="0.262231" ref="Ni60" />
-      <fraction n="0.011399" ref="Ni61" />
-      <fraction n="0.036345" ref="Ni62" />
-      <fraction n="0.009256" ref="Ni64" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
-    <element name="Silcone">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
-    </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
-    <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
-    </element>
-    <isotope N="1" Z="1" name="H1">
-      <atom unit="g/mole" value="1.00782503081372" />
-    </isotope>
-    <isotope N="2" Z="1" name="H2">
-      <atom unit="g/mole" value="2.01410199966617" />
-    </isotope>
-    <element name="Hydrogen">
-      <fraction n="0.999885" ref="H1" />
-      <fraction n="0.000115" ref="H2" />
-    </element>
-    <isotope N="16" Z="8" name="O16">
-      <atom unit="g/mole" value="15.9949" />
-    </isotope>
-    <isotope N="17" Z="8" name="O17">
-      <atom unit="g/mole" value="16.9991" />
-    </isotope>
-    <isotope N="18" Z="8" name="O18">
-      <atom unit="g/mole" value="17.9992" />
-    </isotope>
-    <element name="Oxygen">
-      <fraction n="0.99757" ref="O16" />
-      <fraction n="0.00038" ref="O17" />
-      <fraction n="0.00205" ref="O18" />
-    </element>
-    <isotope N="23" Z="11" name="Na23">
-      <atom unit="g/mole" value="22.9898" />
-    </isotope>
-    <element name="Sodium">
-      <fraction n="1" ref="Na23" />
+        <fraction n="0.680769" ref="Ni58" />
+        <fraction n="0.262231" ref="Ni60" />
+        <fraction n="0.011399" ref="Ni61" />
+        <fraction n="0.036345" ref="Ni62" />
+        <fraction n="0.009256" ref="Ni64" />
     </element>
     <isotope N="24" Z="12" name="Mg24">
-      <atom unit="g/mole" value="23.985" />
+        <atom unit="g/mole" value="23.985" />
     </isotope>
     <isotope N="25" Z="12" name="Mg25">
-      <atom unit="g/mole" value="24.9858" />
+        <atom unit="g/mole" value="24.9858" />
     </isotope>
     <isotope N="26" Z="12" name="Mg26">
-      <atom unit="g/mole" value="25.9826" />
+        <atom unit="g/mole" value="25.9826" />
     </isotope>
     <element name="Magnesium">
-      <fraction n="0.7899" ref="Mg24" />
-      <fraction n="0.1" ref="Mg25" />
-      <fraction n="0.1101" ref="Mg26" />
-    </element>
-    <isotope N="27" Z="13" name="Al27">
-      <atom unit="g/mole" value="26.9815" />
-    </isotope>
-    <element name="Aluminum">
-      <fraction n="1" ref="Al27" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
-    <element name="Silcone">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
-    </element>
-    <isotope N="39" Z="19" name="K39">
-      <atom unit="g/mole" value="38.9637" />
-    </isotope>
-    <isotope N="40" Z="19" name="K40">
-      <atom unit="g/mole" value="39.964" />
-    </isotope>
-    <isotope N="41" Z="19" name="K41">
-      <atom unit="g/mole" value="40.9618" />
-    </isotope>
-    <element name="Potassium">
-      <fraction n="0.932581" ref="K39" />
-      <fraction n="0.000117" ref="K40" />
-      <fraction n="0.067302" ref="K41" />
-    </element>
-    <isotope N="40" Z="20" name="Ca40">
-      <atom unit="g/mole" value="39.9626" />
-    </isotope>
-    <isotope N="42" Z="20" name="Ca42">
-      <atom unit="g/mole" value="41.9586" />
-    </isotope>
-    <isotope N="43" Z="20" name="Ca43">
-      <atom unit="g/mole" value="42.9588" />
-    </isotope>
-    <isotope N="44" Z="20" name="Ca44">
-      <atom unit="g/mole" value="43.9555" />
-    </isotope>
-    <isotope N="46" Z="20" name="Ca46">
-      <atom unit="g/mole" value="45.9537" />
-    </isotope>
-    <isotope N="48" Z="20" name="Ca48">
-      <atom unit="g/mole" value="47.9525" />
-    </isotope>
-    <element name="Calcium">
-      <fraction n="0.96941" ref="Ca40" />
-      <fraction n="0.00647" ref="Ca42" />
-      <fraction n="0.00135" ref="Ca43" />
-      <fraction n="0.02086" ref="Ca44" />
-      <fraction n="4e-05" ref="Ca46" />
-      <fraction n="0.00187" ref="Ca48" />
-    </element>
-    <isotope N="54" Z="26" name="Fe54">
-      <atom unit="g/mole" value="53.9396" />
-    </isotope>
-    <isotope N="56" Z="26" name="Fe56">
-      <atom unit="g/mole" value="55.9349" />
-    </isotope>
-    <isotope N="57" Z="26" name="Fe57">
-      <atom unit="g/mole" value="56.9354" />
-    </isotope>
-    <isotope N="58" Z="26" name="Fe58">
-      <atom unit="g/mole" value="57.9333" />
-    </isotope>
-    <element name="Iron">
-      <fraction n="0.05845" ref="Fe54" />
-      <fraction n="0.91754" ref="Fe56" />
-      <fraction n="0.02119" ref="Fe57" />
-      <fraction n="0.00282" ref="Fe58" />
-    </element>
-    <isotope N="12" Z="6" name="C12">
-      <atom unit="g/mole" value="12" />
-    </isotope>
-    <isotope N="13" Z="6" name="C13">
-      <atom unit="g/mole" value="13.0034" />
-    </isotope>
-    <element name="Carbon">
-      <fraction n="0.9893" ref="C12" />
-      <fraction n="0.0107" ref="C13" />
+        <fraction n="0.7899" ref="Mg24" />
+        <fraction n="0.1" ref="Mg25" />
+        <fraction n="0.1101" ref="Mg26" />
     </element>
     <isotope N="10" Z="5" name="B10">
-      <atom unit="g/mole" value="10.0129" />
+        <atom unit="g/mole" value="10.0129" />
     </isotope>
     <isotope N="11" Z="5" name="B11">
-      <atom unit="g/mole" value="11.0093" />
+        <atom unit="g/mole" value="11.0093" />
     </isotope>
     <element name="Boron">
-      <fraction n="0.199" ref="B10" />
-      <fraction n="0.801" ref="B11" />
+        <fraction n="0.199" ref="B10" />
+        <fraction n="0.801" ref="B11" />
     </element>
     <isotope N="35" Z="17" name="Cl35">
-      <atom unit="g/mole" value="34.9689" />
+        <atom unit="g/mole" value="34.9689" />
     </isotope>
     <isotope N="37" Z="17" name="Cl37">
-      <atom unit="g/mole" value="36.9659" />
+        <atom unit="g/mole" value="36.9659" />
     </isotope>
     <element name="Cl">
-      <fraction n="0.7578" ref="Cl35" />
-      <fraction n="0.2422" ref="Cl37" />
-    </element>
-    <isotope N="28" Z="14" name="Si28">
-      <atom unit="g/mole" value="27.9769" />
-    </isotope>
-    <isotope N="29" Z="14" name="Si29">
-      <atom unit="g/mole" value="28.9765" />
-    </isotope>
-    <isotope N="30" Z="14" name="Si30">
-      <atom unit="g/mole" value="29.9738" />
-    </isotope>
-    <element name="Silcone">
-      <fraction n="0.922296077703922" ref="Si28" />
-      <fraction n="0.0468319531680468" ref="Si29" />
-      <fraction n="0.0308719691280309" ref="Si30" />
+        <fraction n="0.7578" ref="Cl35" />
+        <fraction n="0.2422" ref="Cl37" />
     </element>
     <material name="StainlessSteel" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="283.950311419092" />
-      <D unit="g/cm3" value="8.06" />
-      <fraction n="0.001" ref="Carbon" />
-      <fraction n="0.007" ref="Silicon" />
-      <fraction n="0.18" ref="Chrome" />
-      <fraction n="0.01" ref="Manganese" />
-      <fraction n="0.712" ref="Iron" />
-      <fraction n="0.09" ref="Nickel" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="283.950311419092" />
+        <D unit="g/cm3" value="8.06" />
+        <fraction n="0.001" ref="Carbon" />
+        <fraction n="0.007" ref="Silicon" />
+        <fraction n="0.18" ref="Chrome" />
+        <fraction n="0.01" ref="Manganese" />
+        <fraction n="0.712" ref="Iron" />
+        <fraction n="0.09" ref="Nickel" />
     </material>
     <material name="XFELVacuum" state="gas">
-      <T unit="K" value="300" />
-      <P unit="pascal" value="1e-06" />
-      <MEE unit="eV" value="50.7301800285021" />
-      <D unit="g/cm3" value="2.89e-18" />
-      <fraction n="0.334444841128169" ref="Carbon" />
-      <fraction n="0.445555158871832" ref="Oxygen" />
-      <fraction n="0.22" ref="Hydrogen" />
+        <T unit="K" value="300" />
+        <P unit="pascal" value="1e-06" />
+        <MEE unit="eV" value="50.7301800285021" />
+        <D unit="g/cm3" value="2.89e-18" />
+        <fraction n="0.334444841128169" ref="Carbon" />
+        <fraction n="0.445555158871832" ref="Oxygen" />
+        <fraction n="0.22" ref="Hydrogen" />
     </material>
     <material name="G4_SILICON_DIOXIDE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="139.2" />
-      <D unit="g/cm3" value="2.32" />
-      <fraction n="0.467433841791527" ref="Si" />
-      <fraction n="0.532566158208473" ref="O" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="139.2" />
+        <D unit="g/cm3" value="2.32" />
+        <fraction n="0.467433841791527" ref="Si" />
+        <fraction n="0.532566158208473" ref="O" />
     </material>
     <material Z="13" name="Aluminium" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="166" />
-      <D unit="g/cm3" value="2.7" />
-      <fraction n="1" ref="Al" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="166" />
+        <D unit="g/cm3" value="2.7" />
+        <fraction n="1" ref="Al" />
     </material>
     <material name="Copper" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="322" />
-      <D unit="g/cm3" value="8.96" />
-      <fraction n="1" ref="Cu" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="322" />
+        <D unit="g/cm3" value="8.96" />
+        <fraction n="1" ref="Cu" />
     </material>
     <material name="Air20" state="gas">
-      <T unit="K" value="293" />
-      <MEE unit="eV" value="85.7030667332999" />
-      <D unit="g/cm3" value="0.001205" />
-      <fraction n="0.7" ref="Nitrogen" />
-      <fraction n="0.3" ref="Oxygen" />
+        <T unit="K" value="293" />
+        <MEE unit="eV" value="85.7030667332999" />
+        <D unit="g/cm3" value="0.001205" />
+        <fraction n="0.7" ref="Nitrogen" />
+        <fraction n="0.3" ref="Oxygen" />
     </material>
     <material name="Lead" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="823" />
-      <D unit="g/cm3" value="11.35" />
-      <fraction n="1" ref="Pb" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="823" />
+        <D unit="g/cm3" value="11.35" />
+        <fraction n="1" ref="Pb" />
     </material>
     <material name="Iron" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="286" />
-      <D unit="g/cm3" value="7.87" />
-      <fraction n="1" ref="Fe" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="286" />
+        <D unit="g/cm3" value="7.87" />
+        <fraction n="1" ref="Fe" />
     </material>
     <material name="Tungsten" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="727" />
-      <D unit="g/cm3" value="19.3" />
-      <fraction n="1" ref="W" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="727" />
+        <D unit="g/cm3" value="19.3" />
+        <fraction n="1" ref="W" />
     </material>
     <material name="ShieldingConcrete" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="129.12126375241" />
-      <D unit="g/cm3" value="2.5" />
-      <fraction n="0.52" ref="Oxygen" />
-      <fraction n="0.325" ref="Silicon" />
-      <fraction n="0.06" ref="Calcium" />
-      <fraction n="0.015" ref="Sodium" />
-      <fraction n="0.04" ref="Iron" />
-      <fraction n="0.04" ref="Aluminum" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="129.12126375241" />
+        <D unit="g/cm3" value="2.5" />
+        <fraction n="0.52" ref="Oxygen" />
+        <fraction n="0.325" ref="Silicon" />
+        <fraction n="0.06" ref="Calcium" />
+        <fraction n="0.015" ref="Sodium" />
+        <fraction n="0.04" ref="Iron" />
+        <fraction n="0.04" ref="Aluminum" />
     </material>
     <material name="PolyethyleneProto" state="gas">
-      <T unit="K" value="293" />
-      <MEE unit="eV" value="85.7030667332999" />
-      <D unit="g/cm3" value="0.001205" />
-      <fraction n="0.7" ref="Nitrogen" />
-      <fraction n="0.3" ref="Oxygen" />
+        <T unit="K" value="293" />
+        <MEE unit="eV" value="85.7030667332999" />
+        <D unit="g/cm3" value="0.001205" />
+        <fraction n="0.7" ref="Nitrogen" />
+        <fraction n="0.3" ref="Oxygen" />
     </material>
     <material name="CaliceTungstenDens1910" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="727" />
-      <D unit="g/cm3" value="19.1" />
-      <fraction n="1" ref="Tungsten" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="727" />
+        <D unit="g/cm3" value="19.1" />
+        <fraction n="1" ref="Tungsten" />
     </material>
     <material name="CaliceCarbonFiber" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="67.8058135998218" />
-      <D unit="g/cm3" value="1.6" />
-      <fraction n="0.5" ref="C" />
-      <fraction n="0.0655" ref="Hydrogen" />
-      <fraction n="0.26785" ref="Carbon" />
-      <fraction n="0.16665" ref="Oxygen" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="67.8058135998218" />
+        <D unit="g/cm3" value="1.6" />
+        <fraction n="0.5" ref="C" />
+        <fraction n="0.0655" ref="Hydrogen" />
+        <fraction n="0.26785" ref="Carbon" />
+        <fraction n="0.16665" ref="Oxygen" />
     </material>
     <material name="G4_Cu" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="322" />
-      <D unit="g/cm3" value="8.96" />
-      <fraction n="1" ref="Cu" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="322" />
+        <D unit="g/cm3" value="8.96" />
+        <fraction n="1" ref="Cu" />
     </material>
     <material name="G4_Si" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="173" />
-      <D unit="g/cm3" value="2.33" />
-      <fraction n="1" ref="Si" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="173" />
+        <D unit="g/cm3" value="2.33" />
+        <fraction n="1" ref="Si" />
     </material>
     <material name="CalicePCB" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="87.4182641091322" />
-      <D unit="g/cm3" value="1.7" />
-      <fraction n="0.180773837303546" ref="Silcone" />
-      <fraction n="0.405632634930629" ref="Oxygen" />
-      <fraction n="0.278041749762425" ref="Carbon" />
-      <fraction n="0.0684427384015354" ref="Hydrogen" />
-      <fraction n="0.0671090396018644" ref="Bromine" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="87.4182641091322" />
+        <D unit="g/cm3" value="1.7" />
+        <fraction n="0.180773837303546" ref="Silcone" />
+        <fraction n="0.405632634930629" ref="Oxygen" />
+        <fraction n="0.278041749762425" ref="Carbon" />
+        <fraction n="0.0684427384015354" ref="Hydrogen" />
+        <fraction n="0.0671090396018644" ref="Bromine" />
     </material>
     <material name="G4_AIR" state="gas">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="85.7" />
-      <D unit="g/cm3" value="0.00120479" />
-      <fraction n="0.000124000124000124" ref="C" />
-      <fraction n="0.755267755267755" ref="N" />
-      <fraction n="0.231781231781232" ref="O" />
-      <fraction n="0.0128270128270128" ref="Ar" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="85.7" />
+        <D unit="g/cm3" value="0.00120479" />
+        <fraction n="0.000124000124000124" ref="C" />
+        <fraction n="0.755267755267755" ref="N" />
+        <fraction n="0.231781231781232" ref="O" />
+        <fraction n="0.0128270128270128" ref="Ar" />
     </material>
     <material Z="13" name="G4_Al" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="166" />
-      <D unit="g/cm3" value="2.699" />
-      <atom unit="g/mole" value="26.9815" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="166" />
+        <D unit="g/cm3" value="2.699" />
+        <atom unit="g/mole" value="26.9815" />
     </material>
     <material name="FR4" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="92.09781993986" />
-      <D unit="g/cm3" value="1.85" />
-      <fraction n="0.05109" ref="Hydrogen" />
-      <fraction n="0.208923" ref="Carbon" />
-      <fraction n="0.454833064236978" ref="Oxygen" />
-      <fraction n="0.285153935763022" ref="Silcone" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="92.09781993986" />
+        <D unit="g/cm3" value="1.85" />
+        <fraction n="0.05109" ref="Hydrogen" />
+        <fraction n="0.208923" ref="Carbon" />
+        <fraction n="0.454833064236978" ref="Oxygen" />
+        <fraction n="0.285153935763022" ref="Silcone" />
     </material>
     <material name="G4_ALUMINUM_OXIDE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="145.2" />
-      <D unit="g/cm3" value="3.97" />
-      <fraction n="0.529250491608071" ref="Al" />
-      <fraction n="0.470749508391929" ref="O" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="145.2" />
+        <D unit="g/cm3" value="3.97" />
+        <fraction n="0.529250491608071" ref="Al" />
+        <fraction n="0.470749508391929" ref="O" />
     </material>
     <material name="G4_KAPTON" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="79.6" />
-      <D unit="g/cm3" value="1.42" />
-      <fraction n="0.691127814286998" ref="C" />
-      <fraction n="0.0263633782339879" ref="H" />
-      <fraction n="0.0732713201549139" ref="N" />
-      <fraction n="0.2092374873241" ref="O" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="79.6" />
+        <D unit="g/cm3" value="1.42" />
+        <fraction n="0.691127814286998" ref="C" />
+        <fraction n="0.0263633782339879" ref="H" />
+        <fraction n="0.0732713201549139" ref="N" />
+        <fraction n="0.2092374873241" ref="O" />
     </material>
     <material name="Air20Refractive" state="gas">
-      <T unit="K" value="293" />
-      <MEE unit="eV" value="85.7030667332999" />
-      <D unit="g/cm3" value="0.001205" />
-      <fraction n="0.7" ref="Nitrogen" />
-      <fraction n="0.3" ref="Oxygen" />
+        <T unit="K" value="293" />
+        <MEE unit="eV" value="85.7030667332999" />
+        <D unit="g/cm3" value="0.001205" />
+        <fraction n="0.7" ref="Nitrogen" />
+        <fraction n="0.3" ref="Oxygen" />
     </material>
     <material name="G4_GRAPHITE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="78" />
-      <D unit="g/cm3" value="2.21" />
-      <fraction n="1" ref="C" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="78" />
+        <D unit="g/cm3" value="2.21" />
+        <fraction n="1" ref="C" />
     </material>
     <material name="G4_POLYETHYLENE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="57.4" />
-      <D unit="g/cm3" value="0.94" />
-      <fraction n="0.856281712255198" ref="C" />
-      <fraction n="0.143718287744802" ref="H" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="57.4" />
+        <D unit="g/cm3" value="0.94" />
+        <fraction n="0.856281712255198" ref="C" />
+        <fraction n="0.143718287744802" ref="H" />
     </material>
     <material name="G4_GADOLINIUM_OXYSULFIDE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="493.3" />
-      <D unit="g/cm3" value="7.44" />
-      <fraction n="0.830770954489375" ref="Gd" />
-      <fraction n="0.084525591263041" ref="O" />
-      <fraction n="0.0847034542475835" ref="S" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="493.3" />
+        <D unit="g/cm3" value="7.44" />
+        <fraction n="0.830770954489375" ref="Gd" />
+        <fraction n="0.084525591263041" ref="O" />
+        <fraction n="0.0847034542475835" ref="S" />
     </material>
     <material name="LG_TF1" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="277.443413855404" />
-      <D unit="g/cm3" value="3.86" />
-      <fraction n="0.475" ref="Pb" />
-      <fraction n="0.273" ref="Oxygen" />
-      <fraction n="0.193" ref="Silicon" />
-      <fraction n="0.029" ref="Potassium" />
-      <fraction n="0.026" ref="Sodium" />
-      <fraction n="0.004" ref="Arsenic" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="277.443413855404" />
+        <D unit="g/cm3" value="3.86" />
+        <fraction n="0.475" ref="Pb" />
+        <fraction n="0.273" ref="Oxygen" />
+        <fraction n="0.193" ref="Silicon" />
+        <fraction n="0.029" ref="Potassium" />
+        <fraction n="0.026" ref="Sodium" />
+        <fraction n="0.004" ref="Arsenic" />
     </material>
     <material name="G4_W" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="727" />
-      <D unit="g/cm3" value="19.3" />
-      <fraction n="1" ref="W" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="727" />
+        <D unit="g/cm3" value="19.3" />
+        <fraction n="1" ref="W" />
     </material>
     <material name="G4_Fe" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="286" />
-      <D unit="g/cm3" value="7.874" />
-      <fraction n="1" ref="Fe" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="286" />
+        <D unit="g/cm3" value="7.874" />
+        <fraction n="1" ref="Fe" />
     </material>
     <material name="G4_Pb" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="823" />
-      <D unit="g/cm3" value="11.35" />
-      <fraction n="1" ref="Pb" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="823" />
+        <D unit="g/cm3" value="11.35" />
+        <fraction n="1" ref="Pb" />
     </material>
     <material name="Wabsorber_MGS" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="679.09186717488" />
-      <D unit="g/cm3" value="17.7" />
-      <fraction n="0.93" ref="W" />
-      <fraction n="0.0525" ref="Ni" />
-      <fraction n="0.0175" ref="Cu" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="679.09186717488" />
+        <D unit="g/cm3" value="17.7" />
+        <fraction n="0.93" ref="W" />
+        <fraction n="0.0525" ref="Ni" />
+        <fraction n="0.0175" ref="Cu" />
     </material>
     <material name="FrontFanoutMaterial" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="126.25143837796" />
-      <D unit="g/cm3" value="2.082" />
-      <fraction n="0.433333333333333" ref="Cu" />
-      <fraction n="0.230375938095666" ref="C" />
-      <fraction n="0.00878779274466265" ref="H" />
-      <fraction n="0.0244237733849713" ref="N" />
-      <fraction n="0.0697458291080334" ref="O" />
-      <fraction n="0.0305666666666667" ref="Hydrogen" />
-      <fraction n="0.124996666666667" ref="Carbon" />
-      <fraction n="0.07777" ref="Oxygen" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="126.25143837796" />
+        <D unit="g/cm3" value="2.082" />
+        <fraction n="0.433333333333333" ref="Cu" />
+        <fraction n="0.230375938095666" ref="C" />
+        <fraction n="0.00878779274466265" ref="H" />
+        <fraction n="0.0244237733849713" ref="N" />
+        <fraction n="0.0697458291080334" ref="O" />
+        <fraction n="0.0305666666666667" ref="Hydrogen" />
+        <fraction n="0.124996666666667" ref="Carbon" />
+        <fraction n="0.07777" ref="Oxygen" />
     </material>
     <material name="BackFanoutMaterial" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="123.172128702988" />
-      <D unit="g/cm3" value="3.14866666666667" />
-      <fraction n="0.4" ref="Cu" />
-      <fraction n="0.299488719524366" ref="C" />
-      <fraction n="0.0114241305680614" ref="H" />
-      <fraction n="0.0317509054004627" ref="N" />
-      <fraction n="0.0906695778404434" ref="O" />
-      <fraction n="0.0218333333333333" ref="Hydrogen" />
-      <fraction n="0.0892833333333333" ref="Carbon" />
-      <fraction n="0.05555" ref="Oxygen" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="123.172128702988" />
+        <D unit="g/cm3" value="3.14866666666667" />
+        <fraction n="0.4" ref="Cu" />
+        <fraction n="0.299488719524366" ref="C" />
+        <fraction n="0.0114241305680614" ref="H" />
+        <fraction n="0.0317509054004627" ref="N" />
+        <fraction n="0.0906695778404434" ref="O" />
+        <fraction n="0.0218333333333333" ref="Hydrogen" />
+        <fraction n="0.0892833333333333" ref="Carbon" />
+        <fraction n="0.05555" ref="Oxygen" />
     </material>
     <material name="ECalCarbonFiber" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="67.8058135998218" />
-      <D unit="g/cm3" value="1.6" />
-      <fraction n="0.5" ref="C" />
-      <fraction n="0.0655" ref="Hydrogen" />
-      <fraction n="0.26785" ref="Carbon" />
-      <fraction n="0.16665" ref="Oxygen" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="67.8058135998218" />
+        <D unit="g/cm3" value="1.6" />
+        <fraction n="0.5" ref="C" />
+        <fraction n="0.0655" ref="Hydrogen" />
+        <fraction n="0.26785" ref="Carbon" />
+        <fraction n="0.16665" ref="Oxygen" />
     </material>
     <material name="ECAL_FR4" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="103.732116621205" />
-      <D unit="g/cm3" value="1.93" />
-      <fraction n="0.04454" ref="Hydrogen" />
-      <fraction n="0.182138" ref="Carbon" />
-      <fraction n="0.113322" ref="Oxygen" />
-      <fraction n="0.261780662339824" ref="Silcone" />
-      <fraction n="0.298219337660176" ref="Oxygen" />
-      <fraction n="0.1" ref="Cu" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="103.732116621205" />
+        <D unit="g/cm3" value="1.93" />
+        <fraction n="0.04454" ref="Hydrogen" />
+        <fraction n="0.182138" ref="Carbon" />
+        <fraction n="0.113322" ref="Oxygen" />
+        <fraction n="0.261780662339824" ref="Silcone" />
+        <fraction n="0.298219337660176" ref="Oxygen" />
+        <fraction n="0.1" ref="Cu" />
     </material>
     <material name="BoratedPolyethyleneConcrete" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="80.8146365853645" />
-      <D unit="g/cm3" value="3.5" />
-      <fraction n="0.07457832" ref="Hydrogen" />
-      <fraction n="0.2444708" ref="Oxygen" />
-      <fraction n="0.008409527" ref="Sodium" />
-      <fraction n="0.00127008" ref="Magnesium" />
-      <fraction n="0.022465912" ref="Aluminum" />
-      <fraction n="0.154595" ref="Silcone" />
-      <fraction n="0.009398543" ref="Potassium" />
-      <fraction n="0.040630702" ref="Calcium" />
-      <fraction n="0.006031116" ref="Iron" />
-      <fraction n="0.430151" ref="Carbon" />
-      <fraction n="0.007999" ref="Boron" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="80.8146365853645" />
+        <D unit="g/cm3" value="3.5" />
+        <fraction n="0.07457832" ref="Hydrogen" />
+        <fraction n="0.2444708" ref="Oxygen" />
+        <fraction n="0.008409527" ref="Sodium" />
+        <fraction n="0.00127008" ref="Magnesium" />
+        <fraction n="0.022465912" ref="Aluminum" />
+        <fraction n="0.154595" ref="Silcone" />
+        <fraction n="0.009398543" ref="Potassium" />
+        <fraction n="0.040630702" ref="Calcium" />
+        <fraction n="0.006031116" ref="Iron" />
+        <fraction n="0.430151" ref="Carbon" />
+        <fraction n="0.007999" ref="Boron" />
     </material>
     <material name="CarbonFiber" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="67.8058135998218" />
-      <D unit="g/cm3" value="1.6" />
-      <fraction n="0.5" ref="C" />
-      <fraction n="0.0655" ref="Hydrogen" />
-      <fraction n="0.26785" ref="Carbon" />
-      <fraction n="0.16665" ref="Oxygen" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="67.8058135998218" />
+        <D unit="g/cm3" value="1.6" />
+        <fraction n="0.5" ref="C" />
+        <fraction n="0.0655" ref="Hydrogen" />
+        <fraction n="0.26785" ref="Carbon" />
+        <fraction n="0.16665" ref="Oxygen" />
     </material>
     <material name="G4_WATER" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="78" />
-      <D unit="g/cm3" value="1" />
-      <fraction n="0.111898477841067" ref="H" />
-      <fraction n="0.888101522158933" ref="O" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="78" />
+        <D unit="g/cm3" value="1" />
+        <fraction n="0.111898477841067" ref="H" />
+        <fraction n="0.888101522158933" ref="O" />
     </material>
     <material name="ColdPlateMaterial" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="64.9803674527085" />
-      <D unit="g/cm3" value="1.48679245283019" />
-      <fraction n="0.0871116751269036" ref="Hydrogen" />
-      <fraction n="0.3562269035533" ref="Carbon" />
-      <fraction n="0.221636040609137" ref="Oxygen" />
-      <fraction n="0.33502538071066" ref="C" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="64.9803674527085" />
+        <D unit="g/cm3" value="1.48679245283019" />
+        <fraction n="0.0871116751269036" ref="Hydrogen" />
+        <fraction n="0.3562269035533" ref="Carbon" />
+        <fraction n="0.221636040609137" ref="Oxygen" />
+        <fraction n="0.33502538071066" ref="C" />
     </material>
     <material name="StaveEndCapMaterial" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="73.6709617281652" />
-      <D unit="g/cm3" value="1.4" />
-      <fraction n="0.554032118206098" ref="Carbon" />
-      <fraction n="0.0294266588047588" ref="Hydrogen" />
-      <fraction n="0.116541222989144" ref="Oxygen" />
-      <fraction n="0.3" ref="C" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="73.6709617281652" />
+        <D unit="g/cm3" value="1.4" />
+        <fraction n="0.554032118206098" ref="Carbon" />
+        <fraction n="0.0294266588047588" ref="Hydrogen" />
+        <fraction n="0.116541222989144" ref="Oxygen" />
+        <fraction n="0.3" ref="C" />
     </material>
     <material name="G4_POLYVINYL_CHLORIDE" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="108.2" />
-      <D unit="g/cm3" value="1.3" />
-      <fraction n="0.384356672764272" ref="C" />
-      <fraction n="0.0483828062386325" ref="H" />
-      <fraction n="0.567260520997095" ref="Cl" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="108.2" />
+        <D unit="g/cm3" value="1.3" />
+        <fraction n="0.384356672764272" ref="C" />
+        <fraction n="0.0483828062386325" ref="H" />
+        <fraction n="0.567260520997095" ref="Cl" />
     </material>
     <material name="Silicon" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="173" />
-      <D unit="g/cm3" value="2.33" />
-      <fraction n="1" ref="Si" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="173" />
+        <D unit="g/cm3" value="2.33" />
+        <fraction n="1" ref="Si" />
     </material>
     <material name="Tracker_FR4" state="solid">
-      <T unit="K" value="293.15" />
-      <MEE unit="eV" value="103.732116621205" />
-      <D unit="g/cm3" value="1.93" />
-      <fraction n="0.04454" ref="Hydrogen" />
-      <fraction n="0.182138" ref="Carbon" />
-      <fraction n="0.411541337660176" ref="Oxygen" />
-      <fraction n="0.261780662339824" ref="Silcone" />
-      <fraction n="0.1" ref="Cu" />
+        <T unit="K" value="293.15" />
+        <MEE unit="eV" value="103.732116621205" />
+        <D unit="g/cm3" value="1.93" />
+        <fraction n="0.04454" ref="Hydrogen" />
+        <fraction n="0.182138" ref="Carbon" />
+        <fraction n="0.411541337660176" ref="Oxygen" />
+        <fraction n="0.261780662339824" ref="Silcone" />
+        <fraction n="0.1" ref="Cu" />
     </material>
-  </materials>
+</materials>
