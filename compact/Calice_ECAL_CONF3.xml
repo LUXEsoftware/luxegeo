@@ -1,0 +1,250 @@
+<lccdd xmlns:compact="http://www.lcsim.org/schemas/compact/1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xs:noNamespaceSchemaLocation="http://www.lcsim.org/schemas/compact/1.0/compact.xsd">
+<info name="SiW-TB-2021_conf_TB2022-03_CONF3_v03"
+    title="SiW-TB-2021_conf_TB2022-03_CONF3_v03"
+    author="F. Jimenez Morales"
+    url="cern.ch"
+    status="adapted for LUXE BSM, not by the authors of course"
+    version="$Id$">
+    <comment>
+   The compact File for the SiECAL TB Setup at DESY (2021) 
+   configuration TB2022-03_CONF3
+   updated geom December 2021
+   fabricio.jm@cern.ch
+</comment>
+</info>
+
+<limits>
+<limitset name="cal_limits">
+<limit name="step_length_max" particles="*" value="5.0" unit="mm" />
+</limitset>
+</limits>
+
+<comment>Common Generic visualization attributes</comment>
+<display>
+<vis name="InvisibleNoDaughters"      showDaughters="false" visible="false"/>
+<vis name="InvisibleWithDaughters"    showDaughters="true" visible="false"/>
+<vis name="GreenVis"   alpha="1" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="true"/>
+<vis name="RedVis"     alpha="1" r="1.0" g="0.0" b="0.0" showDaughters="true" visible="true"/>
+<vis name="BlueVis"    alpha="1" r="0.0" g="0.0" b="1.0" showDaughters="true" visible="true"/>
+<vis name="InVis"     alpha="1.0"  r="0.0" g="1.0"  b="0.0" showDaughters="true"  visible="false"/>
+</display>
+
+<define>
+<include ref="Calice_ECAL_commondefs.xml"/>
+</define>
+
+<display>
+<include ref="Calice_ECAL_commondisp.xml"/>
+</display>
+
+<readouts>
+<readout name="SiEcalCollection">
+<segmentation type="TiledLayerGridXY" grid_size_x="Calice_Ecal_CellSizeX" grid_size_y="Calice_Ecal_CellSizeX" offset_x="-(Calice_Ecal_dim_x-Calice_Ecal_CellSizeX)/2.0" offset_y="-(Calice_Ecal_dim_x-Calice_Ecal_CellSizeX)/2.0" />
+<id>system:8,layer:8,x:8,y:8,slice:4</id>
+</readout>
+</readouts>
+
+<detectors>
+<detector name="EcalTestBeam" type="CaloPrototype_v02" vis="EcalVis" id="3" readout="SiEcalCollection" insideTrackingVolume="false">
+<dimensions x="Calice_Ecal_dim_x" y="Calice_Ecal_dim_y" z="Calice_Ecal_dim_z"/>
+<common_parameters frontFaceZ="Ecal_FrontFaceZ" nCellsX="Calice_Ecal_NcellsX" nCellsY="Calice_Ecal_NcellsY" cellSizeX="Calice_Ecal_CellSizeX" cellSizeY="Calice_Ecal_CellSizeY"/> 
+<type_flags type="1" />
+<envelope vis="EcalVis">
+<shape type="Box" dx="Calice_Ecal_dim_x/2.0 + Calice_env_safety" dy="Calice_Ecal_dim_y/2.0 + Calice_env_safety"  dz="Calice_Ecal_dim_z/2.0 + Calice_env_safety" material="Air20" />
+<rotation x="0" y="0" z="0"/>
+<position x="0" y="0" z="Calice_Ecal_dim_z/2.0"/>
+</envelope>
+<slice material = "PolyethyleneProto"    thickness = "Ecal_PlasticThickness"   vis="PlasticVis"/>
+<slice material = "Air20"         thickness = "59.7*mm"   vis="Invisible"/>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness650"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap650"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness650"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap650"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "Air20" thickness = "2*Calice_Ecal_WThickness"  vis="AirVis" />
+<slice material = "CaliceTungstenDens1910" thickness = "4*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness500"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap500"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+<layer repeat="1" vis="EcalVis">
+<slice material = "CaliceTungstenDens1910" thickness = "6*Calice_Ecal_WThickness"  vis="TungstenVis" />
+<slice material = "CaliceCarbonFiber" thickness = "Calice_Ecal_CFThickness"        vis="CFVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_kap"  vis="AirVis"/>
+<slice material = "G4_Si"          thickness = "Calice_Ecal_WaferThickness320"     vis="SiVis" sensitive = "yes" />
+<slice material = "Air20"         thickness = "Calice_Ecal_GlueThickness_pcb"  vis="AirVis"/>
+<slice material = "G4_Cu"          thickness = "Calice_Ecal_KaptonThickness"    vis="CuVis" />
+<slice material = "CalicePCB"         thickness = "Calice_Ecal_PcbThickness"       vis="PCBVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_ChipThickness"       vis="AirVis" />
+<slice material = "Air20"         thickness = "Calice_Ecal_w_slab_gap320"        vis="AirVis"/>
+</layer>
+</detector>
+</detectors>
+</lccdd>

@@ -1,0 +1,102 @@
+<!-- 
+     ECAL parameters for testbeam: November 2021 (DESY)
+     Names were modified to include to LUXE as BSM detector, also some defs for the casing were added.
+-->
+
+<!--
+   "||" = W layer (2.1mm)
+
+   Conf 1: 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 |||| 13 |||| 14 |||| 15 → 9.6 X0
+  -->
+  
+<!-- 
+   Plastic plate (polyethylene) thickness: 2 mm
+   Distance to groove 61.8 mm
+   Dist between grooves: 15 mm
+   Carbon thickness
+
+
+   ECAL slab structure (from upstream beam direction)
+
+   Tungsten             0 mm, 2.1 mm or  4.2 mm
+   Carbon               1.50 mm (A Gallas)
+   Kapton               0.10 mm 
+   Glue                 0.10 mm
+   Silicon Sensor       0.32 mm or 0.5 mm
+   Glue                 0.10 mm
+   Copper layer:        0.10 mm
+   PCB                  1.70 mm (TODO To be checked with Jerome)
+   Chip                 1.20 mm 
+   Air
+   ==================================
+   total slab thickness = 9.32 mm or 9.5 mm (counting 4.2 mm Tungsten "box")
+  
+
+  -->
+
+
+  <define>
+    <constant name="Calice_env_safety" value="0.001*mm"/>
+    
+    <constant name="Calice_Ecal_NcellsX" value="32" />
+    <constant name="Calice_Ecal_NcellsY" value="32" />
+    <constant name="Calice_Ecal_CellSizeX" value="5.5*mm" />
+    <constant name="Calice_Ecal_CellSizeY" value="5.5*mm" />
+
+    <constant name="Calice_Ecal_dim_x" value="Calice_Ecal_NcellsX*Calice_Ecal_CellSizeX"/>
+    <constant name="Calice_Ecal_dim_y" value="Calice_Ecal_NcellsY*Calice_Ecal_CellSizeY"/>
+    <constant name="Calice_Ecal_dim_z" value="285*mm"/> <!-- 15*15 layers + 26 (rear space) + 30 (upfront space) + 4 (plastic plates) -->
+    <!--TODO: check!! , more on the order of 220*mm (used to be 500*mm), but still fine if we put the first layer in the border of the box (?)-->
+
+    <constant name="Calice_Ecal_LayerDistance" value="15.0*mm"/> 
+    <!-- Meaning of quantity below? total width of asu? Currently: 4.2 (2 W layers) + 4.5 (C+Kapton+Si+Glue+Cu+PCB+Chip)-->
+    <!-- <constant name="Calice_Ecal_slab_thickness" value="6.73*mm"/> -->
+    <constant name="Calice_Ecal_slab_thickness320" value="9.32*mm"/>
+    <constant name="Calice_Ecal_slab_thickness500" value="9.5*mm"/>
+    <constant name="Calice_Ecal_slab_thickness650" value="9.65*mm"/>
+
+    <!-- TB2021: No Aluminum-->
+    <!-- <constant name="Calice_Ecal_AlThickness" value="0.1*mm"/> --> 
+    <constant name="Calice_Ecal_WThickness" value="0.7*mm"/> <!-- Such that both tb21 and tb22 W thicknesses are integer multiples-->
+    <constant name="Calice_Ecal_CFThickness" value="1.5*mm"/>
+    <constant name="Calice_Ecal_KaptonThickness" value="0.1*mm"/>
+    <constant name="Calice_Ecal_GlueThickness_kap" value="0.1*mm"/>
+    <constant name="Calice_Ecal_WaferThickness320" value="0.320*mm"/>
+    <constant name="Calice_Ecal_WaferThickness500" value="0.500*mm"/>
+    <constant name="Calice_Ecal_WaferThickness650" value="0.650*mm"/>
+    <!-- TODO: Used to have GlueThickness_pcb and GlueThickness_kap, now (2021) only one-->
+    <!-- <constant name="Calice_Ecal_GlueThickness_pcb" value="0.08*mm"/>-->
+    <constant name="Calice_Ecal_GlueThickness_pcb" value="0.1*mm"/>
+    <!-- TODO: Used to have GlueThickness_pcb and GlueThickness_kap, now (2021) only one-->
+    <!-- <constant name="Calice_Ecal_GlueThickness_kap" value="0.08*mm"/> -->
+    <!-- TODO: Vincent suggested (I think) that we had wafer - glue - Cu (??) - PCB - Chip -->
+    <!-- TODO: check, PCBTHickness used to be 1.61*mm -->
+    <constant name="Calice_Ecal_PcbThickness" value="1.7*mm"/> 
+    <!-- TODO: missing chip!! --> 
+    <constant name="Calice_Ecal_ChipThickness" value="1.2*mm"/> 
+
+    <!-- this is the gap within a slab (electronics, etc) -->
+    <!-- <constant name="Calice_Ecal_GapThickness" value="Calice_Ecal_slab_thickness - Calice_Ecal_AlThickness - Calice_Ecal_PcbThickness - Ecal_WaferThickness - Calice_Ecal_KaptonThickness - Calice_Ecal_CFThickness - Calice_Ecal_GlueThickness_pcb - Calice_Ecal_GlueThickness_kap"/> -->
+    <!-- TODO: Check if this is necessary in 2021? -->
+    <!-- constant name="Calice_Ecal_GapThickness" value="Calice_Ecal_slab_thickness - Calice_Ecal_PcbThickness - Ecal_WaferThickness - Calice_Ecal_KaptonThickness - Calice_Ecal_CFThickness - Ecal_GlueThickness"/-->
+
+
+    <!-- TODO: Check if these gaps apply to 2021 -->
+    <!-- <constant name="Calice_Ecal_w_slab_gap1" value="0.5*mm"/> -->
+    <!-- <constant name="Calice_Ecal_w_slab_gap2" value="Calice_Ecal_LayerDistance-3*Calice_Ecal_WThickness-Calice_Ecal_slab_thickness-Calice_Ecal_w_slab_gap1"/> -->
+
+    <!--constant name="Calice_Ecal_w_slab_gap320" value="Calice_Ecal_LayerDistance-2*Calice_Ecal_WThickness-Calice_Ecal_slab_thickness320"/-->
+    <constant name="Calice_Ecal_w_slab_gap320" value="Calice_Ecal_LayerDistance-Calice_Ecal_slab_thickness320"/>
+    <!--constant name="Calice_Ecal_w_slab_gap500" value="Calice_Ecal_LayerDistance-2*Calice_Ecal_WThickness-Calice_Ecal_slab_thickness500"/-->
+    <constant name="Calice_Ecal_w_slab_gap500" value="Calice_Ecal_LayerDistance-Calice_Ecal_slab_thickness500"/>
+    <constant name="Calice_Ecal_w_slab_gap650" value="Calice_Ecal_LayerDistance-Calice_Ecal_slab_thickness650"/>
+
+    <constant name="Calice_Ecal_casing_material" value="Aluminium" type="string"/>
+    <constant name="Calice_Ecal_casing_thickness" value="5.0*mm"/>
+    <constant name="Calice_Ecal_casing_box_x" value="620.0*mm"/>
+    
+  </define>
+
+  
+
+

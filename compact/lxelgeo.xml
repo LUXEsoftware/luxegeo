@@ -38,11 +38,11 @@
   </define>
 
 
-  <limits>
+  <!--limits>
     <limitset name="cal_limits">
       <limit name="step_length_max" particles="*" value="5.0" unit="mm" />
     </limitset>
-  </limits>
+  </limits-->
 
 
   <include ref="./LxXTD8.xml"/>
@@ -62,6 +62,7 @@
   <include ref="./LxCherenkov.xml"/>
   <include ref="./LxSScreen.xml"/>
   <include ref="./LxTrackerOPPP.xml"/>
+  <include ref="./Calice_ECAL_CONF3.xml"/>
 
 
 
