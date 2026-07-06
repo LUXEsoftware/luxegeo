@@ -598,6 +598,14 @@
         <fraction n="0.0525" ref="Ni" />
         <fraction n="0.0175" ref="Cu" />
     </material>
+    <material name="Wabsorber_PL" state="solid">
+        <T unit="K" value="293.15" />
+        <!--MEE unit="eV" value="679.09186717488" /-->
+        <D unit="g/cm3" value="18.0" />
+        <fraction n="0.95" ref="W" />
+        <fraction n="0.025" ref="Ni" />
+        <fraction n="0.025" ref="Cu" />
+    </material>
     <material name="FrontFanoutMaterial" state="solid">
         <T unit="K" value="293.15" />
         <MEE unit="eV" value="126.25143837796" />

@@ -63,7 +63,7 @@
   <include ref="./LxSScreen.xml"/>
   <include ref="./LxTrackerOPPP.xml"/>
   <include ref="./Calice_ECAL_CONF3.xml"/>
-
+  <include ref="./LxECal.xml"/>
 
 
   <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+<!--
+  Detector entry for LxECal (silicon-tungsten calorimeter).
+  Include in the main XML via:
+      <include ref="LxECal_dd4hep.xml"/>
+
+  Readout bit layout:
+      system : 8  bits — detector system ID
+      layer  : 6  bits — layer index (iplacelayer, up to 63 layers)
+      x      : 16 bits signed — CartesianGridXY cell in X
+      y      : 16 bits signed — CartesianGridXY cell in Y
+
+  Cell sizes:
+      grid_size_x = ECalSensorPixelX
+      grid_size_y = ECalSensorPixelY
+
+  Local geometry constants (previously hardcoded numerical values in C++):
+      Lcal_absorber_pitch      — absorber pitch (was 1*mm)
+      Lcal_tungsten_thickness  — tungsten absorber thickness (was 3.5*mm)
+      Lcal_silicon_thickness   — silicon sensor thickness (was 0.32*mm)
+      Lcal_epoxy_heightF       — front fanout epoxy layer (was 0.065*mm)
+      Lcal_kapton_heightF      — front fanout kapton layer (was 0.050*mm)
+      Lcal_copper_heightF      — front fanout copper layer (was 0.035*mm)
+      Lcal_epoxy_heightB       — back fanout epoxy layer (was 0.060*mm)
+      Lcal_kapton_heightB      — back fanout kapton layer (was 0.065*mm)
+      Lcal_copper_heightB      — back fanout copper layer (was 0.025*mm)
+      Lcal_pad_metal_thickness — Al pad metallisation (was 0.02*mm)
+      Lcal_CF_halfz            — carbon fiber half-thickness (was 0.395*mm)
+      Lcal_DUT_extra_halfz     — DUT extra half-gap (was 0.002*mm)
+
+  TBeam_senrio — string constant describing the layer sequence.
+-->
+
+<define>
+  <!-- Local geometry constants -->
+  <constant name="Lcal_absorber_pitch"       value="1.0*mm"/>
+  <constant name="Lcal_tungsten_thickness"   value="3.5*mm"/>
+  <constant name="Lcal_silicon_thickness"    value="0.32*mm"/>
+  <constant name="Lcal_epoxy_heightF"        value="0.065*mm"/>
+  <constant name="Lcal_kapton_heightF"       value="0.050*mm"/>
+  <constant name="Lcal_copper_heightF"       value="0.035*mm"/>
+  <constant name="Lcal_epoxy_heightB"        value="0.060*mm"/>
+  <constant name="Lcal_kapton_heightB"       value="0.065*mm"/>
+  <constant name="Lcal_copper_heightB"       value="0.025*mm"/>
+  <constant name="Lcal_pad_metal_thickness"  value="0.02*mm"/>
+  <constant name="Lcal_CF_halfz"             value="0.395*mm"/>
+  <constant name="Lcal_DUT_extra_halfz"      value="0.002*mm"/>
+
+  <!-- TBeam layer sequence string -->
+  <constant name="TBeam_senrio" type="string"
+            value="AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS AS"/>
+</define>
+
+<readouts>
+  <readout name="ECalSensorHits">
+    <id>system:8,layer:6,x:-16,y:-16</id>
+    <segmentation type="CartesianGridXY"
+                  grid_size_x="ECalSensorPixelX"
+                  grid_size_y="ECalSensorPixelY"/>
+  </readout>
+</readouts>
+
+<detectors>
+  <detector id="20" name="LxECal" type="LxECal"
+            readout="ECalSensorHits">
+  </detector>
+</detectors>
+
+</lccdd>
