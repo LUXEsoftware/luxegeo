@@ -35,7 +35,13 @@
           x="EcalP_dim_x"
           y="EcalP_dim_y"
           z="EcalP_dim_z" />
-      <type_flags type="1" />
+      <!-- DetType = CALORIMETER (2) | ELECTROMAGNETIC (2048) = 2050. The
+           ECALp is a single forward slab, so it deliberately carries neither
+           the BARREL nor the ENDCAP bit; downstream tooling (e.g. the ACTS
+           calo-face extrapolation in k4ActsTracking) uses this to recognise
+           it as a telescope-style calorimeter. (Was erroneously type="1",
+           i.e. TRACKER.) -->
+      <type_flags type="2050" />
       <envelope vis="EcalVis">
         <shape type="Box"
             dx="EcalP_dim_x/2.0 + env_safety"
