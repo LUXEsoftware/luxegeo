@@ -66,6 +66,8 @@
   <include ref="./LxECal.xml"/>
 
 
+  <include ref="./LxFieldsSimple.xml"/>
+
   <!-- For older DD4hep versions (e.g. 1.32) it is necessary to have the plugins
        here at the end. They cannot be included from a common xml file.-->
 <!--

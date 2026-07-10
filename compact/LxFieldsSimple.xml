@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+
+  <comment> == Simplified version of LUXE magnetic fields == </comment>
+
+  <fields>
+
+    <field name="DumpMagnetField" type="MultipoleMagnet" Z="0.0">
+      <position x="DumpMagnetXpos" y="DumpMagnetYpos" z="DumpMagnetZpos"/>
+      <rotation x="0" y="0" z="pi/2.0"/>
+      <coefficient coefficient="DumpMagFieldY" skew="0.0"/>
+      <shape type="Box" dx="FlashMFieldX/2.0" dy="FlashMagneteffY/2.0" dz="FlashMFieldLength/2.0"/>
+    </field>
+
+    <field name="IPMagnetField" type="MultipoleMagnet" Z="0.0">
+      <position x="IPMagnetXpos" y="IPMagnetYpos" z="IPMagnetZpos"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="IPMagFieldY" skew="0.0"/>
+      <shape type="Box" dx="FlashMFieldX/2.0" dy="FlashMagneteffY/2.0" dz="FlashMFieldLength/2.0"/>
+    </field>
+
+    <field name="GammaMagnetField" type="MultipoleMagnet" Z="0.0">
+      <position x="GMagnetXpos" y="GMagnetYpos" z="GMagnetZpos"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="GMagFieldY" skew="0.0"/>
+      <shape type="Box" dx="FlashMFieldX/2.0" dy="FlashMagneteffY/2.0" dz="FlashMFieldLength/2.0"/>
+    </field>
+
+  </fields>
+
+</lccdd>
+
