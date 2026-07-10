@@ -32,7 +32,7 @@
   <constant name="DumpMagnetZ" value="100.0 *cm"/>
   <constant name="DumpMagnetThickness" value="50.0 *cm"/>
   <constant name="DumpMagFieldY" value="-1.5*tesla"/>
-  <constant name="IPMagFieldY" value="-10000.0*gauss"/>
+  <constant name="IPMagFieldY" value="-0.95*tesla"/>
   <constant name="DMBPipeWindow" value="pi/4.0 *rad"/>
   <constant name="CerenkovchannelY" value="5. * mm"/>
   <constant name="ScintCerenkovPhysics" value="0"/>
@@ -210,7 +210,7 @@
   <constant name="GMagnetX" value="73.75 *cm"/>
   <constant name="GMagnetZ" value="128.0 *cm"/>
   <constant name="GMagnetZpos" value="CollimatorZpos + 1.5*CollimatorZ + GMagnetZ/2.0 + 2.0*50.0*cm"/>
-  <constant name="GMagFieldY" value="-1.0*tesla"/>
+  <constant name="GMagFieldY" value="-1.4*tesla"/>
   <constant name="GMagCoilThickness" value="150.0* mm"/>
   <constant name="GMagCoilH" value="160.0* mm"/>
   <constant name="GMagnetCutX" value="36.0*cm"/>
