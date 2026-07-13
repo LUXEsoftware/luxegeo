@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lccdd>
+
+  <comment> == LUXE magnetic fields setting corresponding to functionse used in Geant4 ==
+               Three distribution functions are implemented with the following tags:
+               const - constant filed within the sepcified range
+               f_fd  - looks like Fermi-Dirac distribution function (or Wood-Saxon, or exponential sigmoid) with limits as E_f and smearing as a temperature.
+               f_err - Error funcion, visually similar to f_fd, but must be longer to calculate.
+  </comment>
+
+
+  <define>
+  <!--    Brems magnet settings, e.g. Bxx = Bx(x)  -->
+  <constant name="DumpMagFieldBx" value="1.5*tesla"  type="string"/>
+  <constant name="DumpMagFieldBy" value="0.0*tesla"   type="string"/>
+  <constant name="DumpMagFieldBz" value="0.0*tesla"   type="string"/>
+  <constant name="DumpMagDistribBxx" value="const  -30.0    30.0   mm"                  type="string"/>
+  <constant name="DumpMagDistribBxy" value="f_fd   -165.0   165.0   7.7    7.7    mm"   type="string"/>
+  <constant name="DumpMagDistribBxz" value="f_fd   -616.0   622.0   28.66  28.91  mm"   type="string"/>
+  <constant name="DumpMagDistribByx" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="DumpMagDistribByy" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="DumpMagDistribByz" value="const  -616.0   622.0  mm"   type="string"/>
+  <constant name="DumpMagDistribBzx" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="DumpMagDistribBzy" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="DumpMagDistribBzz" value="const  -616.0   622.0  mm"   type="string"/>
+
+  <!--    IP magnet settings   -->
+  <constant name="IPMagFieldBx" value="0.0*tesla"    type="string"/>
+  <constant name="IPMagFieldBy" value="-0.95*tesla"  type="string"/>
+  <constant name="IPMagFieldBz" value="0.0*tesla"    type="string"/>
+  <constant name="IPMagDistribBxx" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="IPMagDistribBxy" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="IPMagDistribBxz" value="const  -616.0   622.0  mm"   type="string"/>
+  <constant name="IPMagDistribByx" value="f_fd   -165.0   165.0   7.7    7.7    mm"   type="string"/>
+  <constant name="IPMagDistribByy" value="const  -30.0    30.0   mm"                  type="string"/>
+  <constant name="IPMagDistribByz" value="f_fd   -616.0   622.0   28.66  28.91  mm"   type="string"/>
+  <constant name="IPMagDistribBzx" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="IPMagDistribBzy" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="IPMagDistribBzz" value="const  -616.0   622.0  mm"   type="string"/>
+
+  <!--    Gamma magnet settings   -->
+  <constant name="GammaMagFieldBx" value="0.0*tesla"    type="string"/>
+  <constant name="GammaMagFieldBy" value="-1.4*tesla"   type="string"/>
+  <constant name="GammaMagFieldBz" value="0.0*tesla"    type="string"/>
+  <constant name="GammaMagDistribBxx" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="GammaMagDistribBxy" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="GammaMagDistribBxz" value="const  -616.0   622.0  mm"   type="string"/>
+  <constant name="GammaMagDistribByx" value="f_fd   -165.0   165.0   7.7    7.7    mm"   type="string"/>
+  <constant name="GammaMagDistribByy" value="const  -30.0    30.0   mm"                  type="string"/>
+  <constant name="GammaMagDistribByz" value="f_fd   -616.0   622.0   28.66  28.91  mm"   type="string"/>
+  <constant name="GammaMagDistribBzx" value="const  -165.0   165.0  mm"   type="string"/>
+  <constant name="GammaMagDistribBzy" value="const  -30.0    30.0   mm"   type="string"/>
+  <constant name="GammaMagDistribBzz" value="const  -616.0   622.0  mm"   type="string"/>
+
+  </define>
+
+<fields>
+
+  <!-- custom field -->
+  <field name="Brems" type="LxDipoleField"/>
+  <field name="IP"    type="LxDipoleField"/>
+  <field name="Gamma" type="LxDipoleField"/>
+
+</fields>
+
+</lccdd>
