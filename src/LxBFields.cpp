@@ -12,9 +12,9 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <stdexcept>
 #include <typeinfo>
 
+#include "DD4hep/Printout.h"
 #include "DD4hep/Detector.h"
 #include "DD4hep/Fields.h"
 #include "DD4hep/Factories.h"
@@ -204,30 +204,33 @@ LxBField* LxDipoleFields::GetLxDipoleField(dd4hep::Detector& description, const 
 void LxDipoleFields::LoadFieldsConfigurations(dd4hep::Detector& description, const std::string& name)
 {
   // This map can be reduced to vector, but the names in c++ code and in mac settings for the magnets are different. This maps one to another.
-  std::map<std::string, std::string> fieldNames {{"DumpMag", "Brems"}, {"IPMag", "IP"}, {"GammaMag", "Gamma"}};
+  std::map<std::string, std::string> fieldNames {{"Brems", "DumpMag"}, {"IP", "IPMag"}, {"Gamma", "GammaMag"}};
   std::vector<std::string> fieldComponetNames {"Bx", "By", "Bz"};
   std::vector<std::string> fieldDistribConstNames {"x", "y", "z"};
 
-  for (const auto &mag : fieldNames) {
-    for (const auto &fcval : fieldComponetNames) {
-      std::string readCName = mag.first + "Field" + fcval;
-      std::string cparams = description.constant<std::string>(readCName);
-      fBFieldModelsInfo[mag.second].push_back(std::make_tuple(fcval, "bvalue", "bvalue", cparams));
+  auto mag = fieldNames.find(name);
+  if (mag == fieldNames.end()) {
+    dd4hep::except("LxDipoleFields::LoadFieldsConfigurations","No configuration for the magnet %s", name.c_str());
+  }
 
-      for (const auto &fdistr : fieldDistribConstNames) {
-        std::string readDName = mag.first + "Distrib" + fcval + fdistr;
-        std::string newValue = description.constant<std::string>(readDName);
-        std::istringstream istr(newValue);
-        std::string fmodel;
-        istr >> fmodel;
-        std::string dparams(newValue.c_str() + istr.tellg());
-        fBFieldModelsInfo[mag.second].push_back(std::make_tuple(fcval, fdistr, fmodel, dparams));
-      }
+  for (const auto &fcval : fieldComponetNames) {
+    std::string readCName = mag->second + "Field" + fcval;
+    std::string cparams = description.constant<std::string>(readCName);
+    fBFieldModelsInfo[name].push_back(std::make_tuple(fcval, "bvalue", "bvalue", cparams));
+
+    for (const auto &fdistr : fieldDistribConstNames) {
+      std::string readDName = mag->second + "Distrib" + fcval + fdistr;
+      std::string newValue = description.constant<std::string>(readDName);
+      std::istringstream istr(newValue);
+      std::string fmodel;
+      istr >> fmodel;
+      std::string dparams(newValue.c_str() + istr.tellg());
+      fBFieldModelsInfo[name].push_back(std::make_tuple(fcval, fdistr, fmodel, dparams));
     }
   }
+
   PrintBFieldModel();
 }
-
 
 
 LxBField* LxDipoleFields::AddBremsMagField(dd4hep::Detector& description)
