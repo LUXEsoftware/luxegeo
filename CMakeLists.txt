@@ -14,8 +14,12 @@ SET( ${PROJECT_NAME}_VERSION_PATCH 0 )
 SET( ${PROJECT_NAME}_VERSION "${${PROJECT_NAME}_VERSION_MAJOR}.${${PROJECT_NAME}_VERSION_MINOR}.${${PROJECT_NAME}_VERSION_PATCH}" )
 
 find_package(DD4hep REQUIRED COMPONENTS DDG4)
+find_package(Geant4 REQUIRED)
+find_package(HDF5 REQUIRED COMPONENTS C CXX)
 
-include_directories(${PROJECT_NAME} include)
+### include_directories(${PROJECT_NAME} include)
+include_directories(${PROJECT_NAME} include  PRIVATE ${Geant4_INCLUDE_DIRS} ${HDF5_INCLUDE_DIRS})
+
 # create our library and make the components file
 # our sources
 set(sources
@@ -40,10 +44,14 @@ set(sources
   ./src/LxBSMCaliceCaloPrototype_v02.cpp
   ./src/LxECal.cpp
   ./src/LxBFields.cpp
+  ./src/LuxeTestGenerator.cpp
+  ./src/PrimarySpectra.cpp
+  ./src/LxPrimaryGenerator.cpp
   )
 
 add_dd4hep_plugin(${PROJECT_NAME} SHARED ${sources}) # link it with DDCore, or whatever you need
-target_link_libraries(${PROJECT_NAME} DD4hep::DDCore)
+### target_link_libraries(${PROJECT_NAME} DD4hep::DDCore)
+target_link_libraries(${PROJECT_NAME} DD4hep::DDCore DD4hep::DDG4 ${Geant4_LIBRARIES} ${HDF5_LIBRARIES})
 
 # Create this_package.sh file, and install
 dd4hep_instantiate_package(${PROJECT_NAME})
