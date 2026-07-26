@@ -5,17 +5,20 @@ def lxGenerator(dd4hepSimulation):
     gen = GeneratorAction(Kernel(), "LxPrimaryGenerator/Primary", True)
 
     #gen.BeamType = "mc"
-    #gen.MCFile   = "/home/sqy/work/luxe/g4sim/lxelgeo/test_data4.out"
+    #gen.MCFile   = "test_data4.out"
 
-    gen.SpectraFile = "/home/sqy/work/luxe/g4sim/lxelgeo/spectra_test_compt.txt"
+    #gen.SpectraFile = "spectra_test_compt.txt"
+    gen.SpectraFile = "spectra_bw_positron.txt"
 
     gen.BeamType = "mono"
     gen.Position = [0, 0, 0]
     #gen.Position = [0, 0, -7.4*u.m]
     gen.Energy = 16.6*u.GeV
 
+    gen.Particle = "e+";
+
     #gen.BeamType = "mchdf5"
-    #gen.MCFile = "/home/sqy/work/luxe/sh/positron_pos/e0gpc_2.0_0936_particles.h5"
+    #gen.MCFile = "e0gpc_2.0_0936_particles.h5"
 
     gen.enableUI()
     return gen
