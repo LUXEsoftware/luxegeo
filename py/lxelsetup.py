@@ -7,15 +7,15 @@ def lxGenerator(dd4hepSimulation):
     #gen.BeamType = "mc"
     #gen.MCFile   = "test_data4.out"
 
-    #gen.SpectraFile = "spectra_test_compt.txt"
-    gen.SpectraFile = "spectra_bw_positron.txt"
+    gen.SpectraFile = "spectra_test_compt_electron.txt"
+    #gen.SpectraFile = "spectra_bw_positron.txt"
 
     gen.BeamType = "mono"
     gen.Position = [0, 0, 0]
     #gen.Position = [0, 0, -7.4*u.m]
-    gen.Energy = 16.6*u.GeV
+    gen.Energy = 16.5*u.GeV
 
-    gen.Particle = "e+";
+    gen.Particle = "e-";
 
     #gen.BeamType = "mchdf5"
     #gen.MCFile = "e0gpc_2.0_0936_particles.h5"
